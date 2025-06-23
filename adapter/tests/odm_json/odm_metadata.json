@@ -1,0 +1,19 @@
+{
+  "StudyOID": "ST.VEXIN-03",
+  "MetaDataVersion": {
+    "OID": "MDV.1",
+    "Name": "Example Metadata",
+    "ItemDefs": [
+      {
+        "OID": "IT.SUBJID",
+        "Name": "Subject ID",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      }
+    ],
+    "CodeLists": [],
+    "ItemGroupDefs": [],
+    "FormDefs": []
+  }
+}

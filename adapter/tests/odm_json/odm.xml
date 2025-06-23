@@ -1,0 +1,1042 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ODMVersion="2.0" FileOID="000-00-0000" FileType="Snapshot" CreationDateTime="2025-06-20T21:15:45.283629">
+  <Study OID="ST.VEXIN-03" StudyName="VEXIN-03" ProtocolName="VEXIN-PROT-001">
+    <MetaDataVersion OID="MDV.1" Name="Example Metadata">
+      <ItemDef OID="IT.SUBJID" Name="Subject ID" DataType="text"/>
+    </MetaDataVersion>
+  </Study>
+  <ClinicalData StudyOID="ST.VEXIN-03" MetaDataVersionOID="MDV.1">
+    <SubjectData SubjectKey="01-99163">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-99163</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-03-26</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-03-19</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1981-11-30</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-09-07</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-1002">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-1002</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-08-15</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-08-08</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1988-04-22</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>AMERICAN INDIAN OR ALASKA NATIVE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2023-06-16</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="Jan-62">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>Jan-62</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-01-08</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-01-01</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1987-04-17</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-03-30</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-99752">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-99752</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-09-25</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-09-18</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1993-05-13</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>MULTIPLE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-01-15</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-99516">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-99516</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-06-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-06-13</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1995-01-06</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>MULTIPLE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-06-04</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-1006">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-1006</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-01-28</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-01-21</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1992-02-16</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-07-12</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-1007">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-1007</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-08-18</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-08-11</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1984-07-02</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-04-13</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-99828">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-99828</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-12-08</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-12-01</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1986-12-09</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-06-18</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-99604">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-99604</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-04-27</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-04-20</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1997-10-19</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-02-11</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="01-99680">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>01-99680</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-12-21</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-12-14</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1982-08-01</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>AMERICAN INDIAN OR ALASKA NATIVE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-09-25</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="Feb-86">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>Feb-86</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-10-13</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-10-06</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1995-03-04</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-12-18</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="02-99521">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>02-99521</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-03-06</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-02-27</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1981-01-20</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-12-21</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="02-99113">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>02-99113</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-07-27</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-07-20</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2004-01-03</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-06-05</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="4-Feb">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>4-Feb</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-06-09</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-06-02</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2000-10-16</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-07-23</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="02-99269">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>02-99269</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-12-27</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-12-20</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1988-04-04</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-03-14</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="02-99104">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>02-99104</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-07-21</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-07-14</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2000-01-06</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-08-17</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="7-Feb">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>7-Feb</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-07-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-07-13</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1981-11-28</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-06-08</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="02-99134">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>02-99134</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-03-06</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-02-28</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1995-10-20</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>AMERICAN INDIAN OR ALASKA NATIVE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-12-07</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="9-Feb">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>9-Feb</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-06-29</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-06-22</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2006-09-15</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-10-06</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="Feb-61">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>Feb-61</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-08-22</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-08-15</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>2</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1990-05-11</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>OTHER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACEOTH"><Value>Native Amazonian</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-09-07</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="03-99851">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>03-99851</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-12-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFENDTC"><Value>2023-12-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-12-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFPENDTC"><Value>2023-12-20</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1988-12-11</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>MULTIPLE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-09-08</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="2-Mar">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>2-Mar</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-12-28</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-12-21</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2001-05-05</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-03-18</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="20-Mar">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>20-Mar</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-02-09</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-02-02</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2001-07-25</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>MULTIPLE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-06-21</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="4-Mar">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>4-Mar</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-06-27</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-06-20</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1985-12-18</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-11-13</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="03-99403">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>03-99403</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-02-26</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-02-19</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1995-12-12</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-12-27</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="03-99912">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>03-99912</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-06-23</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-06-16</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1994-03-25</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-10-25</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="03-99927">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>03-99927</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-07-23</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-07-16</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1995-09-26</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-10-15</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="03-99431">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>03-99431</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-11-15</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-11-08</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2000-10-25</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-08-14</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="9-Mar">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>9-Mar</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-07-10</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-07-03</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1994-02-08</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-10-05</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="03-99764">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>03-99764</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-12-01</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-11-24</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>3</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1990-07-19</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-11-26</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="1-Apr">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>1-Apr</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-06-08</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-06-01</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1993-05-17</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-10-31</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="2-Apr">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>2-Apr</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-08-23</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-08-16</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1993-10-12</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>OTHER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACEOTH"><Value>Caribbean</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2024-09-23</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="3-Apr">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>3-Apr</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-02-08</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-02-01</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1999-08-15</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>ASIAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>VEXIN-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Pelvovexinol-50mg</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-11-18</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="04-99132">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>04-99132</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-11-22</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-11-15</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1980-08-17</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>ASIAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-02-02</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="04-99647">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>04-99647</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-10-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFENDTC"><Value>2023-10-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-10-20</Value></ItemData>
+            <ItemData ItemOID="IT.RFPENDTC"><Value>2023-10-20</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2003-02-15</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-03-10</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="6-Apr">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>6-Apr</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-07-19</Value></ItemData>
+            <ItemData ItemOID="IT.RFENDTC"><Value>2023-07-19</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-07-19</Value></ItemData>
+            <ItemData ItemOID="IT.RFPENDTC"><Value>2023-07-19</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1990-08-20</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2023-01-25</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="7-Apr">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>7-Apr</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2024-12-03</Value></ItemData>
+            <ItemData ItemOID="IT.RFENDTC"><Value>2024-12-03</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2024-12-03</Value></ItemData>
+            <ItemData ItemOID="IT.RFPENDTC"><Value>2024-12-03</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1989-11-25</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>NATIVE HAWAIIAN OR PACIFIC ISLANDER</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2021-09-09</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="8-Apr">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>8-Apr</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-05-18</Value></ItemData>
+            <ItemData ItemOID="IT.RFENDTC"><Value>2023-05-18</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-05-18</Value></ItemData>
+            <ItemData ItemOID="IT.RFPENDTC"><Value>2023-05-18</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1981-12-22</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>M</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>BLACK OR AFRICAN AMERICAN</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-04-16</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="04-99638">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>04-99638</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-12-30</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-12-23</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>1987-02-08</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>WHITE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2020-07-06</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+    <SubjectData SubjectKey="04-99508">
+      <StudyEventData StudyEventOID="SE.SCREENING">
+        <ItemGroupData ItemGroupOID="FORM.DM" TransactionType="Update"><ItemData ItemOID="IT.STUDYID"><Value>VEXIN-03</Value></ItemData>
+            <ItemData ItemOID="IT.DOMAIN"><Value>DM</Value></ItemData>
+            <ItemData ItemOID="IT.USUBJID"><Value>04-99508</Value></ItemData>
+            <ItemData ItemOID="IT.RFSTDTC"><Value>2023-02-05</Value></ItemData>
+            <ItemData ItemOID="IT.RFICDTC"><Value>2023-01-29</Value></ItemData>
+            <ItemData ItemOID="IT.SITEID"><Value>4</Value></ItemData>
+            <ItemData ItemOID="IT.BRTHDTC"><Value>2005-07-20</Value></ItemData>
+            <ItemData ItemOID="IT.SEX"><Value>F</Value></ItemData>
+            <ItemData ItemOID="IT.RACE"><Value>MULTIPLE</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_WHITE"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_BLACK"><Value>1</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_ASIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_NHPI"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_AIAN"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.RACE_OTHER"><Value>0</Value></ItemData>
+            <ItemData ItemOID="IT.ETHNIC"><Value>NOT HISPANIC OR LATINO</Value></ItemData>
+            <ItemData ItemOID="IT.ARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARMCD"><Value>PLACEBO</Value></ItemData>
+            <ItemData ItemOID="IT.ACTARM"><Value>Placebo</Value></ItemData>
+            <ItemData ItemOID="IT.COUNTRY"><Value>USA</Value></ItemData>
+            <ItemData ItemOID="IT.DMDTC"><Value>2022-09-21</Value></ItemData>
+          </ItemGroupData></StudyEventData>
+    </SubjectData>
+  </ClinicalData>
+</ODM>
