@@ -5,15 +5,317 @@
     "Name": "Example Metadata",
     "ItemDefs": [
       {
-        "OID": "IT.SUBJID",
-        "Name": "Subject ID",
+        "OID": "IT.ACTARM",
+        "Name": "ACTARM",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.ACTARMCD",
+        "Name": "ACTARMCD",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.ARM",
+        "Name": "ARM",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.ARMCD",
+        "Name": "ARMCD",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.BRTHDTC",
+        "Name": "BRTHDTC",
+        "DataType": "date",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.COUNTRY",
+        "Name": "COUNTRY",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.DMDTC",
+        "Name": "DMDTC",
+        "DataType": "date",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.DOMAIN",
+        "Name": "DOMAIN",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.ETHNIC",
+        "Name": "ETHNIC",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE",
+        "Name": "RACE",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACEOTH",
+        "Name": "RACEOTH",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE_AIAN",
+        "Name": "RACE_AIAN",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE_ASIAN",
+        "Name": "RACE_ASIAN",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE_BLACK",
+        "Name": "RACE_BLACK",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE_NHPI",
+        "Name": "RACE_NHPI",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE_OTHER",
+        "Name": "RACE_OTHER",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RACE_WHITE",
+        "Name": "RACE_WHITE",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RFENDTC",
+        "Name": "RFENDTC",
+        "DataType": "date",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RFICDTC",
+        "Name": "RFICDTC",
+        "DataType": "date",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RFPENDTC",
+        "Name": "RFPENDTC",
+        "DataType": "date",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.RFSTDTC",
+        "Name": "RFSTDTC",
+        "DataType": "date",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.SEX",
+        "Name": "SEX",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.SITEID",
+        "Name": "SITEID",
+        "DataType": "integer",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.STUDYID",
+        "Name": "STUDYID",
+        "DataType": "text",
+        "Length": null,
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.USUBJID",
+        "Name": "USUBJID",
         "DataType": "text",
         "Length": null,
         "CodeListRef": null
       }
     ],
     "CodeLists": [],
-    "ItemGroupDefs": [],
+    "ItemGroupDefs": [
+      {
+        "OID": "FORM.DM",
+        "Name": "DM",
+        "Type": "Tabular",
+        "Repeating": "No",
+        "ItemRefs": [
+          {
+            "ItemOID": "IT.ACTARM",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.ACTARMCD",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.ARM",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.ARMCD",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.BRTHDTC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.COUNTRY",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DMDTC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DOMAIN",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.ETHNIC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACEOTH",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE_AIAN",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE_ASIAN",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE_BLACK",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE_NHPI",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE_OTHER",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RACE_WHITE",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RFENDTC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RFICDTC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RFPENDTC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.RFSTDTC",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.SEX",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.SITEID",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.STUDYID",
+            "Mandatory": "No",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.USUBJID",
+            "Mandatory": "No",
+            "RepeatKey": null
+          }
+        ]
+      }
+    ],
     "FormDefs": []
   }
 }
