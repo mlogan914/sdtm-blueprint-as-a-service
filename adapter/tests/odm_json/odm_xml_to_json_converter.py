@@ -139,7 +139,7 @@ def main():
     with open(outp, "w", encoding="utf-8") as fh:
         json.dump(metadata_json, fh, indent=2)
 
-    print(f"✅ Metadata JSON written to {outp}")
+    print(f"✅ JSON written to {outp}")
 
 if __name__ == "__main__":
     main()
