@@ -5,196 +5,227 @@
     "Name": "Example ODM Export",
     "ItemDefs": [
       {
-        "OID": "IT.ACTARM",
+        "OID": "IT.DM.ACTARM",
         "Name": "ACTARM",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.ACTARMCD",
+        "OID": "IT.DM.ACTARMCD",
         "Name": "ACTARMCD",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.ARM",
+        "OID": "IT.DM.ARM",
         "Name": "ARM",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.ARMCD",
+        "OID": "IT.DM.ARMCD",
         "Name": "ARMCD",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.BRTHDTC",
+        "OID": "IT.DM.BRTHDTC",
         "Name": "BRTHDTC",
         "DataType": "date",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.COUNTRY",
+        "OID": "IT.DM.COUNTRY",
         "Name": "COUNTRY",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.DTHDTC",
+        "OID": "IT.DM.DTHDTC",
         "Name": "DTHDTC",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.DTHFL",
+        "OID": "IT.DM.DTHFL",
         "Name": "DTHFL",
         "DataType": "text",
         "Length": "1",
         "CodeListRef": null
       },
       {
-        "OID": "IT.DMDTC",
+        "OID": "IT.DM.DMDTC",
         "Name": "DMDTC",
         "DataType": "date",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.DOMAIN",
+        "OID": "IT.DM.DOMAIN",
         "Name": "DOMAIN",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.ETHNIC",
+        "OID": "IT.DM.ETHNIC",
         "Name": "ETHNIC",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": "CL.ETHNIC"
       },
       {
-        "OID": "IT.RACE",
+        "OID": "IT.DM.RACE",
         "Name": "RACE",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACEOTH",
+        "OID": "IT.DM.RACEOTH",
         "Name": "RACEOTH",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACE_AIAN",
+        "OID": "IT.DM.RACE_AIAN",
         "Name": "RACE_AIAN",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACE_ASIAN",
+        "OID": "IT.DM.RACE_ASIAN",
         "Name": "RACE_ASIAN",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACE_BLACK",
+        "OID": "IT.DM.RACE_BLACK",
         "Name": "RACE_BLACK",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACE_NHPI",
+        "OID": "IT.DM.RACE_NHPI",
         "Name": "RACE_NHPI",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACE_OTHER",
+        "OID": "IT.DM.RACE_OTHER",
         "Name": "RACE_OTHER",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RACE_WHITE",
+        "OID": "IT.DM.RACE_WHITE",
         "Name": "RACE_WHITE",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RFENDTC",
+        "OID": "IT.DM.RFENDTC",
         "Name": "RFENDTC",
         "DataType": "date",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RFICDTC",
+        "OID": "IT.DM.RFICDTC",
         "Name": "RFICDTC",
         "DataType": "date",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RFPENDTC",
+        "OID": "IT.DM.RFPENDTC",
         "Name": "RFPENDTC",
         "DataType": "date",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.RFSTDTC",
+        "OID": "IT.DM.RFSTDTC",
         "Name": "RFSTDTC",
         "DataType": "date",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.SEX",
+        "OID": "IT.DM.SEX",
         "Name": "SEX",
         "DataType": "text",
-        "Length": "200",
-        "CodeListRef": null
+        "Length": "1",
+        "CodeListRef": "CL.SEX"
       },
       {
-        "OID": "IT.SITEID",
+        "OID": "IT.DM.SITEID",
         "Name": "SITEID",
         "DataType": "integer",
         "Length": null,
         "CodeListRef": null
       },
       {
-        "OID": "IT.STUDYID",
+        "OID": "IT.DM.STUDYID",
         "Name": "STUDYID",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       },
       {
-        "OID": "IT.USUBJID",
+        "OID": "IT.DM.USUBJID",
         "Name": "USUBJID",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null
       }
     ],
-    "CodeLists": [],
+    "CodeLists": [
+      {
+        "OID": "CL.SEX",
+        "Name": "Sex",
+        "DataType": "text",
+        "Items": [
+          {
+            "CodedValue": "M",
+            "Decode": "Male"
+          },
+          {
+            "CodedValue": "F",
+            "Decode": "Female"
+          }
+        ]
+      },
+      {
+        "OID": "CL.ETHNIC",
+        "Name": "Ethnicity",
+        "DataType": "text",
+        "Items": [
+          {
+            "CodedValue": "HISPANIC OR LATINO",
+            "Decode": "Hispanic or Latino"
+          },
+          {
+            "CodedValue": "NOT HISPANIC OR LATINO",
+            "Decode": "Not Hispanic or Latino"
+          }
+        ]
+      }
+    ],
     "ItemGroupDefs": [
       {
         "OID": "FORM.DM",
@@ -203,137 +234,137 @@
         "Repeating": "No",
         "ItemRefs": [
           {
-            "ItemOID": "IT.ACTARM",
+            "ItemOID": "IT.DM.ACTARM",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.ACTARMCD",
+            "ItemOID": "IT.DM.ACTARMCD",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.ARM",
+            "ItemOID": "IT.DM.ARM",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.ARMCD",
+            "ItemOID": "IT.DM.ARMCD",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.BRTHDTC",
+            "ItemOID": "IT.DM.BRTHDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.COUNTRY",
+            "ItemOID": "IT.DM.COUNTRY",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DTHDTC",
+            "ItemOID": "IT.DM.DTHDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DTHFL",
+            "ItemOID": "IT.DM.DTHFL",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DMDTC",
+            "ItemOID": "IT.DM.DMDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DOMAIN",
+            "ItemOID": "IT.DM.DOMAIN",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.ETHNIC",
+            "ItemOID": "IT.DM.ETHNIC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE",
+            "ItemOID": "IT.DM.RACE",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACEOTH",
+            "ItemOID": "IT.DM.RACEOTH",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE_AIAN",
+            "ItemOID": "IT.DM.RACE_AIAN",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE_ASIAN",
+            "ItemOID": "IT.DM.RACE_ASIAN",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE_BLACK",
+            "ItemOID": "IT.DM.RACE_BLACK",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE_NHPI",
+            "ItemOID": "IT.DM.RACE_NHPI",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE_OTHER",
+            "ItemOID": "IT.DM.RACE_OTHER",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RACE_WHITE",
+            "ItemOID": "IT.DM.RACE_WHITE",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RFENDTC",
+            "ItemOID": "IT.DM.RFENDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RFICDTC",
+            "ItemOID": "IT.DM.RFICDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RFPENDTC",
+            "ItemOID": "IT.DM.RFPENDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.RFSTDTC",
+            "ItemOID": "IT.DM.RFSTDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.SEX",
+            "ItemOID": "IT.DM.SEX",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.SITEID",
+            "ItemOID": "IT.DM.SITEID",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.STUDYID",
+            "ItemOID": "IT.DM.STUDYID",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.USUBJID",
+            "ItemOID": "IT.DM.USUBJID",
             "Mandatory": "Yes",
             "RepeatKey": null
           }
