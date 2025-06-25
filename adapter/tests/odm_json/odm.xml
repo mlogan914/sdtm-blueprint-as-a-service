@@ -1,113 +1,147 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v2.0" 
-	 ODMVersion="2.0" 
-	 FileOID="All-VEXIN-03-EDC-EXPORT"
-	 FileType="Snapshot"
-	 Granularity="All"
-	 Context="Exchange"
-	 Originator="Orginization"
-	 SourceSystem="Generic EDC"
-	 CreationDateTime="2025-06-20T21:15:45.283629">
-	<!-- Study – This element collects static structural information about an individual study -->
+<ODM xmlns="http://www.cdisc.org/ns/odm/v2.0"
+    ODMVersion="2.0"
+    FileOID="All-VEXIN-03-EDC-EXPORT"
+    FileType="Snapshot"
+    Granularity="All"
+    Context="Exchange"
+    Originator="Organization"
+    SourceSystem="Generic EDC"
+    CreationDateTime="2025-06-20T21:15:45.283629">
+    <!-- Study – This element collects static structural information about an individual study -->
     <Study OID="ST.VEXIN-03" StudyName="VEXIN-03" ProtocolName="VEXIN-PROT-001">
         <Description>
             <TranslatedText xml:lang="en" Type="text">Snapshot export</TranslatedText>
         </Description>
-    <!-- MetaDataVersion – Defines structure of CRF metadata -->
+        <!-- MetaDataVersion – Defines structure of CRF metadata -->
         <MetaDataVersion OID="MDV.2" Name="Example ODM Export">
-			<!-- StudyEventDef – defines visit/schedule -->
-            <StudyEventDef 
-                OID="SE.DEMOGRAPHICS" 
-                Name="Demographics" 
-                Repeating="No" 
-                Type="Scheduled" 
+            <!-- StudyEventDef – defines visit/schedule -->
+            <StudyEventDef
+                OID="SE.DEMOGRAPHICS"
+                Name="Demographics"
+                Repeating="No"
+                Type="Scheduled"
                 Category="Screening">
                 <!-- ItemGroupRef references an ItemGroupDef -->
-				<ItemGroupRef ItemGroupOID="FORM.DM" Mandatory="Yes" />
+                <ItemGroupRef ItemGroupOID="FORM.DM" Mandatory="Yes" />
             </StudyEventDef>
-			
-			<!-- ItemGroupDef – defines groupings of fields (e.g., each form) -->
-            <ItemGroupDef 
-				OID="FORM.DM" Name="Demographics" Repeating="No" Type="CRF" Domain="DM" DatasetName="DM"  Purpose="Tabulation">
-				
-				<Description>
-					<TranslatedText xml:lang="en" Type="text">Subject demographics</TranslatedText>
-				</Description>
-				
-				<Class Name="SPECIAL PURPOSE">
-					<!-- Optional: -->
-					<!-- <SubClass Name="" ParentClass=""></SubClass> -->
-				</Class>
-				
+
+            <!-- ItemGroupDef – defines groupings of fields (e.g., each form) -->
+            <ItemGroupDef
+                OID="FORM.DM"
+                Name="Demographics"
+                Repeating="No"
+                Type="CRF"
+                Domain="DM"
+                DatasetName="DM"
+                Purpose="Tabulation">
+
+                <Description>
+                    <TranslatedText xml:lang="en" Type="text">Subject demographics</TranslatedText>
+                </Description>
+
+                <Class Name="SPECIAL PURPOSE">
+                    <!-- Optional: -->
+                    <!-- <SubClass Name="" ParentClass=""></SubClass> -->
+                </Class>
+
                 <ItemRef ItemOID="IT.ACTARM" Mandatory="Yes" OrderNumber="25">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.ACTARMCD" Mandatory="Yes" OrderNumber="24">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.ARM" Mandatory="Yes" OrderNumber="23">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.ARMCD" Mandatory="Yes" OrderNumber="22">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.BRTHDTC" Mandatory="Yes" OrderNumber="11">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.COUNTRY" Mandatory="Yes" OrderNumber="26">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
-				<ItemRef ItemOID="IT.DTHDTC" Mandatory="Yes" OrderNumber="8">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
-				<ItemRef ItemOID="IT.DTHFL" Mandatory="Yes" OrderNumber="9">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
+                <ItemRef ItemOID="IT.DTHDTC" Mandatory="Yes" OrderNumber="8">
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
+                <ItemRef ItemOID="IT.DTHFL" Mandatory="Yes" OrderNumber="9">
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.DMDTC" Mandatory="Yes" OrderNumber="27">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.DOMAIN" Mandatory="Yes" OrderNumber="2">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.ETHNIC" Mandatory="Yes" OrderNumber="21">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE" Mandatory="Yes" OrderNumber="13">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACEOTH" Mandatory="Yes" OrderNumber="20">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE_AIAN" Mandatory="Yes" OrderNumber="18">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE_ASIAN" Mandatory="Yes" OrderNumber="16">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE_BLACK" Mandatory="Yes" OrderNumber="15">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE_NHPI" Mandatory="Yes" OrderNumber="17">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE_OTHER" Mandatory="Yes" OrderNumber="19">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RACE_WHITE" Mandatory="Yes" OrderNumber="14">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RFENDTC" Mandatory="Yes" OrderNumber="5">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>	
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RFICDTC" Mandatory="Yes" OrderNumber="6">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RFPENDTC" Mandatory="Yes" OrderNumber="7">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.RFSTDTC" Mandatory="Yes" OrderNumber="4">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.SEX" Mandatory="Yes" OrderNumber="12">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.SITEID" Mandatory="Yes" OrderNumber="10">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
-                <ItemRef ItemOID="IT.STUDYID" Mandatory="Yes" OrderNumber="1" >
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
+                <ItemRef ItemOID="IT.STUDYID" Mandatory="Yes" OrderNumber="1">
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
                 <ItemRef ItemOID="IT.USUBJID" Mandatory="Yes" OrderNumber="3">
-                    <Origin Type="Collected" Source="Sponsor"></Origin></ItemRef>
+                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                </ItemRef>
             </ItemGroupDef>
-			<!-- ItemDef – defines each field-->
-            <ItemDef OID="IT.ACTARM" Name="ACTARM" DataType="text" Length='200'/>
-            <ItemDef OID="IT.ACTARMCD" Name="ACTARMCD" DataType="text" Length='200'/>
-            <ItemDef OID="IT.ARM" Name="ARM" DataType="text" Length='200'/>
-            <ItemDef OID="IT.ARMCD" Name="ARMCD" DataType="text" Length='200'/>
+
+            <!-- ItemDef – defines each field-->
+            <ItemDef OID="IT.ACTARM" Name="ACTARM" DataType="text" Length='200' />
+            <ItemDef OID="IT.ACTARMCD" Name="ACTARMCD" DataType="text" Length='200' />
+            <ItemDef OID="IT.ARM" Name="ARM" DataType="text" Length='200' />
+            <ItemDef OID="IT.ARMCD" Name="ARMCD" DataType="text" Length='200' />
             <ItemDef OID="IT.BRTHDTC" Name="BRTHDTC" DataType="date" />
-            <ItemDef OID="IT.COUNTRY" Name="COUNTRY" DataType="text" Length='200'/>
-			<ItemDef OID="IT.DTHDTC" Name="DTHDTC" DataType="text" Length='200'/>
-			<ItemDef OID="IT.DTHFL" Name="DTHFL" DataType="text" Length='1'/>
+            <ItemDef OID="IT.COUNTRY" Name="COUNTRY" DataType="text" Length='200' />
+            <ItemDef OID="IT.DTHDTC" Name="DTHDTC" DataType="text" Length='200' />
+            <ItemDef OID="IT.DTHFL" Name="DTHFL" DataType="text" Length='1' />
             <ItemDef OID="IT.DMDTC" Name="DMDTC" DataType="date" />
-            <ItemDef OID="IT.DOMAIN" Name="DOMAIN" DataType="text" Length='200'/>
-            <ItemDef OID="IT.ETHNIC" Name="ETHNIC" DataType="text" Length='200'/>
-            <ItemDef OID="IT.RACE" Name="RACE" DataType="text" Length='200'/>
-            <ItemDef OID="IT.RACEOTH" Name="RACEOTH" DataType="text" Length='200'/>
+            <ItemDef OID="IT.DOMAIN" Name="DOMAIN" DataType="text" Length='200' />
+            <ItemDef OID="IT.ETHNIC" Name="ETHNIC" DataType="text" Length='200' />
+            <ItemDef OID="IT.RACE" Name="RACE" DataType="text" Length='200' />
+            <ItemDef OID="IT.RACEOTH" Name="RACEOTH" DataType="text" Length='200' />
             <ItemDef OID="IT.RACE_AIAN" Name="RACE_AIAN" DataType="integer" />
             <ItemDef OID="IT.RACE_ASIAN" Name="RACE_ASIAN" DataType="integer" />
             <ItemDef OID="IT.RACE_BLACK" Name="RACE_BLACK" DataType="integer" />
@@ -118,13 +152,14 @@
             <ItemDef OID="IT.RFICDTC" Name="RFICDTC" DataType="date" />
             <ItemDef OID="IT.RFPENDTC" Name="RFPENDTC" DataType="date" />
             <ItemDef OID="IT.RFSTDTC" Name="RFSTDTC" DataType="date" />
-            <ItemDef OID="IT.SEX" Name="SEX" DataType="text" Length='200'/>
+            <ItemDef OID="IT.SEX" Name="SEX" DataType="text" Length='200' />
             <ItemDef OID="IT.SITEID" Name="SITEID" DataType="integer" />
-            <ItemDef OID="IT.STUDYID" Name="STUDYID" DataType="text" Length='200'/>
-            <ItemDef OID="IT.USUBJID" Name="USUBJID" DataType="text" Length='200'/>
+            <ItemDef OID="IT.STUDYID" Name="STUDYID" DataType="text" Length='200' />
+            <ItemDef OID="IT.USUBJID" Name="USUBJID" DataType="text" Length='200' />
         </MetaDataVersion>
     </Study>
-	<!-- ClinicalData – Where subject-level data lives -->
+
+    <!-- ClinicalData – Where subject-level data lives -->
     <ClinicalData StudyOID="ST.VEXIN-03" MetaDataVersionOID="MDV.1">
         <SubjectData SubjectKey="01-99163">
             <StudyEventData StudyEventOID="SE.SCREENING">
