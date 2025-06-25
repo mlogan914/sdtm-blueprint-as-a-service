@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODM
+    xmlns="http://www.cdisc.org/ns/odm/v2.0"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    FileType=""
+    Granularity=""
+    Context=""
+    FileOID=""
+    CreationDateTime="2023-08-23T00:00:00"
+    PriorFileOID=""
+    AsOfDateTime="2023-08-23T00:00:00"
+    ODMVersion="2.0"
+    Originator="CDISC Data Exchange Standards ODM v2.0 Team"
+    SourceSystem=""
+    SourceSystemVersion="">
+    <Description>
+        <TranslatedText xml:lang="" Type="">
+            <xhtml:div>CDISC ODM v2.0 Template</xhtml:div>
+        </TranslatedText>
+    </Description>
+    <Study OID="" StudyName="" ProtocolName="" VersionId="" VersionName="" Status="">
+        <Description>
+            <TranslatedText xml:lang="" Type="">
+                <xhtml:div> </xhtml:div>
+            </TranslatedText>
+        </Description>
+        <MetaDataVersion OID="" Name="" CommentOID="">
+            <Description>
+                <TranslatedText xml:lang="" Type="">
+                    <xhtml:div> </xhtml:div>
+                </TranslatedText>
+            </Description>
+            <Include StudyOID="" MetaDataVersionOID="" href=""> </Include>
+            <Standards>
+                <Standard OID="" Name="" Type="" PublishingSet="" Version="" Status="Draft" CommentOID=""> </Standard>
+            </Standards>
+            <AnnotatedCRF>
+                <DocumentRef LeafID="">
+                    <PDFPageRef PageRefs="" FirstPage="" LastPage="" Type="" Title=""/>
+                </DocumentRef>
+            </AnnotatedCRF>
+            <SupplementalDoc>
+                <DocumentRef LeafID="">
+                    <PDFPageRef PageRefs="" FirstPage="" LastPage="" Type="" Title=""/>
+                </DocumentRef>
+            </SupplementalDoc>
+            <ValueListDef OID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <ItemRef ItemOID="" KeySequence="" IsNonStandard="" HasNoData="" MethodOID=""
+                    UnitsItemOID="" Repeat="" Other="" Role="" RoleCodeListOID="" OrderNumber=""
+                    Mandatory="" CollectionExceptionConditionOID="" PreSpecifiedValue="" Core="">
+                    <Origin Type="" Source=""> </Origin>
+                    <WhereClauseRef WhereClauseOID=""> </WhereClauseRef>
+                </ItemRef>
+            </ValueListDef>
+            <WhereClauseDef OID="" CommentOID="">
+                <RangeCheck Comparator="" SoftHard="" ItemOID="">
+                    <CheckValue/>
+                    <!--
+                    <MethodSignature> </MethodSignature>
+                    <FormalExpression Context="">
+                        <Code></Code>
+                    </FormalExpression>
+                    -->
+                    <ErrorMessage>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </ErrorMessage>
+                </RangeCheck>
+            </WhereClauseDef>
+            <Protocol>
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <StudySummary>
+                    <StudyParameter OID="" Term="" ShortName="">
+                        <ParameterValue Value="">
+                            <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""/>
+                        </ParameterValue>
+                    </StudyParameter>
+                </StudySummary>
+                <StudyStructure>
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                    <Arm OID="" Name="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""/>
+                        </Description>
+                        <WorkflowRef WorkflowOID=""/>
+                    </Arm>
+                    <Epoch OID="" Name="" SequenceNumber="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""/>
+                        </Description>
+                    </Epoch>
+                    <WorkflowRef WorkflowOID=""> </WorkflowRef>
+                </StudyStructure>
+                <TrialPhase Value="">
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                </TrialPhase>
+                <StudyTimings>
+                    <StudyTiming OID="" Name="">
+                        <AbsoluteTimingConstraint OID="" Name="" StudyEventGroupOID=""
+                            StudyEventOID="" TimepointTarget="" TimepointPreWindow=""
+                            TimepointPostWindow=""/>
+                        <RelativeTimingConstraint OID="" Name="" Type="" PredecessorOID=""
+                            SuccessorOID="" TimepointRelativeTarget="" TimepointPreWindow=""
+                            TimepointPostWindow=""/>
+                        <TransitionTimingConstraint OID="" Name="" TransitionOID="" MethodOID=""
+                            Type="" TimepointPostWindow="" TimepointPreWindow="" TimepointTarget=""/>
+                        <DurationTimingConstraint OID="" Name="" DurationPostWindow=""
+                            DurationPreWindow="" DurationTarget="" StructuralElementOID=""/>
+                    </StudyTiming>
+                </StudyTimings>
+                <StudyIndications>
+                    <StudyIndication OID="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                        </Description>
+                        <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""/>
+                    </StudyIndication>
+                </StudyIndications>
+                <StudyInterventions>
+                    <StudyIntervention OID="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                        </Description>
+                        <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""/>
+                    </StudyIntervention>
+                </StudyInterventions>
+                <StudyObjectives>
+                    <StudyObjective OID="" Name="" Type="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                        </Description>
+                        <StudyEndPointRef StudyEndPointOID="" OrderNumber=""/>
+                    </StudyObjective>
+                </StudyObjectives>
+                <StudyEndPoints>
+                    <StudyEndPoint OID="" Name="" Type="" Level="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                        </Description>
+                        <FormalExpression Context="">
+                            <Code/>
+                            <!--                       
+                            <ExternalCodeLib Library="" Method="" Version="" ref="" href=""/>
+                        -->
+                        </FormalExpression>
+                    </StudyEndPoint>
+                </StudyEndPoints>
+                <StudyTargetPopulation OID="" Name="">
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <FormalExpression Context="">
+                        <Code/>
+                        <!--                       
+                            <ExternalCodeLib Library="" Method="" Version="" ref="" href=""/>
+                        -->
+                    </FormalExpression>
+                </StudyTargetPopulation>
+                <StudyEstimands>
+                    <StudyEstimand OID="" Name="">
+                        <Description>
+                            <TranslatedText xml:lang="" Type=""/>
+                        </Description>
+                        <StudyTargetPopulationRef StudyTargetPopulationOID=""/>
+                        <StudyInterventionRef StudyInterventionOID=""/>
+                        <StudyEndPointRef StudyEndPointOID="" OrderNumber=""/>
+                        <IntercurrentEvent>
+                            <Description>
+                                <TranslatedText xml:lang="" Type=""/>
+                            </Description>
+                        </IntercurrentEvent>
+                        <SummaryMeasure>
+                            <Description>
+                                <TranslatedText xml:lang="" Type=""/>
+                            </Description>
+                        </SummaryMeasure>
+                    </StudyEstimand>
+                </StudyEstimands>
+                <InclusionExclusionCriteria>
+                    <InclusionCriteria>
+                        <Criterion OID="" Name="" ConditionOID="">
+                            <Description>
+                                <TranslatedText xml:lang="" Type=""/>
+                            </Description>
+                            <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                        </Criterion>
+                    </InclusionCriteria>
+                    <ExclusionCriteria>
+                        <Criterion OID="" Name="" ConditionOID="">
+                            <Description>
+                                <TranslatedText xml:lang="" Type=""/>
+                            </Description>
+                            <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                       </Criterion>
+                     </ExclusionCriteria>
+                </InclusionExclusionCriteria>
+                <StudyEventGroupRef StudyEventGroupOID="" OrderNumber="" Mandatory=""
+                    CollectionExceptionConditionOID="">
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                </StudyEventGroupRef>
+                <WorkflowRef WorkflowOID=""> </WorkflowRef>
+                <Alias Context="" Name=""> </Alias>
+            </Protocol>
+            <WorkflowDef OID="" Name="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <WorkflowStart StartOID=""> </WorkflowStart>
+                <Transition OID="" Name="" SourceOID="" TargetOID="" StartConditionOID=""
+                    EndConditionOID=""> </Transition>
+                <Branching OID="" Name="" Type="">
+                    <TargetTransition TargetTransitionOID="" ConditionOID=""> </TargetTransition>
+                    <DefaultTransition TargetTransitionOID=""> </DefaultTransition>
+                </Branching>
+                <WorkflowEnd EndOID=""/>
+            </WorkflowDef>
+            <StudyEventGroupDef OID="" Name="" ArmOID="" EpochOID="" CommentOID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <StudyEventGroupRef StudyEventGroupOID="" OrderNumber="" Mandatory=""
+                    CollectionExceptionConditionOID="">
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                </StudyEventGroupRef>
+                <StudyEventRef StudyEventOID="" OrderNumber="" Mandatory=""
+                    CollectionExceptionConditionOID=""> </StudyEventRef>
+                <WorkflowRef WorkflowOID=""> </WorkflowRef>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+            </StudyEventGroupDef>
+            <StudyEventDef OID="" Name="" Repeating="" Type="" Category="" CommentOID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <ItemGroupRef ItemGroupOID="" MethodOID="" OrderNumber="" Mandatory=""
+                    CollectionExceptionConditionOID=""> </ItemGroupRef>
+                <WorkflowRef WorkflowOID=""> </WorkflowRef>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <Alias Context="" Name=""> </Alias>
+            </StudyEventDef>
+            <ItemGroupDef OID="" Name="" Repeating="" RepeatingLimit="" IsReferenceData=""
+                Structure="" ArchiveLocationID="" DatasetName="" Domain="" Type="" Purpose=""
+                StandardOID="" IsNonStandard="" HasNoData="" CommentOID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <Class Name="">
+                    <SubClass Name="" ParentClass=""/>
+                </Class>
+                <ItemGroupRef ItemGroupOID="" MethodOID="" OrderNumber="" Mandatory=""
+                    CollectionExceptionConditionOID=""> </ItemGroupRef>
+                <ItemRef ItemOID="" KeySequence="" IsNonStandard="" HasNoData="" MethodOID=""
+                    UnitsItemOID="" Repeat="" Other="" Role="" RoleCodeListOID="" OrderNumber=""
+                    Mandatory="" CollectionExceptionConditionOID="" PreSpecifiedValue="" Core="">
+                    <Origin Type="" Source=""> </Origin>
+                    <WhereClauseRef WhereClauseOID=""> </WhereClauseRef>
+                </ItemRef>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <WorkflowRef WorkflowOID=""> </WorkflowRef>
+                <Origin Type="" Source="">
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                    <SourceItems>
+                        <SourceItem ItemOID="" ItemGroupOID="" MetaDataVersionOID="" StudyOID=""
+                            LeafID="" Name="">
+                            <Resource Type="" Name="" Attribute="" Label="">
+                                <Selection Path=""/>
+                            </Resource>
+                        </SourceItem>
+                    </SourceItems>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <DocumentRef LeafID=""> </DocumentRef>
+                </Origin>
+                <Alias Context="" Name=""> </Alias>
+                <Leaf ID="" xlink:href="">
+                    <Title> </Title>
+                </Leaf>
+            </ItemGroupDef>
+            <ItemDef OID="" Name="" DataType="" Length="" DisplayFormat="" CommentOID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Question>
+                <Prompt>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Prompt>
+                <CRFCompletionInstructions >
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </CRFCompletionInstructions >
+                <ImplementationNotes >
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </ImplementationNotes >
+                <Definition>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Definition>
+                <VariableSet >
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </VariableSet >
+                <CDISCNotes >
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </CDISCNotes >
+                <RangeCheck Comparator="" SoftHard="" ItemOID="">
+                    <CheckValue/>
+                    <!--                   
+                        <MethodSignature>
+                        </MethodSignature>
+                        <FormalExpression Context="">
+                          <Code></Code>
+                        </FormalExpression>
+                    -->
+                    <ErrorMessage>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </ErrorMessage>
+                </RangeCheck>
+                <CodeListRef CodeListOID=""> </CodeListRef>
+                <ValueListRef ValueListOID=""> </ValueListRef>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <Alias Context="" Name=""> </Alias>
+            </ItemDef>
+            <CodeList OID="" Name="" DataType="" CommentOID="" StandardOID="" IsNonStandard="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <CodeListItem CodedValue="" Rank="" Other="" OrderNumber="" ExtendedValue=""
+                    CommentOID="">
+                    <Description>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Description>
+                    <Decode>
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Decode>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <Alias Context="" Name=""> </Alias>
+                </CodeListItem>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <Alias Context="" Name=""> </Alias>
+            </CodeList>
+            <ConditionDef OID="" Name="" CommentOID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <MethodSignature>
+                    <Parameter Name="" DataType="" Definition="" OrderNumber=""> </Parameter>
+                    <ReturnValue Name="" DataType="" Definition="" OrderNumber=""> </ReturnValue>
+                </MethodSignature>
+                <FormalExpression Context="">
+                    <Code/>
+                    <!--
+                        <ExternalCodeLib Library="" Method="" Version="" ref="" href=""/>
+                    -->
+                </FormalExpression>
+                <Alias Context="" Name=""> </Alias>
+            </ConditionDef>
+            <MethodDef OID="" Name="" Type="" CommentOID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <MethodSignature>
+                    <Parameter Name="" DataType="" Definition="" OrderNumber=""> </Parameter>
+                    <ReturnValue Name="" DataType="" Definition="" OrderNumber=""> </ReturnValue>
+                </MethodSignature>
+                <FormalExpression Context="">
+                    <Code/>
+                    <!--
+                        <ExternalCodeLib Library="" Method="" Version="" ref="" href=""/>
+                    -->
+                </FormalExpression>
+                <Alias Context="" Name=""> </Alias>
+                <DocumentRef LeafID="">
+                    <PDFPageRef PageRefs="" FirstPage="" LastPage="" Type="" Title=""/>
+                </DocumentRef>
+            </MethodDef>
+            <CommentDef OID="">
+                <Description>
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Description>
+                <DocumentRef LeafID="">
+                    <PDFPageRef PageRefs="" FirstPage="" LastPage="" Type="" Title=""/>
+                </DocumentRef>
+            </CommentDef>
+            <Leaf ID="" xlink:href="">
+                <title> </title>
+            </Leaf>
+        </MetaDataVersion>
+    </Study>
+    <AdminData StudyOID="">
+        <User OID="" UserType="" OrganizationOID="" LocationOID="">
+            <UserName/>
+            <Prefix/>
+            <Suffix/>
+            <FullName/>
+            <GivenName/>
+            <FamilyName/>
+            <Image ImageFileName="" href="" MimeType=""> </Image>
+            <Address>
+                <StreetName/>
+                <HouseNumber/>
+                <City/>
+                <StateProv/>
+                <Country/>
+                <PostalCode/>
+                <GeoPosition Longitude="" Latitude="" Altitude=""> </GeoPosition>
+                <OtherText/>
+            </Address>
+            <Telecom TelecomType="" Value=""> </Telecom>
+        </User>
+        <Organization OID="" Name="" Role="" Type="" LocationOID="" PartOfOrganizationOID="">
+            <Description>
+                <TranslatedText xml:lang="" Type="">
+                    <xhtml:div> </xhtml:div>
+                </TranslatedText>
+            </Description>
+            <Address>
+                <StreetName/>
+                <HouseNumber/>
+                <City/>
+                <StateProv/>
+                <Country/>
+                <PostalCode/>
+                <GeoPosition Longitude="" Latitude="" Altitude=""> </GeoPosition>
+                <OtherText/>
+            </Address>
+            <Telecom TelecomType="" Value=""> </Telecom>
+        </Organization>
+        <Location OID="" Name="" Role="" OrganizationOID="">
+            <Description>
+                <TranslatedText xml:lang="" Type="">
+                    <xhtml:div> </xhtml:div>
+                </TranslatedText>
+            </Description>
+            <MetaDataVersionRef StudyOID="" MetaDataVersionOID="" EffectiveDate=""> </MetaDataVersionRef>
+            <Address>
+                <StreetName/>
+                <HouseNumber/>
+                <City/>
+                <StateProv/>
+                <Country/>
+                <PostalCode/>
+                <GeoPosition Longitude="" Latitude="" Altitude=""> </GeoPosition>
+                <OtherText/>
+            </Address>
+            <Telecom TelecomType="" Value=""> </Telecom>
+            <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                <Value SeqNum=""/>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+            </Query>
+        </Location>
+        <SignatureDef OID="" Methodology="">
+            <Meaning/>
+            <LegalReason/>
+        </SignatureDef>
+    </AdminData>
+    <ReferenceData StudyOID="" MetaDataVersionOID="">
+        <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType="" ItemGroupDataSeq="">
+            <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType=""
+                ItemGroupDataSeq="">
+                <ItemData ItemOID="" TransactionType="" IsNull="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                    <Signature ID="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <SignatureRef SignatureOID=""> </SignatureRef>
+                        <DateTimeStamp/>
+                    </Signature>
+                    <Annotation SeqNum="" TransactionType="" ID=""> </Annotation>
+                    <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                        <Value SeqNum=""/>
+                    </Query>
+                </ItemData>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+                <Signature ID="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <SignatureRef SignatureOID=""> </SignatureRef>
+                    <DateTimeStamp/>
+                </Signature>
+                <Annotation SeqNum="" TransactionType="" ID="">
+                    <Comment SponsorOrSite="">
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Comment>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <Flag>
+                        <FlagValue CodeListOID=""/>
+                    </Flag>
+                </Annotation>
+                <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                </Query>
+            </ItemGroupData>
+            <ItemData ItemOID="" TransactionType="" IsNull="">
+                <Value SeqNum=""/>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+                <Signature ID="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <SignatureRef SignatureOID=""> </SignatureRef>
+                    <DateTimeStamp/>
+                </Signature>
+                <Annotation SeqNum="" TransactionType="" ID="">
+                    <Comment SponsorOrSite="">
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Comment>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <Flag>
+                        <FlagValue CodeListOID=""/>
+                    </Flag>
+                </Annotation>
+                <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                </Query>
+            </ItemData>
+            <AuditRecord EditPoint="" UsedMethod="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <DateTimeStamp/>
+                <ReasonForChange/>
+                <SourceID/>
+            </AuditRecord>
+            <Signature ID="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <SignatureRef SignatureOID=""> </SignatureRef>
+                <DateTimeStamp/>
+            </Signature>
+            <Annotation SeqNum="" TransactionType="" ID="">
+                <Comment SponsorOrSite="">
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Comment>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <Flag>
+                    <FlagValue CodeListOID=""/>
+                    <FlagType CodeListOID=""/>
+                </Flag>
+            </Annotation>
+            <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                <Value SeqNum=""/>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+            </Query>
+        </ItemGroupData>
+        <AuditRecord EditPoint="" UsedMethod="">
+            <UserRef UserOID=""> </UserRef>
+            <LocationRef LocationOID=""> </LocationRef>
+            <DateTimeStamp/>
+            <ReasonForChange/>
+            <SourceID/>
+        </AuditRecord>
+        <Signature ID="">
+            <UserRef UserOID=""> </UserRef>
+            <LocationRef LocationOID=""> </LocationRef>
+            <SignatureRef SignatureOID=""> </SignatureRef>
+            <DateTimeStamp/>
+        </Signature>
+        <Annotation SeqNum="" TransactionType="" ID="">
+            <Comment SponsorOrSite="">
+                <TranslatedText xml:lang="" Type="">
+                    <xhtml:div> </xhtml:div>
+                </TranslatedText>
+            </Comment>
+            <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+            <Flag>
+                <FlagValue CodeListOID=""/>
+                <FlagType CodeListOID=""/>
+            </Flag>
+        </Annotation>
+    </ReferenceData>
+    <ClinicalData StudyOID="" MetaDataVersionOID="">
+        <SubjectData SubjectKey="" TransactionType="">
+            <InvestigatorRef UserOID=""> </InvestigatorRef>
+            <SiteRef LocationOID=""> </SiteRef>
+            <StudyEventData StudyEventOID="" StudyEventRepeatKey="" TransactionType="">
+                <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType=""
+                    ItemGroupDataSeq="">
+                    <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType=""
+                        ItemGroupDataSeq=""> </ItemGroupData>
+                    <ItemData ItemOID="" TransactionType="" IsNull=""> </ItemData>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                    <Signature ID="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <SignatureRef SignatureOID=""> </SignatureRef>
+                        <DateTimeStamp/>
+                    </Signature>
+                    <Annotation SeqNum="" TransactionType="" ID=""> </Annotation>
+                    <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                        <Value SeqNum=""/>
+                    </Query>
+                </ItemGroupData>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+                <Signature ID="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <SignatureRef SignatureOID=""> </SignatureRef>
+                    <DateTimeStamp/>
+                </Signature>
+                <Annotation SeqNum="" TransactionType="" ID="">
+                    <Comment SponsorOrSite="">
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Comment>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <Flag>
+                        <FlagValue CodeListOID=""/>
+                    </Flag>
+                </Annotation>
+                <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                </Query>
+            </StudyEventData>
+            <AuditRecord EditPoint="" UsedMethod="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <DateTimeStamp/>
+                <ReasonForChange/>
+                <SourceID/>
+            </AuditRecord>
+            <Signature ID="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <SignatureRef SignatureOID=""> </SignatureRef>
+                <DateTimeStamp/>
+            </Signature>
+            <Annotation SeqNum="" TransactionType="" ID="">
+                <Comment SponsorOrSite="">
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Comment>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <Flag>
+                    <FlagValue CodeListOID=""/>
+                    <FlagType CodeListOID=""/>
+                </Flag>
+            </Annotation>
+            <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                <Value SeqNum=""/>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+            </Query>
+        </SubjectData>
+        <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType="" ItemGroupDataSeq="">
+            <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType=""
+                ItemGroupDataSeq="">
+                <ItemData ItemOID="" TransactionType="" IsNull="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                    <Signature ID="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <SignatureRef SignatureOID=""> </SignatureRef>
+                        <DateTimeStamp/>
+                    </Signature>
+                    <Annotation SeqNum="" TransactionType="" ID=""> </Annotation>
+                    <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                        <Value SeqNum=""/>
+                    </Query>
+                </ItemData>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+                <Signature ID="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <SignatureRef SignatureOID=""> </SignatureRef>
+                    <DateTimeStamp/>
+                </Signature>
+                <Annotation SeqNum="" TransactionType="" ID="">
+                    <Comment SponsorOrSite="">
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Comment>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <Flag>
+                        <FlagValue CodeListOID=""/>
+                    </Flag>
+                </Annotation>
+                <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                </Query>
+            </ItemGroupData>
+            <ItemData ItemOID="" TransactionType="" IsNull="">
+                <Value SeqNum=""/>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+                <Signature ID="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <SignatureRef SignatureOID=""> </SignatureRef>
+                    <DateTimeStamp/>
+                </Signature>
+                <Annotation SeqNum="" TransactionType="" ID="">
+                    <Comment SponsorOrSite="">
+                        <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                    </Comment>
+                    <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                    <Flag>
+                        <FlagValue CodeListOID=""/>
+                    </Flag>
+                </Annotation>
+                <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                    <Value SeqNum=""/>
+                    <AuditRecord EditPoint="" UsedMethod="">
+                        <UserRef UserOID=""> </UserRef>
+                        <LocationRef LocationOID=""> </LocationRef>
+                        <DateTimeStamp/>
+                    </AuditRecord>
+                </Query>
+            </ItemData>
+            <AuditRecord EditPoint="" UsedMethod="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <DateTimeStamp/>
+                <ReasonForChange/>
+                <SourceID/>
+            </AuditRecord>
+            <Signature ID="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <SignatureRef SignatureOID=""> </SignatureRef>
+                <DateTimeStamp/>
+            </Signature>
+            <Annotation SeqNum="" TransactionType="" ID="">
+                <Comment SponsorOrSite="">
+                    <TranslatedText xml:lang="" Type=""> </TranslatedText>
+                </Comment>
+                <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+                <Flag>
+                    <FlagValue CodeListOID=""/>
+                    <FlagType CodeListOID=""/>
+                </Flag>
+            </Annotation>
+            <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+                <Value SeqNum=""/>
+                <AuditRecord EditPoint="" UsedMethod="">
+                    <UserRef UserOID=""> </UserRef>
+                    <LocationRef LocationOID=""> </LocationRef>
+                    <DateTimeStamp/>
+                    <ReasonForChange/>
+                    <SourceID/>
+                </AuditRecord>
+            </Query>
+        </ItemGroupData>
+        <AuditRecord EditPoint="" UsedMethod="">
+            <UserRef UserOID=""> </UserRef>
+            <LocationRef LocationOID=""> </LocationRef>
+            <DateTimeStamp/>
+            <ReasonForChange/>
+            <SourceID/>
+        </AuditRecord>
+        <Signature ID="">
+            <UserRef UserOID=""> </UserRef>
+            <LocationRef LocationOID=""> </LocationRef>
+            <SignatureRef SignatureOID=""> </SignatureRef>
+            <DateTimeStamp/>
+        </Signature>
+        <Annotation SeqNum="" TransactionType="" ID="">
+            <Comment SponsorOrSite="">
+                <TranslatedText xml:lang="" Type="">
+                    <xhtml:div> </xhtml:div>
+                </TranslatedText>
+            </Comment>
+            <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+            <Flag>
+                <FlagValue CodeListOID=""/>
+                <FlagType CodeListOID=""/>
+            </Flag>
+        </Annotation>
+        <Query OID="" Source="" Target="" Type="" State="" LastUpdateDatetime="" Name="">
+            <Value SeqNum=""/>
+            <AuditRecord EditPoint="" UsedMethod="">
+                <UserRef UserOID=""> </UserRef>
+                <LocationRef LocationOID=""> </LocationRef>
+                <DateTimeStamp/>
+                <ReasonForChange/>
+                <SourceID/>
+            </AuditRecord>
+        </Query>
+    </ClinicalData>
+    <Association StudyOID="" MetaDataVersionOID="">
+        <KeySet StudyOID="" SubjectKey="" MetaDataVersionOID="" StudyEventOID=""
+            StudyEventRepeatKey="" ItemGroupOID="" ItemGroupRepeatKey="" ItemOID=""> </KeySet>
+        <KeySet StudyOID="" SubjectKey="" MetaDataVersionOID="" StudyEventOID=""
+            StudyEventRepeatKey="" ItemGroupOID="" ItemGroupRepeatKey="" ItemOID=""> </KeySet>
+        <Annotation SeqNum="" TransactionType="" ID="">
+            <Comment SponsorOrSite="">
+                <TranslatedText xml:lang="" Type="">
+                    <xhtml:div> </xhtml:div>
+                </TranslatedText>
+            </Comment>
+            <Coding Code="" System="" SystemName="" SystemVersion="" Label="" href="" ref="" CommentOID=""> </Coding>
+            <Flag>
+                <FlagValue CodeListOID=""/>
+                <FlagType CodeListOID=""/>
+            </Flag>
+        </Annotation>
+    </Association>
+</ODM>
