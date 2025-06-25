@@ -1,35 +1,35 @@
 {
   "StudyOID": "ST.VEXIN-03",
   "MetaDataVersion": {
-    "OID": "MDV.1",
-    "Name": "Example Metadata",
+    "OID": "MDV.2",
+    "Name": "Example ODM Export",
     "ItemDefs": [
       {
         "OID": "IT.ACTARM",
         "Name": "ACTARM",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.ACTARMCD",
         "Name": "ACTARMCD",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.ARM",
         "Name": "ARM",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.ARMCD",
         "Name": "ARMCD",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
@@ -43,7 +43,21 @@
         "OID": "IT.COUNTRY",
         "Name": "COUNTRY",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.DTHDTC",
+        "Name": "DTHDTC",
+        "DataType": "text",
+        "Length": "200",
+        "CodeListRef": null
+      },
+      {
+        "OID": "IT.DTHFL",
+        "Name": "DTHFL",
+        "DataType": "text",
+        "Length": "1",
         "CodeListRef": null
       },
       {
@@ -57,28 +71,28 @@
         "OID": "IT.DOMAIN",
         "Name": "DOMAIN",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.ETHNIC",
         "Name": "ETHNIC",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.RACE",
         "Name": "RACE",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.RACEOTH",
         "Name": "RACEOTH",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
@@ -155,7 +169,7 @@
         "OID": "IT.SEX",
         "Name": "SEX",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
@@ -169,14 +183,14 @@
         "OID": "IT.STUDYID",
         "Name": "STUDYID",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       },
       {
         "OID": "IT.USUBJID",
         "Name": "USUBJID",
         "DataType": "text",
-        "Length": null,
+        "Length": "200",
         "CodeListRef": null
       }
     ],
@@ -184,133 +198,143 @@
     "ItemGroupDefs": [
       {
         "OID": "FORM.DM",
-        "Name": "DM",
-        "Type": "Tabular",
+        "Name": "Demographics",
+        "Type": "CRF",
         "Repeating": "No",
         "ItemRefs": [
           {
             "ItemOID": "IT.ACTARM",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.ACTARMCD",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.ARM",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.ARMCD",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.BRTHDTC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.COUNTRY",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DTHDTC",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DTHFL",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.DMDTC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.DOMAIN",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.ETHNIC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACEOTH",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE_AIAN",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE_ASIAN",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE_BLACK",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE_NHPI",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE_OTHER",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RACE_WHITE",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RFENDTC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RFICDTC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RFPENDTC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.RFSTDTC",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.SEX",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.SITEID",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.STUDYID",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           },
           {
             "ItemOID": "IT.USUBJID",
-            "Mandatory": "No",
+            "Mandatory": "Yes",
             "RepeatKey": null
           }
         ]
