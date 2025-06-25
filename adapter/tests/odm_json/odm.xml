@@ -1,15 +1,32 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v2.0"
-    ODMVersion="2.0"
-    FileOID="All-VEXIN-03-EDC-EXPORT"
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    +===========================================================================+
+    | Sample ODM-XML file created for testing the BaaS (Blueprint-as-a-Service) |
+    | pipeline. This mock includes only Study and Metadata definitions.         |
+    |                                                                           |
+    | Created by: Melanie Logan (mlogan914)                                     |
+    | Created on: 2025-06-25                                                    |
+    | Purpose   : Testing metadata-driven processing for SQL scaffolding        |
+    +===========================================================================+
+-->
+<ODM
+    xmlns="http://www.cdisc.org/ns/odm/v2.0"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     FileType="Snapshot"
-    Granularity="All"
+    Granularity="Metadata"
     Context="Exchange"
-    Originator="Organization"
-    SourceSystem="Generic EDC"
-    CreationDateTime="2025-06-20T21:15:45.283629">
+    FileOID="001-VEXIN-03-EDCEXP-20250620"
+    CreationDateTime="2025-06-20T21:15:45.283629"
+    PriorFileOID="000-VEXIN-03-EDCEXP-20250520"
+    AsOfDateTime="2025-06-20T21:15:45.283629"
+    ODMVersion="2.0"
+    Originator="Org-CDM-Clinical Data Systems"
+    SourceSystem="GenericEDC"
+    SourceSystemVersion="2.3.1">
     <!-- Study – This element collects static structural information about an individual study -->
-    <Study OID="ST.VEXIN-03" StudyName="VEXIN-03" ProtocolName="VEXIN-PROT-001">
+    <Study OID="ST.VEXIN-03" StudyName="VEXIN-03" ProtocolName="001-VEXIN-03-PROT">
         <Description>
             <TranslatedText xml:lang="en" Type="text">Snapshot export</TranslatedText>
         </Description>
@@ -37,7 +54,7 @@
                 Purpose="Tabulation">
 
                 <Description>
-                    <TranslatedText xml:lang="en" Type="text">Subject demographics</TranslatedText>
+                    <TranslatedText xml:lang="en" Type="text">Demographics</TranslatedText>
                 </Description>
 
                 <Class Name="SPECIAL PURPOSE">
