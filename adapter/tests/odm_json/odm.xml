@@ -98,7 +98,7 @@
                 <ItemRef ItemOID="IT.DM.RACE" Mandatory="Yes" OrderNumber="13">
                     <Origin Type="Collected" Source="Sponsor"></Origin>
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACEOTH" Mandatory="Yes" OrderNumber="20">
+                <ItemRef ItemOID="IT.SUPPDM.RACEOTH" Mandatory="Yes" OrderNumber="20">
                     <Origin Type="Collected" Source="Sponsor"></Origin>
                 </ItemRef>
                 <ItemRef ItemOID="IT.DM.RACE_AIAN" Mandatory="Yes" OrderNumber="18">
@@ -162,9 +162,9 @@
             <ItemDef OID="IT.DM.RACE" Name="RACE" DataType="text" Length='200'>
                 <Alias Context="SDTM" Name="RACE" />
             </ItemDef>
-            <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length='200'>
-                <Alias Context="SDTM" Name="RACE" />
-                <Alias Context="SDTM.SUPP" Name="SUPPDM.QVAL" />
+            <ItemDef OID="IT.SUPPDM.RACEOTH" Name="RACEOTH" DataType="text" Length='200'>
+                <Alias Context="Collected.Form" Name="DM" />
+                <Alias Context="SDTM" Name="SUPPDM.QVAL" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_AIAN" Name="RACE_AIAN" DataType="integer">
                 <Alias Context="SDTM" Name="RACE" />
@@ -1643,7 +1643,7 @@
                     <ItemData ItemOID="IT.DM.RACE_OTHER">
                         <Value>1</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RACEOTH">
+                    <ItemData ItemOID="IT.SUPPDM.RACEOTH">
                         <Value>Native Amazonian</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.ETHNIC">
@@ -2504,7 +2504,7 @@
                     <ItemData ItemOID="IT.DM.RACE_OTHER">
                         <Value>1</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RACEOTH">
+                    <ItemData ItemOID="IT.SUPPDM.RACEOTH">
                         <Value>Caribbean</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.ETHNIC">
