@@ -57,12 +57,22 @@ def parse_metadata(xml_path: Path) -> dict:
             "Name": item.attrib.get("Name"),
             "DataType": item.attrib.get("DataType"),
             "Length": item.attrib.get("Length"),
-            "CodeListRef": None
+            "CodeListRef": None,
+            "Aliases": []  # New field to hold Alias entries
         }
         cl_ref = item.find("odm:CodeListRef", NS)
         if cl_ref is not None:
             item_entry["CodeListRef"] = cl_ref.attrib.get("CodeListOID")
+
+        # New: Extract Alias elements
+        for alias in item.findall("odm:Alias", NS):
+            item_entry["Aliases"].append({
+                "Context": alias.attrib.get("Context"),
+                "Name": alias.attrib.get("Name")
+            })
+
         meta_json["MetaDataVersion"]["ItemDefs"].append(item_entry)
+
 
     # ----- CodeLists -----
     for cl in mdv.findall("odm:CodeList", NS):
