@@ -9,189 +9,260 @@
         "Name": "ACTARM",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.ACTARMCD",
         "Name": "ACTARMCD",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.ARM",
         "Name": "ARM",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.ARMCD",
         "Name": "ARMCD",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.BRTHDTC",
         "Name": "BRTHDTC",
         "DataType": "date",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.COUNTRY",
         "Name": "COUNTRY",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.DTHDTC",
         "Name": "DTHDTC",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.DTHFL",
         "Name": "DTHFL",
         "DataType": "text",
         "Length": "1",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.DMDTC",
         "Name": "DMDTC",
         "DataType": "date",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.DOMAIN",
         "Name": "DOMAIN",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.ETHNIC",
         "Name": "ETHNIC",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": "CL.ETHNIC"
+        "CodeListRef": "CL.ETHNIC",
+        "Aliases": []
       },
       {
         "OID": "IT.DM.RACE",
         "Name": "RACE",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACEOTH",
         "Name": "RACEOTH",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          },
+          {
+            "Context": "SDTM.SUPP",
+            "Name": "SUPPDM.QVAL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACE_AIAN",
         "Name": "RACE_AIAN",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACE_ASIAN",
         "Name": "RACE_ASIAN",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACE_BLACK",
         "Name": "RACE_BLACK",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACE_NHPI",
         "Name": "RACE_NHPI",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACE_OTHER",
         "Name": "RACE_OTHER",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACE_WHITE",
         "Name": "RACE_WHITE",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RFENDTC",
         "Name": "RFENDTC",
         "DataType": "date",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.RFICDTC",
         "Name": "RFICDTC",
         "DataType": "date",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.RFPENDTC",
         "Name": "RFPENDTC",
         "DataType": "date",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.RFSTDTC",
         "Name": "RFSTDTC",
         "DataType": "date",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.SEX",
         "Name": "SEX",
         "DataType": "text",
         "Length": "1",
-        "CodeListRef": "CL.SEX"
+        "CodeListRef": "CL.SEX",
+        "Aliases": []
       },
       {
         "OID": "IT.DM.SITEID",
         "Name": "SITEID",
         "DataType": "integer",
         "Length": null,
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.STUDYID",
         "Name": "STUDYID",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.USUBJID",
         "Name": "USUBJID",
         "DataType": "text",
         "Length": "200",
-        "CodeListRef": null
+        "CodeListRef": null,
+        "Aliases": []
       }
     ],
     "CodeLists": [
