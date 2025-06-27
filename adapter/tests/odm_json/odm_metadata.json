@@ -2,7 +2,7 @@
   "StudyOID": "ST.VEXIN-03",
   "MetaDataVersion": {
     "OID": "MDV.2",
-    "Name": "Example ODM Export",
+    "Name": "VEXIN-03 ODM Export",
     "ItemDefs": [
       {
         "OID": "IT.DM.ACTARM",
@@ -370,7 +370,6 @@
           }
         ]
       }
-    ],
-    "FormDefs": []
+    ]
   }
 }

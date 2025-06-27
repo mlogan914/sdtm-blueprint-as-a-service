@@ -31,7 +31,7 @@
             <TranslatedText xml:lang="en" Type="text">Snapshot export</TranslatedText>
         </Description>
         <!-- MetaDataVersion – Defines structure of CRF metadata -->
-        <MetaDataVersion OID="MDV.2" Name="Example ODM Export">
+        <MetaDataVersion OID="MDV.2" Name="VEXIN-03 ODM Export">
             <!-- StudyEventDef – defines visit/schedule -->
             <StudyEventDef
                 OID="SE.DEMOGRAPHICS"
@@ -158,23 +158,37 @@
             <ItemDef OID="IT.DM.DOMAIN" Name="DOMAIN" DataType="text" Length='200' />
             <ItemDef OID="IT.DM.ETHNIC" Name="ETHNIC" DataType="text" Length='200'>
                 <CodeListRef CodeListOID="CL.ETHNIC" />
-                <Alias Context="SDTM" Name="ETHNIC"/>
             </ItemDef>
-            <ItemDef OID="IT.DM.RACE" Name="RACE" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.RACE_AIAN" Name="RACE_AIAN" DataType="integer" />
-            <ItemDef OID="IT.DM.RACE_ASIAN" Name="RACE_ASIAN" DataType="integer" />
-            <ItemDef OID="IT.DM.RACE_BLACK" Name="RACE_BLACK" DataType="integer" />
-            <ItemDef OID="IT.DM.RACE_NHPI" Name="RACE_NHPI" DataType="integer" />
-            <ItemDef OID="IT.DM.RACE_OTHER" Name="RACE_OTHER" DataType="integer" />
-            <ItemDef OID="IT.DM.RACE_WHITE" Name="RACE_WHITE" DataType="integer" />
+            <ItemDef OID="IT.DM.RACE" Name="RACE" DataType="text" Length='200'>
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length='200'>
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACE_AIAN" Name="RACE_AIAN" DataType="integer">
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACE_ASIAN" Name="RACE_ASIAN" DataType="integer">
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACE_BLACK" Name="RACE_BLACK" DataType="integer">
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACE_NHPI" Name="RACE_NHPI" DataType="integer">
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACE_OTHER" Name="RACE_OTHER" DataType="integer">
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RACE_WHITE" Name="RACE_WHITE" DataType="integer">
+                <Alias Context="SDTM" Name="RACE" />
+            </ItemDef>
             <ItemDef OID="IT.DM.RFENDTC" Name="RFENDTC" DataType="date" />
             <ItemDef OID="IT.DM.RFICDTC" Name="RFICDTC" DataType="date" />
             <ItemDef OID="IT.DM.RFPENDTC" Name="RFPENDTC" DataType="date" />
             <ItemDef OID="IT.DM.RFSTDTC" Name="RFSTDTC" DataType="date" />
             <ItemDef OID="IT.DM.SEX" Name="SEX" DataType="text" Length='1'>
                 <CodeListRef CodeListOID="CL.SEX" />
-                <Alias Context="SDTM" Name="SEX"/>
             </ItemDef>
             <ItemDef OID="IT.DM.SITEID" Name="SITEID" DataType="integer" />
             <ItemDef OID="IT.DM.STUDYID" Name="STUDYID" DataType="text" Length='200' />
