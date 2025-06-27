@@ -47,7 +47,6 @@ def parse_metadata(xml_path: Path) -> dict:
             "ItemDefs": [],
             "CodeLists": [],
             "ItemGroupDefs": [],
-            "FormDefs": []
         }
     }
 
@@ -100,21 +99,6 @@ def parse_metadata(xml_path: Path) -> dict:
             })
         meta_json["MetaDataVersion"]["ItemGroupDefs"].append(ig_entry)
 
-    # ----- FormDefs -----
-    for fd in mdv.findall("odm:FormDef", NS):
-        fd_entry = {
-            "OID": fd.attrib.get("OID"),
-            "Name": fd.attrib.get("Name"),
-            "Repeating": fd.attrib.get("Repeating"),
-            "ItemGroupRefs": []
-        }
-        for igr in fd.findall("odm:ItemGroupRef", NS):
-            fd_entry["ItemGroupRefs"].append({
-                "ItemGroupOID": igr.attrib.get("ItemGroupOID"),
-                "Mandatory": igr.attrib.get("Mandatory")
-            })
-        meta_json["MetaDataVersion"]["FormDefs"].append(fd_entry)
-
     return meta_json
 
 
@@ -143,3 +127,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+## -- End of Program Code --##
