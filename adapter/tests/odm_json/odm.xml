@@ -22,7 +22,7 @@
     PriorFileOID="FILE.VEXIN03-UAT-EDCEXP-20250520"
     AsOfDateTime="2025-06-20T21:15:45.283629"
     ODMVersion="2.0"
-    Originator="Org-CDM-Clinical Data Systems"
+    Originator="Org-CDM-CDS"
     SourceSystem="ProtoEDC"
     SourceSystemVersion="2.3.1">
     <!-- Study – This element collects static structural information about an individual study -->
