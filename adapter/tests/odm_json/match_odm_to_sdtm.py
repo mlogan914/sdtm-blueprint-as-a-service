@@ -25,6 +25,7 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
     for item in item_defs:
         oid = item["OID"]
         name = item["Name"]
+        label = item.get("Label", "")
         aliases = item.get("Aliases", [])
 
         parts = oid.split(".")
@@ -34,40 +35,53 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
         match_key = (inferred_domain, inferred_var)
         match = sdtm_lookup.get(match_key)
         match_type = "OID" if match else None
+        mapping_type = "Direct"
+        alias_context = ""
+        alias_name = ""
+        alias_label = ""
 
-        # Fallback to alias if OID failed
+        for alias in aliases:
+            context = alias.get("Context")
+            alias_context = context
+            alias_name = alias.get("Name", "")
+            alias_label = alias.get("Label", label)
+
+            if context == "SDTM" and alias_name:
+                domain, var = (
+                    alias_name.split(".") if "." in alias_name else (inferred_domain, alias_name)
+                )
+                match = sdtm_lookup.get((domain, var))
+                if match:
+                    match_type = "Alias"
+                    mapping_type = "Custom"
+                    break
+
+            elif context == "SUPPQUAL" and alias_name:
+                match = sdtm_lookup.get((f"SUPP{inferred_domain}", "QVAL"))
+                if match:
+                    match_type = "Alias.SUPP"
+                    mapping_type = "SUPPQUAL"
+                    break
+
         if not match:
-            for alias in aliases:
-                context = alias.get("Context")
-                alias_name = alias.get("Name")
-
-                if context == "SDTM":
-                    if "." in alias_name:
-                        domain, var = alias_name.split(".")
-                    else:
-                        domain, var = inferred_domain, alias_name
-                    match = sdtm_lookup.get((domain, var))
-                    if match:
-                        match_type = "Alias"
-                        break
-
-                elif context == "SDTM.SUPP" and "SUPP" in alias_name:
-                    domain = alias_name.replace("SUPP", "").split(".")[0]
-                    match = sdtm_lookup.get((f"SUPP{domain}", "QVAL"))
-                    if match:
-                        match_type = "Alias.SUPP"
-                        break
+            mapping_type = "Unmatched"
 
         results.append({
             "ItemOID": oid,
             "ODM_Variable": name,
             "ODM_Domain": inferred_domain or "",
-            "Alias_Context": aliases[0]["Context"] if aliases else "",
-            "Alias_Name": aliases[0]["Name"] if aliases else "",
+            "Alias_Context": alias_context,
+            "Alias_Name": alias_name,
+            "Alias_Label": alias_label,
+            "Mapping_Type": mapping_type,
             "Match_Type": match_type if match else "Unmatched",
             "SDTM_Domain": match["SDTM_Domain"] if match else "",
             "SDTM_Variable": match["SDTM_Variable"] if match else "",
-            "SDTM_Label": match["SDTM_Label"] if match else ""
+            "SDTM_Label": match["SDTM_Label"] if match else "",
+            "QNAM": alias_name if mapping_type == "SUPPQUAL" else "",
+            "QLABEL": alias_label if mapping_type == "SUPPQUAL" else "",
+            "IDVAR": inferred_domain if mapping_type == "SUPPQUAL" else "",
+            "IDVARVAL": name if mapping_type == "SUPPQUAL" else ""
         })
 
     return results

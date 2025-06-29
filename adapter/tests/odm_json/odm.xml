@@ -164,6 +164,7 @@
             </ItemDef>
             <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length='200'>
                 <Alias Context="SUPPQUAL" Name="SUPPDM.QVAL" />
+                <Alias Context="LABEL" Name="Other Race Text" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_AIAN" Name="RACE_AIAN" DataType="integer">
                 <Alias Context="SDTM" Name="RACE" />
