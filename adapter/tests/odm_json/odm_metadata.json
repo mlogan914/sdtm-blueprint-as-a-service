@@ -106,18 +106,14 @@
         ]
       },
       {
-        "OID": "IT.SUPPDM.RACEOTH",
+        "OID": "IT.DM.RACEOTH",
         "Name": "RACEOTH",
         "DataType": "text",
         "Length": "200",
         "CodeListRef": null,
         "Aliases": [
           {
-            "Context": "Collected.Form",
-            "Name": "DM"
-          },
-          {
-            "Context": "SDTM",
+            "Context": "SUPPQUAL",
             "Name": "SUPPDM.QVAL"
           }
         ]
@@ -365,7 +361,7 @@
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.SUPPDM.RACEOTH",
+            "ItemOID": "IT.DM.RACEOTH",
             "Mandatory": "Yes",
             "RepeatKey": null
           },

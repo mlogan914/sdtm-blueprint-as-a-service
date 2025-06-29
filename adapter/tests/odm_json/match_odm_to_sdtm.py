@@ -91,6 +91,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--odm", required=True, help="Path to ODM-collected metadata JSON")
     parser.add_argument("--sdtm", required=True, help="Path to SDTM IG metadata JSON")
-    parser.add_argument("--out", required=True, help="Output CSV path for match results")
+    parser.add_argument("--output", required=True, help="Output CSV path for match results")
     args = parser.parse_args()
-    main(args.odm, args.sdtm, args.out)
+    main(args.odm, args.sdtm, args.output)
