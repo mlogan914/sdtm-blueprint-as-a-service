@@ -279,7 +279,7 @@
                 <Question>
                     <TranslatedText xml:lang="en" Type="text">Age (Years) </TranslatedText>
                 </Question>
-                <Alias Context="DERIVATION_RULE" Name="AGE = floor((RFICDTC - BRTHDTC)/365.25)" />
+                <Alias Context="DERIVATION_RULE" Name="AGE" />
             </ItemDef>
 
             <!-- Codelists -->
