@@ -9,39 +9,123 @@
         "Name": "ACTARM",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ACTARM"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.ACTARMCD",
         "Name": "ACTARMCD",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ACTARMCD"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.ARM",
         "Name": "ARM",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ARM"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.ARMCD",
         "Name": "ARMCD",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ARMCD"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ARMNRS",
+        "Name": "ARMNRS",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ARMNRS"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ACTARMUD",
+        "Name": "ACTARMUD",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ACTARMUD"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.BRTHDTC",
         "Name": "BRTHDTC",
         "DataType": "date",
         "Length": null,
+        "Format": "YYYY-MM-DD",
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -49,23 +133,9 @@
         "Name": "COUNTRY",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
-        "Aliases": []
-      },
-      {
-        "OID": "IT.DM.DTHDTC",
-        "Name": "DTHDTC",
-        "DataType": "text",
-        "Length": "200",
-        "CodeListRef": null,
-        "Aliases": []
-      },
-      {
-        "OID": "IT.DM.DTHFL",
-        "Name": "DTHFL",
-        "DataType": "text",
-        "Length": "1",
-        "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -73,7 +143,9 @@
         "Name": "DMDTC",
         "DataType": "date",
         "Length": null,
+        "Format": "YYYY-MM-DD",
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -81,7 +153,9 @@
         "Name": "DOMAIN",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -89,7 +163,9 @@
         "Name": "ETHNIC",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": "CL.ETHNIC",
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -97,24 +173,39 @@
         "Name": "RACE",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
-        "Aliases": [
-          {
-            "Context": "SDTM",
-            "Name": "RACE"
-          }
-        ]
+        "Derived": false,
+        "Aliases": []
       },
       {
         "OID": "IT.DM.RACEOTH",
         "Name": "RACEOTH",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": [
           {
-            "Context": "SUPPQUAL",
-            "Name": "SUPPDM.QVAL"
+            "Context": "SUPPQUAL.SUPPDM.QNAM",
+            "Name": "RACEOTH"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.QLABEL",
+            "Name": "Race, Other Specify"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.QVAL",
+            "Name": "RACEOTH"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.IDVAR",
+            "Name": "USUBJID"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.IDVARVAL",
+            "Name": "RACEOTH"
           }
         ]
       },
@@ -123,10 +214,12 @@
         "Name": "RACE_AIAN",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": true,
         "Aliases": [
           {
-            "Context": "SDTM",
+            "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
         ]
@@ -136,10 +229,12 @@
         "Name": "RACE_ASIAN",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": true,
         "Aliases": [
           {
-            "Context": "SDTM",
+            "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
         ]
@@ -149,10 +244,12 @@
         "Name": "RACE_BLACK",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": true,
         "Aliases": [
           {
-            "Context": "SDTM",
+            "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
         ]
@@ -162,10 +259,12 @@
         "Name": "RACE_NHPI",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": true,
         "Aliases": [
           {
-            "Context": "SDTM",
+            "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
         ]
@@ -175,10 +274,12 @@
         "Name": "RACE_OTHER",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": true,
         "Aliases": [
           {
-            "Context": "SDTM",
+            "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
         ]
@@ -188,10 +289,12 @@
         "Name": "RACE_WHITE",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": true,
         "Aliases": [
           {
-            "Context": "SDTM",
+            "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
         ]
@@ -201,15 +304,24 @@
         "Name": "RFENDTC",
         "DataType": "date",
         "Length": null,
+        "Format": "YYYY-MM-DD",
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RFENDTC"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RFICDTC",
         "Name": "RFICDTC",
         "DataType": "date",
         "Length": null,
+        "Format": "YYYY-MM-DD",
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -217,31 +329,54 @@
         "Name": "RFPENDTC",
         "DataType": "date",
         "Length": null,
+        "Format": "YYYY-MM-DD",
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RFPENDTC"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RFSTDTC",
         "Name": "RFSTDTC",
         "DataType": "date",
         "Length": null,
+        "Format": "YYYY-MM-DD",
         "CodeListRef": null,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RFSTDTC"
+          }
+        ]
       },
       {
         "OID": "IT.DM.SEX",
         "Name": "SEX",
         "DataType": "text",
         "Length": "1",
+        "Format": null,
         "CodeListRef": "CL.SEX",
-        "Aliases": []
+        "Derived": false,
+        "Aliases": [
+          {
+            "Context": "SDTM",
+            "Name": "SEX"
+          }
+        ]
       },
       {
         "OID": "IT.DM.SITEID",
         "Name": "SITEID",
         "DataType": "integer",
         "Length": null,
+        "Format": null,
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
@@ -249,16 +384,35 @@
         "Name": "STUDYID",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
       },
       {
-        "OID": "IT.DM.USUBJID",
-        "Name": "USUBJID",
+        "OID": "IT.DM.SUBJID",
+        "Name": "SUBJID",
         "DataType": "text",
         "Length": "200",
+        "Format": null,
         "CodeListRef": null,
+        "Derived": false,
         "Aliases": []
+      },
+      {
+        "OID": "IT.DM.AGE",
+        "Name": "AGE",
+        "DataType": "integer",
+        "Length": "3",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "AGE = floor((RFICDTC - BRTHDTC)/365.25)"
+          }
+        ]
       }
     ],
     "CodeLists": [
@@ -297,7 +451,7 @@
       {
         "OID": "FORM.DM",
         "Name": "Demographics",
-        "Type": "CRF",
+        "Type": "Form",
         "Repeating": "No",
         "ItemRefs": [
           {
@@ -321,6 +475,16 @@
             "RepeatKey": null
           },
           {
+            "ItemOID": "IT.DM.ARMNRS",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ACTARMUD",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
             "ItemOID": "IT.DM.BRTHDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
@@ -331,12 +495,7 @@
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DM.DTHDTC",
-            "Mandatory": "Yes",
-            "RepeatKey": null
-          },
-          {
-            "ItemOID": "IT.DM.DTHFL",
+            "ItemOID": "IT.DM.RFPENDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
@@ -406,11 +565,6 @@
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DM.RFPENDTC",
-            "Mandatory": "Yes",
-            "RepeatKey": null
-          },
-          {
             "ItemOID": "IT.DM.RFSTDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
@@ -431,8 +585,13 @@
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DM.USUBJID",
+            "ItemOID": "IT.DM.SUBJID",
             "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.AGE",
+            "Mandatory": "No",
             "RepeatKey": null
           }
         ]
