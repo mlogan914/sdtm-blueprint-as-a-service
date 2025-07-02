@@ -175,8 +175,13 @@
         "Length": "200",
         "Format": null,
         "CodeListRef": null,
-        "Derived": false,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
       },
       {
         "OID": "IT.DM.RACEOTH",
@@ -410,7 +415,7 @@
         "Aliases": [
           {
             "Context": "DERIVATION_RULE",
-            "Name": "AGE = floor((RFICDTC - BRTHDTC)/365.25)"
+            "Name": "AGE"
           }
         ]
       }

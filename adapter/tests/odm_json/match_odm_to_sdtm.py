@@ -63,13 +63,12 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
                 }
                 break
 
-            elif context == "DERIVATION_RULE" and name_in_alias:
+            elif context == "DERIVATION_RULE":
                 alias_context = context
                 alias_name = name_in_alias
                 mapping_type = "Derived"
                 match_type = "Alias.Derivation"
-                domain, var = inferred_domain, name_in_alias
-                match = sdtm_lookup.get((domain, var))
+                match = sdtm_lookup.get((inferred_domain, inferred_var))
                 break
 
         if not match:
