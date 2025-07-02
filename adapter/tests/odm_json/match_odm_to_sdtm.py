@@ -14,7 +14,8 @@ def flatten_sdtm_metadata(sdtm_json: Dict) -> Dict:
             lookup[(domain, var)] = {
                 "SDTM_Domain": domain,
                 "SDTM_Variable": var,
-                "SDTM_Label": meta.get("label", "")
+                "SDTM_Label": meta.get("label", ""),
+                "Ordinal": meta.get("ordinal", "")
             }
     return lookup
 

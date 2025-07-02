@@ -50,7 +50,7 @@ def extract_sdtm_metadata(input_json_path):
                     "datatype": var.get("simpleDatatype"),
                     "core": var.get("core"),
                     "description": var.get("description"),
-                    "ordinal": var.get("ordinal"),  # 👈 Added this line
+                    "ordinal": var.get("ordinal"), 
                     "codelist": var.get("_links", {}).get("codelist", [{}])[0].get("href") if var.get("_links", {}).get("codelist") else None,
                     "sdtm_path": var.get("_links", {}).get("self", {}).get("href")
                 }
