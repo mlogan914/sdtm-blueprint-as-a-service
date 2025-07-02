@@ -6,7 +6,7 @@
     |                                                                           |
     | Created by: Melanie Logan (mlogan914)                                     |
     | Created on: 2025-06-25                                                    |
-    | Purpose   : Testing metadata-driven processing for DBT-SQL scaffolding        |
+    | Purpose   : Testing metadata-driven processing for DBT-SQL scaffolding    |
     +===========================================================================+
 -->
 
@@ -80,7 +80,7 @@
                 <ItemRef ItemOID="IT.DM.ARMNRS" Mandatory="Yes" OrderNumber="35">
                     <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                    <ItemRef ItemOID="IT.DM.ACTARMUD" Mandatory="Yes" OrderNumber="36">
+                <ItemRef ItemOID="IT.DM.ACTARMUD" Mandatory="Yes" OrderNumber="36">
                     <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
                 <ItemRef ItemOID="IT.DM.BRTHDTC" Mandatory="Yes" OrderNumber="18">
@@ -152,28 +152,28 @@
             </ItemGroupDef>
 
             <!-- ItemDef – defines each field-->
-            <ItemDef OID="IT.DM.ACTARM" Name="ACTARM" DataType="text" Length="200" >
+            <ItemDef OID="IT.DM.ACTARM" Name="ACTARM" DataType="text" Length="200">
                 <Alias Context="DERIVATION_RULE" Name="ACTARM" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
-            <ItemDef OID="IT.DM.ACTARMCD" Name="ACTARMCD" DataType="text" Length="200" >
+            <ItemDef OID="IT.DM.ACTARMCD" Name="ACTARMCD" DataType="text" Length="200">
                 <Alias Context="DERIVATION_RULE" Name="ACTARMCD" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
-            <ItemDef OID="IT.DM.ARM" Name="ARM" DataType="text" Length="200" >
+            <ItemDef OID="IT.DM.ARM" Name="ARM" DataType="text" Length="200">
                 <Alias Context="DERIVATION_RULE" Name="ARM" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
-            <ItemDef OID="IT.DM.ARMCD" Name="ARMCD" DataType="text" Length="200" >
-               <Alias Context="DERIVATION_RULE" Name="ARMCD" />
+            <ItemDef OID="IT.DM.ARMCD" Name="ARMCD" DataType="text" Length="200">
+                <Alias Context="DERIVATION_RULE" Name="ARMCD" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
-            <ItemDef OID="IT.DM.ARMNRS" Name="ARMNRS" DataType="text" Length="200" >
-               <Alias Context="DERIVATION_RULE" Name="ARMNRS" />
+            <ItemDef OID="IT.DM.ARMNRS" Name="ARMNRS" DataType="text" Length="200">
+                <Alias Context="DERIVATION_RULE" Name="ARMNRS" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
-            <ItemDef OID="IT.DM.ACTARMUD" Name="ACTARMUD" DataType="text" Length="200" >
-               <Alias Context="DERIVATION_RULE" Name="ACTARMUD" />
+            <ItemDef OID="IT.DM.ACTARMUD" Name="ACTARMUD" DataType="text" Length="200">
+                <Alias Context="DERIVATION_RULE" Name="ACTARMUD" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
             <ItemDef OID="IT.DM.BRTHDTC" Name="BRTHDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
@@ -202,6 +202,7 @@
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Race (Select all that apply) </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length="200">
                 <Question>
