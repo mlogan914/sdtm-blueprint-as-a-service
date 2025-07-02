@@ -270,7 +270,6 @@
                     <TranslatedText xml:lang="en" Type="text"> Sex </TranslatedText>
                 </Question>
                 <CodeListRef CodeListOID="CL.SEX" />
-                <Alias Context="SDTM" Name="SEX" />
             </ItemDef>
             <ItemDef OID="IT.DM.SITEID" Name="SITEID" DataType="integer" />
             <ItemDef OID="IT.DM.STUDYID" Name="STUDYID" DataType="text" Length="200" />

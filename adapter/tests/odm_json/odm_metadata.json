@@ -367,12 +367,7 @@
         "Format": null,
         "CodeListRef": "CL.SEX",
         "Derived": false,
-        "Aliases": [
-          {
-            "Context": "SDTM",
-            "Name": "SEX"
-          }
-        ]
+        "Aliases": []
       },
       {
         "OID": "IT.DM.SITEID",
