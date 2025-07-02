@@ -35,43 +35,40 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
         match_key = (inferred_domain, inferred_var)
         match = sdtm_lookup.get(match_key)
         match_type = "OID" if match else None
-        mapping_type = "Direct"
+        mapping_type = "Direct" if not aliases else "Unmatched"
         alias_context = ""
         alias_name = ""
         alias_label = ""
 
-        # Try to find alias with QLABEL context (e.g., Label for SUPPQUAL)
-        qlabel_alias = next((a for a in aliases if a.get("Context") == "QLABEL"), None)
+        # Pre-fill with fallback label
+        qlabel_alias = next((a for a in aliases if "QLABEL" in a.get("Context", "")), None)
         fallback_label = qlabel_alias["Name"] if qlabel_alias else item.get("Label", "")
 
         for alias in aliases:
-            context = alias.get("Context")
+            context = alias.get("Context", "")
             name_in_alias = alias.get("Name", "")
 
-            if context == "SDTM" and name_in_alias:
+            if context.startswith("SUPPQUAL") and name_in_alias:
                 alias_context = context
                 alias_name = name_in_alias
-                alias_label = ""
-                domain, var = (
-                    name_in_alias.split(".") if "." in name_in_alias else (inferred_domain, name_in_alias)
-                )
-                match = sdtm_lookup.get((domain, var))
-                if match:
-                    match_type = "Alias"
-                    mapping_type = "Custom"
-                    break
-
-            elif context == "SUPPQUAL" and name_in_alias:
-                alias_context = context
-                alias_name = name_in_alias
-                alias_label = fallback_label  # Now includes QLABEL alias or ItemDef label
+                alias_label = fallback_label
                 mapping_type = "SUPPQUAL"
                 match_type = "Alias.SUPP"
                 match = {
                     "SDTM_Domain": f"SUPP{inferred_domain}",
                     "SDTM_Variable": "QVAL",
-                    "SDTM_Label": "Qualifier Value"
+                    "SDTM_Label": "Qualifier Value",
+                    "Ordinal": ""
                 }
+                break
+
+            elif context == "DERIVATION_RULE" and name_in_alias:
+                alias_context = context
+                alias_name = name_in_alias
+                mapping_type = "Derived"
+                match_type = "Alias.Derivation"
+                domain, var = inferred_domain, name_in_alias
+                match = sdtm_lookup.get((domain, var))
                 break
 
         if not match:
@@ -86,9 +83,10 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
             "Alias_Label": alias_label,
             "Mapping_Type": mapping_type,
             "Match_Type": match_type if match else "Unmatched",
-            "SDTM_Domain": match["SDTM_Domain"] if match else "",
-            "SDTM_Variable": match["SDTM_Variable"] if match else "",
-            "SDTM_Label": match["SDTM_Label"] if match else "",
+            "SDTM_Domain": match.get("SDTM_Domain", "") if match else "",
+            "SDTM_Variable": match.get("SDTM_Variable", "") if match else "",
+            "SDTM_Label": match.get("SDTM_Label", "") if match else "",
+            "Ordinal": match.get("Ordinal", "") if match else "",
             "QNAM": alias_name if mapping_type == "SUPPQUAL" else "",
             "QLABEL": alias_label if mapping_type == "SUPPQUAL" else "",
             "IDVAR": inferred_domain if mapping_type == "SUPPQUAL" else "",
