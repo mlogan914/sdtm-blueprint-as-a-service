@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!--
     +===========================================================================+
     | Sample ODM-XML file created for testing the BaaS (Blueprint-as-a-Service) |
@@ -6,9 +6,10 @@
     |                                                                           |
     | Created by: Melanie Logan (mlogan914)                                     |
     | Created on: 2025-06-25                                                    |
-    | Purpose   : Testing metadata-driven processing for SQL scaffolding        |
+    | Purpose   : Testing metadata-driven processing for DBT-SQL scaffolding        |
     +===========================================================================+
 -->
+
 <ODM
     xmlns="http://www.cdisc.org/ns/odm/v2.0"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
@@ -25,34 +26,36 @@
     Originator="Org-CDM-CDS"
     SourceSystem="ProtoEDC"
     SourceSystemVersion="2.3.1">
+    <Description>
+        <TranslatedText xml:lang="en" Type="text">
+            <xhtml:div>VEXIN-03 ODM v2.0 Metadata Export</xhtml:div>
+        </TranslatedText>
+    </Description>
     <!-- Study – This element collects static structural information about an individual study -->
     <Study OID="ST.VEXIN-03" StudyName="VEXIN-03" ProtocolName="001-VEXIN03-PROT">
         <Description>
-            <TranslatedText xml:lang="en" Type="text">Snapshot export</TranslatedText>
+            <TranslatedText xml:lang="en" Type="text">
+                <xhtml:div>VEXIN-03 ODM v2.0 Snapshot Export</xhtml:div>
+            </TranslatedText>
         </Description>
         <!-- MetaDataVersion – Defines structure of CRF metadata -->
         <MetaDataVersion OID="MDV.2" Name="VEXIN-03 ODM Export">
-            <!-- StudyEventDef – defines visit/schedule -->
-            <StudyEventDef
-                OID="SE.DEMOGRAPHICS"
-                Name="Demographics"
-                Repeating="No"
-                Type="Scheduled"
+            <Description>
+                <TranslatedText xml:lang="en" Type="text">
+                    <xhtml:div>CDISC ODM v2.0 Metadata</xhtml:div>
+                </TranslatedText>
+            </Description>
+            <!-- StudyEventDef – Defines visit/schedule -->
+            <StudyEventDef OID="SE.DEMOGRAPHICS" Name="Demographics" Repeating="No" Type="Scheduled"
                 Category="Screening">
                 <!-- ItemGroupRef references an ItemGroupDef -->
                 <ItemGroupRef ItemGroupOID="FORM.DM" Mandatory="Yes" />
             </StudyEventDef>
 
-            <!-- ItemGroupDef – defines groupings of fields (e.g., each form) -->
-            <ItemGroupDef
-                OID="FORM.DM"
-                Name="Demographics"
-                Repeating="No"
-                Type="CRF"
-                Domain="DM"
-                DatasetName="DM"
+            <!-- ItemGroupDef – Defines groupings of fields (e.g., each form) -->
+            <ItemGroupDef OID="FORM.DM" Name="Demographics" Repeating="No"
+                Structure="One record per subject" DatasetName="DM" Domain="DM" Type="Form"
                 Purpose="Tabulation">
-
                 <Description>
                     <TranslatedText xml:lang="en" Type="text">Demographics</TranslatedText>
                 </Description>
@@ -62,138 +65,221 @@
                     <!-- <SubClass Name="" ParentClass=""></SubClass> -->
                 </Class>
 
-                <ItemRef ItemOID="IT.DM.ACTARM" Mandatory="Yes" OrderNumber="25">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.ACTARM" Mandatory="Yes" OrderNumber="34">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.ACTARMCD" Mandatory="Yes" OrderNumber="24">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.ACTARMCD" Mandatory="Yes" OrderNumber="33">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.ARM" Mandatory="Yes" OrderNumber="23">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.ARM" Mandatory="Yes" OrderNumber="32">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.ARMCD" Mandatory="Yes" OrderNumber="22">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.ARMCD" Mandatory="Yes" OrderNumber="31">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.BRTHDTC" Mandatory="Yes" OrderNumber="11">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.ARMNRS" Mandatory="Yes" OrderNumber="35">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.COUNTRY" Mandatory="Yes" OrderNumber="26">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                    <ItemRef ItemOID="IT.DM.ACTARMUD" Mandatory="Yes" OrderNumber="36">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.DTHDTC" Mandatory="Yes" OrderNumber="8">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.BRTHDTC" Mandatory="Yes" OrderNumber="18">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.DTHFL" Mandatory="Yes" OrderNumber="9">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.COUNTRY" Mandatory="Yes" OrderNumber="37">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.DMDTC" Mandatory="Yes" OrderNumber="27">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RFPENDTC" Mandatory="Yes" OrderNumber="12">
+                    <Origin Type="Collected" Source="Sponsor" />
+                </ItemRef>
+                <ItemRef ItemOID="IT.DM.DMDTC" Mandatory="Yes" OrderNumber="38">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
                 <ItemRef ItemOID="IT.DM.DOMAIN" Mandatory="Yes" OrderNumber="2">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.ETHNIC" Mandatory="Yes" OrderNumber="21">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.ETHNIC" Mandatory="Yes" OrderNumber="30">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE" Mandatory="Yes" OrderNumber="13">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE" Mandatory="Yes" OrderNumber="22">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACEOTH" Mandatory="Yes" OrderNumber="20">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACEOTH" Mandatory="Yes" OrderNumber="29">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE_AIAN" Mandatory="Yes" OrderNumber="18">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE_AIAN" Mandatory="Yes" OrderNumber="27">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE_ASIAN" Mandatory="Yes" OrderNumber="16">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE_ASIAN" Mandatory="Yes" OrderNumber="25">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE_BLACK" Mandatory="Yes" OrderNumber="15">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE_BLACK" Mandatory="Yes" OrderNumber="24">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE_NHPI" Mandatory="Yes" OrderNumber="17">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE_NHPI" Mandatory="Yes" OrderNumber="26">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE_OTHER" Mandatory="Yes" OrderNumber="19">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE_OTHER" Mandatory="Yes" OrderNumber="28">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RACE_WHITE" Mandatory="Yes" OrderNumber="14">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RACE_WHITE" Mandatory="Yes" OrderNumber="23">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFENDTC" Mandatory="Yes" OrderNumber="5">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RFENDTC" Mandatory="Yes" OrderNumber="6">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFICDTC" Mandatory="Yes" OrderNumber="6">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RFICDTC" Mandatory="Yes" OrderNumber="11">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFPENDTC" Mandatory="Yes" OrderNumber="7">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.RFSTDTC" Mandatory="Yes" OrderNumber="5">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFSTDTC" Mandatory="Yes" OrderNumber="4">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.SEX" Mandatory="Yes" OrderNumber="21">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.SEX" Mandatory="Yes" OrderNumber="12">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
-                </ItemRef>
-                <ItemRef ItemOID="IT.DM.SITEID" Mandatory="Yes" OrderNumber="10">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.SITEID" Mandatory="Yes" OrderNumber="15">
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
                 <ItemRef ItemOID="IT.DM.STUDYID" Mandatory="Yes" OrderNumber="1">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                    <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.USUBJID" Mandatory="Yes" OrderNumber="3">
-                    <Origin Type="Collected" Source="Sponsor"></Origin>
+                <ItemRef ItemOID="IT.DM.SUBJID" Mandatory="Yes" OrderNumber="4">
+                    <Origin Type="Collected" Source="Sponsor" />
+                </ItemRef>
+                <ItemRef ItemOID="IT.DM.AGE" Mandatory="No" Role="Timing" OrderNumber="19">
+                    <Origin Type="Derived" Source="Sponsor" />
                 </ItemRef>
             </ItemGroupDef>
 
             <!-- ItemDef – defines each field-->
-            <ItemDef OID="IT.DM.ACTARM" Name="ACTARM" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.ACTARMCD" Name="ACTARMCD" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.ARM" Name="ARM" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.ARMCD" Name="ARMCD" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.BRTHDTC" Name="BRTHDTC" DataType="date" />
-            <ItemDef OID="IT.DM.COUNTRY" Name="COUNTRY" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.DTHDTC" Name="DTHDTC" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.DTHFL" Name="DTHFL" DataType="text" Length='1' />
-            <ItemDef OID="IT.DM.DMDTC" Name="DMDTC" DataType="date" />
-            <ItemDef OID="IT.DM.DOMAIN" Name="DOMAIN" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.ETHNIC" Name="ETHNIC" DataType="text" Length='200'>
+            <ItemDef OID="IT.DM.ACTARM" Name="ACTARM" DataType="text" Length="200" >
+                <Alias Context="DERIVATION_RULE" Name="ACTARM" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.ACTARMCD" Name="ACTARMCD" DataType="text" Length="200" >
+                <Alias Context="DERIVATION_RULE" Name="ACTARMCD" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.ARM" Name="ARM" DataType="text" Length="200" >
+                <Alias Context="DERIVATION_RULE" Name="ARM" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.ARMCD" Name="ARMCD" DataType="text" Length="200" >
+               <Alias Context="DERIVATION_RULE" Name="ARMCD" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.ARMNRS" Name="ARMNRS" DataType="text" Length="200" >
+               <Alias Context="DERIVATION_RULE" Name="ARMNRS" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.ACTARMUD" Name="ACTARMUD" DataType="text" Length="200" >
+               <Alias Context="DERIVATION_RULE" Name="ACTARMUD" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.BRTHDTC" Name="BRTHDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Date of Birth </TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="IT.DM.COUNTRY" Name="COUNTRY" DataType="text" Length="200">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Country </TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="IT.DM.DMDTC" Name="DMDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Date of Collection </TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="IT.DM.DOMAIN" Name="DOMAIN" DataType="text" Length="200" />
+            <ItemDef OID="IT.DM.ETHNIC" Name="ETHNIC" DataType="text" Length="200">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Ethnicity </TranslatedText>
+                </Question>
                 <CodeListRef CodeListOID="CL.ETHNIC" />
             </ItemDef>
-            <ItemDef OID="IT.DM.RACE" Name="RACE" DataType="text" Length='200'>
-                <Alias Context="SDTM" Name="RACE" />
+            <ItemDef OID="IT.DM.RACE" Name="RACE" DataType="text" Length="200">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Race (Select all that apply) </TranslatedText>
+                </Question>
             </ItemDef>
-            <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length='200'>
-                <Alias Context="SUPPQUAL" Name="SUPPDM.QVAL" />
-                <Alias Context="LABEL" Name="Other Race Text" />
+            <ItemDef OID="IT.DM.RACEOTH" Name="RACEOTH" DataType="text" Length="200">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Race, Other Specify </TranslatedText>
+                </Question>
+                <Alias Context="SUPPQUAL.SUPPDM.QNAM" Name="RACEOTH" />
+                <Alias Context="SUPPQUAL.SUPPDM.QLABEL" Name="Race, Other Specify" />
+                <Alias Context="SUPPQUAL.SUPPDM.QVAL" Name="RACEOTH" />
+                <Alias Context="SUPPQUAL.SUPPDM.IDVAR" Name="USUBJID" />
+                <Alias Context="SUPPQUAL.SUPPDM.IDVARVAL" Name="RACEOTH" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_AIAN" Name="RACE_AIAN" DataType="integer">
-                <Alias Context="SDTM" Name="RACE" />
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> American Indian or Alaska Native </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_ASIAN" Name="RACE_ASIAN" DataType="integer">
-                <Alias Context="SDTM" Name="RACE" />
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Asian </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_BLACK" Name="RACE_BLACK" DataType="integer">
-                <Alias Context="SDTM" Name="RACE" />
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Black or African American </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_NHPI" Name="RACE_NHPI" DataType="integer">
-                <Alias Context="SDTM" Name="RACE" />
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Native Hawaiian or Other Pacific
+                        Islander </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_OTHER" Name="RACE_OTHER" DataType="integer">
-                <Alias Context="SDTM" Name="RACE" />
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Other </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_WHITE" Name="RACE_WHITE" DataType="integer">
-                <Alias Context="SDTM" Name="RACE" />
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> White </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
-            <ItemDef OID="IT.DM.RFENDTC" Name="RFENDTC" DataType="date" />
-            <ItemDef OID="IT.DM.RFICDTC" Name="RFICDTC" DataType="date" />
-            <ItemDef OID="IT.DM.RFPENDTC" Name="RFPENDTC" DataType="date" />
-            <ItemDef OID="IT.DM.RFSTDTC" Name="RFSTDTC" DataType="date" />
-            <ItemDef OID="IT.DM.SEX" Name="SEX" DataType="text" Length='1'>
+            <ItemDef OID="IT.DM.RFENDTC" Name="RFENDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+                <Alias Context="DERIVATION_RULE" Name="RFENDTC" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RFICDTC" Name="RFICDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Informed Consent Date </TranslatedText>
+                </Question>
+            </ItemDef>
+            <ItemDef OID="IT.DM.RFPENDTC" Name="RFPENDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+                <Alias Context="DERIVATION_RULE" Name="RFPENDTC" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.RFSTDTC" Name="RFSTDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+                <Alias Context="DERIVATION_RULE" Name="RFSTDTC" />
+            </ItemDef>
+            <ItemDef OID="IT.DM.SEX" Name="SEX" DataType="text" Length="1">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text"> Sex </TranslatedText>
+                </Question>
                 <CodeListRef CodeListOID="CL.SEX" />
+                <Alias Context="SDTM" Name="SEX" />
             </ItemDef>
             <ItemDef OID="IT.DM.SITEID" Name="SITEID" DataType="integer" />
-            <ItemDef OID="IT.DM.STUDYID" Name="STUDYID" DataType="text" Length='200' />
-            <ItemDef OID="IT.DM.USUBJID" Name="USUBJID" DataType="text" Length='200' />
+            <ItemDef OID="IT.DM.STUDYID" Name="STUDYID" DataType="text" Length="200" />
+            <ItemDef OID="IT.DM.SUBJID" Name="SUBJID" DataType="text" Length="200" />
+            <ItemDef OID="IT.DM.AGE" Name="AGE" DataType="integer" Length="3">
+                <Question>
+                    <TranslatedText xml:lang="en" Type="text">Age (Years) </TranslatedText>
+                </Question>
+                <Alias Context="DERIVATION_RULE" Name="AGE = floor((RFICDTC - BRTHDTC)/365.25)" />
+            </ItemDef>
 
             <!-- Codelists -->
             <CodeList OID="CL.SEX" Name="Sex" DataType="text">
@@ -221,7 +307,6 @@
                     </Decode>
                 </CodeListItem>
             </CodeList>
-
         </MetaDataVersion>
     </Study>
 
@@ -236,7 +321,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99163</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -308,7 +393,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-1002</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -380,7 +465,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>Jan-62</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -452,7 +537,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99752</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -524,7 +609,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99516</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -596,7 +681,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-1006</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -668,7 +753,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-1007</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -740,7 +825,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99828</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -812,7 +897,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99604</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -884,7 +969,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99680</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -956,7 +1041,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>Feb-86</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1028,7 +1113,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99521</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1100,7 +1185,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99113</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1172,7 +1257,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>4-Feb</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1244,7 +1329,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99269</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1316,7 +1401,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99104</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1388,7 +1473,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>7-Feb</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1460,7 +1545,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99134</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1532,7 +1617,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>9-Feb</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1604,7 +1689,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>Feb-61</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1679,7 +1764,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99851</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1745,7 +1830,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>2-Mar</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1817,7 +1902,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>20-Mar</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1889,7 +1974,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>4-Mar</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -1961,7 +2046,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99403</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2033,7 +2118,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99912</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2105,7 +2190,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99927</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2177,7 +2262,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99431</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2249,7 +2334,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>9-Mar</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2321,7 +2406,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99764</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2393,7 +2478,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>1-Apr</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2465,7 +2550,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>2-Apr</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2540,7 +2625,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>3-Apr</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2612,7 +2697,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99132</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2684,7 +2769,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99647</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2750,7 +2835,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>6-Apr</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2816,7 +2901,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>7-Apr</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2882,7 +2967,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>8-Apr</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -2948,7 +3033,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99638</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">
@@ -3020,7 +3105,7 @@
                     <ItemData ItemOID="IT.DM.DOMAIN">
                         <Value>DM</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.USUBJID">
+                    <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99508</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFSTDTC">

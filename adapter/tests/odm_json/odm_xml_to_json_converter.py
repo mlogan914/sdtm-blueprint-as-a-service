@@ -52,25 +52,29 @@ def parse_metadata(xml_path: Path) -> dict:
 
     # ----- ItemDefs -----
     for item in mdv.findall("odm:ItemDef", NS):
+        fmt = item.attrib.get("DisplayFormat")
+        cl_ref = item.find("odm:CodeListRef", NS)
+        code_list_oid = cl_ref.attrib.get("CodeListOID") if cl_ref is not None else None
+        aliases = []
+        is_derived = False
+
+        for alias in item.findall("odm:Alias", NS):
+            ctx = alias.attrib.get("Context")
+            name_ = alias.attrib.get("Name")
+            aliases.append({"Context": ctx, "Name": name_})
+            if ctx == "DERIVATION_RULE":
+                is_derived = True
+
         item_entry = {
             "OID": item.attrib.get("OID"),
             "Name": item.attrib.get("Name"),
             "DataType": item.attrib.get("DataType"),
             "Length": item.attrib.get("Length"),
-            "CodeListRef": None,
-            "Aliases": []  # New field to hold Alias entries
+            "Format": fmt,
+            "CodeListRef": code_list_oid,
+            "Derived": is_derived,
+            "Aliases": aliases
         }
-        cl_ref = item.find("odm:CodeListRef", NS)
-        if cl_ref is not None:
-            item_entry["CodeListRef"] = cl_ref.attrib.get("CodeListOID")
-
-        # New: Extract Alias elements
-        for alias in item.findall("odm:Alias", NS):
-            item_entry["Aliases"].append({
-                "Context": alias.attrib.get("Context"),
-                "Name": alias.attrib.get("Name")
-            })
-
         meta_json["MetaDataVersion"]["ItemDefs"].append(item_entry)
 
 

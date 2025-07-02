@@ -40,15 +40,20 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
         alias_name = ""
         alias_label = ""
 
+        # Try to find alias with QLABEL context (e.g., Label for SUPPQUAL)
+        qlabel_alias = next((a for a in aliases if a.get("Context") == "QLABEL"), None)
+        fallback_label = qlabel_alias["Name"] if qlabel_alias else item.get("Label", "")
+
         for alias in aliases:
             context = alias.get("Context")
-            alias_context = context
-            alias_name = alias.get("Name", "")
-            alias_label = alias.get("Label", label)
+            name_in_alias = alias.get("Name", "")
 
-            if context == "SDTM" and alias_name:
+            if context == "SDTM" and name_in_alias:
+                alias_context = context
+                alias_name = name_in_alias
+                alias_label = ""
                 domain, var = (
-                    alias_name.split(".") if "." in alias_name else (inferred_domain, alias_name)
+                    name_in_alias.split(".") if "." in name_in_alias else (inferred_domain, name_in_alias)
                 )
                 match = sdtm_lookup.get((domain, var))
                 if match:
@@ -56,12 +61,18 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
                     mapping_type = "Custom"
                     break
 
-            elif context == "SUPPQUAL" and alias_name:
-                match = sdtm_lookup.get((f"SUPP{inferred_domain}", "QVAL"))
-                if match:
-                    match_type = "Alias.SUPP"
-                    mapping_type = "SUPPQUAL"
-                    break
+            elif context == "SUPPQUAL" and name_in_alias:
+                alias_context = context
+                alias_name = name_in_alias
+                alias_label = fallback_label  # Now includes QLABEL alias or ItemDef label
+                mapping_type = "SUPPQUAL"
+                match_type = "Alias.SUPP"
+                match = {
+                    "SDTM_Domain": f"SUPP{inferred_domain}",
+                    "SDTM_Variable": "QVAL",
+                    "SDTM_Label": "Qualifier Value"
+                }
+                break
 
         if not match:
             mapping_type = "Unmatched"
