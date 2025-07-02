@@ -22,7 +22,7 @@ IT.DM.RFENDTC,RFENDTC,DM,DERIVATION_RULE,RFENDTC,,Derived,Alias.Derivation,DM,RF
 IT.DM.RFICDTC,RFICDTC,DM,,,,Direct,OID,DM,RFICDTC,Date/Time of Informed Consent,11,,,,
 IT.DM.RFPENDTC,RFPENDTC,DM,DERIVATION_RULE,RFPENDTC,,Derived,Alias.Derivation,DM,RFPENDTC,Date/Time of End of Participation,12,,,,
 IT.DM.RFSTDTC,RFSTDTC,DM,DERIVATION_RULE,RFSTDTC,,Derived,Alias.Derivation,DM,RFSTDTC,Subject Reference Start Date/Time,5,,,,
-IT.DM.SEX,SEX,DM,,,,Unmatched,OID,DM,SEX,Sex,21,,,,
+IT.DM.SEX,SEX,DM,,,,Direct,OID,DM,SEX,Sex,21,,,,
 IT.DM.SITEID,SITEID,DM,,,,Direct,OID,DM,SITEID,Study Site Identifier,15,,,,
 IT.DM.STUDYID,STUDYID,DM,,,,Direct,OID,DM,STUDYID,Study Identifier,1,,,,
 IT.DM.SUBJID,SUBJID,DM,,,,Direct,OID,DM,SUBJID,Subject Identifier for the Study,4,,,,
