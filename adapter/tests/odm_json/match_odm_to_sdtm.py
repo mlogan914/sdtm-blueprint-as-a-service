@@ -59,16 +59,23 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
                     "SDTM_Domain": f"SUPP{inferred_domain}",
                     "SDTM_Variable": "QVAL",
                     "SDTM_Label": "Qualifier Value",
-                    "Ordinal": ""
+                    "Ordinal": "",
+                    "core": "",
+                    "role": "",
+                    "datatype": "",
+                    "description": "",
+                    "codelist": "",
+                    "sdtm_path": ""
                 }
                 break
 
-            elif context == "DERIVATION_RULE":
+            elif context == "DERIVATION_RULE" and name_in_alias:
                 alias_context = context
                 alias_name = name_in_alias
                 mapping_type = "Derived"
                 match_type = "Alias.Derivation"
-                match = sdtm_lookup.get((inferred_domain, inferred_var))
+                domain, var = inferred_domain, name_in_alias
+                match = sdtm_lookup.get((domain, var))
                 break
 
         if not match:
@@ -87,6 +94,12 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
             "SDTM_Variable": match.get("SDTM_Variable", "") if match else "",
             "SDTM_Label": match.get("SDTM_Label", "") if match else "",
             "Ordinal": match.get("Ordinal", "") if match else "",
+            "SDTM_Core": match.get("core", "") if match else "",
+            "SDTM_Role": match.get("role", "") if match else "",
+            "SDTM_Datatype": match.get("datatype", "") if match else "",
+            "SDTM_Description": match.get("description", "") if match else "",
+            "SDTM_CodeList": match.get("codelist", "") if match else "",
+            "SDTM_Path": match.get("sdtm_path", "") if match else "",
             "QNAM": alias_name if mapping_type == "SUPPQUAL" else "",
             "QLABEL": alias_label if mapping_type == "SUPPQUAL" else "",
             "IDVAR": inferred_domain if mapping_type == "SUPPQUAL" else "",
