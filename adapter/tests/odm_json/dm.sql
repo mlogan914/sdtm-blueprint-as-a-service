@@ -1,0 +1,23 @@
+SELECT
+    studyid AS STUDYID  -- Study Identifier,
+    domain AS DOMAIN  -- Domain Abbreviation,
+    subjid AS SUBJID  -- Subject Identifier for the Study,
+    rfstdtc AS RFSTDTC  -- Subject Reference Start Date/Time,
+    rfendtc AS RFENDTC  -- Subject Reference End Date/Time,
+    rficdtc AS RFICDTC  -- Date/Time of Informed Consent,
+    rfpendtc AS RFPENDTC  -- Date/Time of End of Participation,
+    siteid AS SITEID  -- Study Site Identifier,
+    brthdtc AS BRTHDTC  -- Date/Time of Birth,
+    age AS AGE  -- Age,
+    sex AS SEX  -- Sex,
+    race AS RACE  -- Race,
+    ethnic AS ETHNIC  -- Ethnicity,
+    armcd AS ARMCD  -- Planned Arm Code,
+    arm AS ARM  -- Description of Planned Arm,
+    actarmcd AS ACTARMCD  -- Actual Arm Code,
+    actarm AS ACTARM  -- Description of Actual Arm,
+    armnrs AS ARMNRS  -- Reason Arm and/or Actual Arm is Null,
+    actarmud AS ACTARMUD  -- Description of Unplanned Actual Arm,
+    country AS COUNTRY  -- Country,
+    dmdtc AS DMDTC  -- Date/Time of Collection
+FROM {% raw %}{{ ref('raw_dm') }}{% endraw %};

@@ -56,3 +56,5 @@ def extract_sdtm_metadata(input_json_path):
                 }
 
     return grouped
+
+## -- End of Program Code -- ##
