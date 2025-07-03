@@ -218,18 +218,21 @@
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> American Indian or Alaska Native </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_ASIAN" Name="RACE_ASIAN" DataType="integer">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Asian </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_BLACK" Name="RACE_BLACK" DataType="integer">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Black or African American </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_NHPI" Name="RACE_NHPI" DataType="integer">
@@ -237,18 +240,21 @@
                     <TranslatedText xml:lang="en" Type="text"> Native Hawaiian or Other Pacific
                         Islander </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_OTHER" Name="RACE_OTHER" DataType="integer">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Other </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RACE_WHITE" Name="RACE_WHITE" DataType="integer">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> White </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
             <ItemDef OID="IT.DM.RFENDTC" Name="RFENDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
