@@ -224,6 +224,10 @@
         "Derived": true,
         "Aliases": [
           {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
             "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
@@ -238,6 +242,10 @@
         "CodeListRef": null,
         "Derived": true,
         "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
           {
             "Context": "DERIVATION_RULE",
             "Name": "RACE"
@@ -254,6 +262,10 @@
         "Derived": true,
         "Aliases": [
           {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
             "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
@@ -268,6 +280,10 @@
         "CodeListRef": null,
         "Derived": true,
         "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
           {
             "Context": "DERIVATION_RULE",
             "Name": "RACE"
@@ -284,6 +300,10 @@
         "Derived": true,
         "Aliases": [
           {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
             "Context": "DERIVATION_RULE",
             "Name": "RACE"
           }
@@ -298,6 +318,10 @@
         "CodeListRef": null,
         "Derived": true,
         "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
           {
             "Context": "DERIVATION_RULE",
             "Name": "RACE"

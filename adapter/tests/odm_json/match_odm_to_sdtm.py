@@ -46,6 +46,7 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
         alias_context = ""
         alias_name = ""
         alias_label = ""
+        derived_target = ""
 
         qlabel_alias = next((a for a in aliases if "QLABEL" in a.get("Context", "")), None)
         fallback_label = qlabel_alias["Name"] if qlabel_alias else item.get("Label", "")
@@ -53,6 +54,9 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
         for alias in aliases:
             context = alias.get("Context", "")
             name_in_alias = alias.get("Name", "")
+
+            if context == "DERIVATION_TARGET":
+                derived_target = name_in_alias
 
             if context.startswith("SUPPQUAL") and name_in_alias:
                 alias_context = context
@@ -104,6 +108,7 @@ def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
             "Description": match.get("Description", "") if match else "",
             "CodeList": match.get("CodeList", "") if match else "",
             "SDTM_Path": match.get("SDTM_Path", "") if match else "",
+            "Derived_Target": derived_target,
             "QNAM": alias_name if mapping_type == "SUPPQUAL" else "",
             "QLABEL": alias_label if mapping_type == "SUPPQUAL" else "",
             "IDVAR": inferred_domain if mapping_type == "SUPPQUAL" else "",
