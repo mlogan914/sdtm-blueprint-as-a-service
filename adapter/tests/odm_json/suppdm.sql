@@ -1,10 +1,11 @@
 SELECT
-    studyid AS STUDYID,
-    rdomain AS RDOMAIN,
-    usubjid AS USUBJID,
-    idvar AS IDVAR,
-    idvarval AS IDVARVAL,
-    qnam AS QNAM,
-    qlabel AS QLABEL,
-    qval AS QVAL
-FROM {% raw %}{{ ref('raw_suppdm') }}{% endraw %};
+    studyid
+    ,'SUPPDM' AS RDOMAIN
+    ,usubjid
+    ,'DM' AS IDVAR
+    ,raceoth AS IDVARVAL
+    ,'RACEOTH' AS QNAM
+    ,'Race, Other Specify' AS QLABEL
+    ,raceoth AS QVAL
+FROM {% raw %}{{ ref('raw_dm') }}{% endraw %}
+WHERE raceoth IS NOT NULL;

@@ -9,23 +9,12 @@
     | Purpose   : Testing metadata-driven processing for DBT-SQL scaffolding    |
     +===========================================================================+
 -->
-
-<ODM
-    xmlns="http://www.cdisc.org/ns/odm/v2.0"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    FileType="Snapshot"
-    Granularity="Metadata"
-    Context="Exchange"
-    FileOID="FILE.VEXIN03-001-EDCEXP-20250620"
-    CreationDateTime="2025-06-20T21:15:45.283629"
-    PriorFileOID="FILE.VEXIN03-UAT-EDCEXP-20250520"
-    AsOfDateTime="2025-06-20T21:15:45.283629"
-    ODMVersion="2.0"
-    Originator="Org-CDM-CDS"
-    SourceSystem="ProtoEDC"
-    SourceSystemVersion="2.3.1">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v2.0" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    FileType="Snapshot" Granularity="Metadata" Context="Exchange"
+    FileOID="FILE.VEXIN03-001-EDCEXP-20250620" CreationDateTime="2025-06-20T21:15:45.283629"
+    PriorFileOID="FILE.VEXIN03-UAT-EDCEXP-20250520" AsOfDateTime="2025-06-20T21:15:45.283629"
+    ODMVersion="2.0" Originator="Org-CDM-CDS" SourceSystem="ProtoEDC" SourceSystemVersion="2.3.1">
     <Description>
         <TranslatedText xml:lang="en" Type="text">
             <xhtml:div>VEXIN-03 ODM v2.0 Metadata Export</xhtml:div>
@@ -89,9 +78,6 @@
                 <ItemRef ItemOID="IT.DM.COUNTRY" Mandatory="Yes" OrderNumber="37">
                     <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFPENDTC" Mandatory="Yes" OrderNumber="12">
-                    <Origin Type="Collected" Source="Sponsor" />
-                </ItemRef>
                 <ItemRef ItemOID="IT.DM.DMDTC" Mandatory="Yes" OrderNumber="38">
                     <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
@@ -125,13 +111,7 @@
                 <ItemRef ItemOID="IT.DM.RACE_WHITE" Mandatory="Yes" OrderNumber="23">
                     <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFENDTC" Mandatory="Yes" OrderNumber="6">
-                    <Origin Type="Collected" Source="Sponsor" />
-                </ItemRef>
                 <ItemRef ItemOID="IT.DM.RFICDTC" Mandatory="Yes" OrderNumber="11">
-                    <Origin Type="Collected" Source="Sponsor" />
-                </ItemRef>
-                <ItemRef ItemOID="IT.DM.RFSTDTC" Mandatory="Yes" OrderNumber="5">
                     <Origin Type="Collected" Source="Sponsor" />
                 </ItemRef>
                 <ItemRef ItemOID="IT.DM.SEX" Mandatory="Yes" OrderNumber="21">
@@ -257,20 +237,12 @@
                 <Alias Context="DERIVATION_TARGET" Name="RACE" />
                 <Alias Context="DERIVATION_RULE" Name="RACE" />
             </ItemDef>
-            <ItemDef OID="IT.DM.RFENDTC" Name="RFENDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
-                <Alias Context="DERIVATION_RULE" Name="RFENDTC" />
-            </ItemDef>
             <ItemDef OID="IT.DM.RFICDTC" Name="RFICDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Informed Consent Date </TranslatedText>
                 </Question>
             </ItemDef>
-            <ItemDef OID="IT.DM.RFPENDTC" Name="RFPENDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
-                <Alias Context="DERIVATION_RULE" Name="RFPENDTC" />
-            </ItemDef>
-            <ItemDef OID="IT.DM.RFSTDTC" Name="RFSTDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
-                <Alias Context="DERIVATION_RULE" Name="RFSTDTC" />
-            </ItemDef>
+
             <ItemDef OID="IT.DM.SEX" Name="SEX" DataType="text" Length="1">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Sex </TranslatedText>
@@ -329,9 +301,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99163</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-03-26</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-03-19</Value>
@@ -402,9 +371,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-1002</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-08-15</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-08-08</Value>
                     </ItemData>
@@ -473,9 +439,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>Jan-62</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-01-08</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-01-01</Value>
@@ -546,9 +509,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99752</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-09-25</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-09-18</Value>
                     </ItemData>
@@ -617,9 +577,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99516</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-06-20</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-06-13</Value>
@@ -690,9 +647,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-1006</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-01-28</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-01-21</Value>
                     </ItemData>
@@ -761,9 +715,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-1007</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-08-18</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-08-11</Value>
@@ -834,9 +785,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99828</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-12-08</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-12-01</Value>
                     </ItemData>
@@ -905,9 +853,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99604</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-04-27</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-04-20</Value>
@@ -978,9 +923,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>01-99680</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-12-21</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-12-14</Value>
                     </ItemData>
@@ -1049,9 +991,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>Feb-86</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-10-13</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-10-06</Value>
@@ -1122,9 +1061,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99521</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-03-06</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-02-27</Value>
                     </ItemData>
@@ -1193,9 +1129,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99113</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-07-27</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-07-20</Value>
@@ -1266,9 +1199,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>4-Feb</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-06-09</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-06-02</Value>
                     </ItemData>
@@ -1337,9 +1267,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99269</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-12-27</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-12-20</Value>
@@ -1410,9 +1337,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99104</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-07-21</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-07-14</Value>
                     </ItemData>
@@ -1481,9 +1405,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>7-Feb</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-07-20</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-07-13</Value>
@@ -1554,9 +1475,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>02-99134</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-03-06</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-02-28</Value>
                     </ItemData>
@@ -1626,9 +1544,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>9-Feb</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-06-29</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-06-22</Value>
                     </ItemData>
@@ -1697,9 +1612,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>Feb-61</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-08-22</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-08-15</Value>
@@ -1773,16 +1685,7 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99851</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-12-20</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFENDTC">
-                        <Value>2023-12-20</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
-                        <Value>2023-12-20</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFPENDTC">
                         <Value>2023-12-20</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SITEID">
@@ -1838,9 +1741,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>2-Mar</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-12-28</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-12-21</Value>
@@ -1911,9 +1811,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>20-Mar</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-02-09</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-02-02</Value>
                     </ItemData>
@@ -1982,9 +1879,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>4-Mar</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-06-27</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-06-20</Value>
@@ -2055,9 +1949,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99403</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-02-26</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-02-19</Value>
                     </ItemData>
@@ -2126,9 +2017,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99912</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-06-23</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-06-16</Value>
@@ -2199,9 +2087,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99927</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-07-23</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-07-16</Value>
                     </ItemData>
@@ -2270,9 +2155,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99431</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-11-15</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-11-08</Value>
@@ -2343,9 +2225,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>9-Mar</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-07-10</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-07-03</Value>
                     </ItemData>
@@ -2414,9 +2293,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>03-99764</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-12-01</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-11-24</Value>
@@ -2487,9 +2363,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>1-Apr</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-06-08</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-06-01</Value>
                     </ItemData>
@@ -2558,9 +2431,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>2-Apr</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-08-23</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-08-16</Value>
@@ -2634,9 +2504,6 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>3-Apr</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-02-08</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-02-01</Value>
                     </ItemData>
@@ -2705,9 +2572,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99132</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-11-22</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2024-11-15</Value>
@@ -2778,16 +2642,7 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99647</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-10-20</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFENDTC">
-                        <Value>2023-10-20</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
-                        <Value>2023-10-20</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFPENDTC">
                         <Value>2023-10-20</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SITEID">
@@ -2844,16 +2699,7 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>6-Apr</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-07-19</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFENDTC">
-                        <Value>2023-07-19</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
-                        <Value>2023-07-19</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFPENDTC">
                         <Value>2023-07-19</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SITEID">
@@ -2910,16 +2756,7 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>7-Apr</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2024-12-03</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFENDTC">
-                        <Value>2024-12-03</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
-                        <Value>2024-12-03</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFPENDTC">
                         <Value>2024-12-03</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SITEID">
@@ -2976,16 +2813,7 @@
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>8-Apr</Value>
                     </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-05-18</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFENDTC">
-                        <Value>2023-05-18</Value>
-                    </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
-                        <Value>2023-05-18</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFPENDTC">
                         <Value>2023-05-18</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SITEID">
@@ -3041,9 +2869,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99638</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-12-30</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-12-23</Value>
@@ -3113,9 +2938,6 @@
                     </ItemData>
                     <ItemData ItemOID="IT.DM.SUBJID">
                         <Value>04-99508</Value>
-                    </ItemData>
-                    <ItemData ItemOID="IT.DM.RFSTDTC">
-                        <Value>2023-02-05</Value>
                     </ItemData>
                     <ItemData ItemOID="IT.DM.RFICDTC">
                         <Value>2023-01-29</Value>

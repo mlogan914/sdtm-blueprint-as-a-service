@@ -329,21 +329,6 @@
         ]
       },
       {
-        "OID": "IT.DM.RFENDTC",
-        "Name": "RFENDTC",
-        "DataType": "date",
-        "Length": null,
-        "Format": "YYYY-MM-DD",
-        "CodeListRef": null,
-        "Derived": true,
-        "Aliases": [
-          {
-            "Context": "DERIVATION_RULE",
-            "Name": "RFENDTC"
-          }
-        ]
-      },
-      {
         "OID": "IT.DM.RFICDTC",
         "Name": "RFICDTC",
         "DataType": "date",
@@ -352,36 +337,6 @@
         "CodeListRef": null,
         "Derived": false,
         "Aliases": []
-      },
-      {
-        "OID": "IT.DM.RFPENDTC",
-        "Name": "RFPENDTC",
-        "DataType": "date",
-        "Length": null,
-        "Format": "YYYY-MM-DD",
-        "CodeListRef": null,
-        "Derived": true,
-        "Aliases": [
-          {
-            "Context": "DERIVATION_RULE",
-            "Name": "RFPENDTC"
-          }
-        ]
-      },
-      {
-        "OID": "IT.DM.RFSTDTC",
-        "Name": "RFSTDTC",
-        "DataType": "date",
-        "Length": null,
-        "Format": "YYYY-MM-DD",
-        "CodeListRef": null,
-        "Derived": true,
-        "Aliases": [
-          {
-            "Context": "DERIVATION_RULE",
-            "Name": "RFSTDTC"
-          }
-        ]
       },
       {
         "OID": "IT.DM.SEX",
@@ -519,11 +474,6 @@
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DM.RFPENDTC",
-            "Mandatory": "Yes",
-            "RepeatKey": null
-          },
-          {
             "ItemOID": "IT.DM.DMDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
@@ -579,17 +529,7 @@
             "RepeatKey": null
           },
           {
-            "ItemOID": "IT.DM.RFENDTC",
-            "Mandatory": "Yes",
-            "RepeatKey": null
-          },
-          {
             "ItemOID": "IT.DM.RFICDTC",
-            "Mandatory": "Yes",
-            "RepeatKey": null
-          },
-          {
-            "ItemOID": "IT.DM.RFSTDTC",
             "Mandatory": "Yes",
             "RepeatKey": null
           },
