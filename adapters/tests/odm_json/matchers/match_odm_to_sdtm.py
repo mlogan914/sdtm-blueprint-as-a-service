@@ -1,7 +1,7 @@
 import json
 import csv
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 def load_json(path: str) -> dict:
     with open(path) as f:
@@ -25,95 +25,146 @@ def flatten_sdtm_metadata(sdtm_json: Dict) -> Dict:
             }
     return lookup
 
-def match_odm_to_sdtm(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
+def parse_odm_items(odm_json: Dict) -> Dict[Tuple[str, str], Dict]:
     item_defs = odm_json["MetaDataVersion"]["ItemDefs"]
-    results = []
-
+    results = {}
     for item in item_defs:
         oid = item["OID"]
-        name = item["Name"]
-        label = item.get("Label", "")
         aliases = item.get("Aliases", [])
-
         parts = oid.split(".")
-        inferred_domain = parts[1] if len(parts) > 2 else None
-        inferred_var = parts[2] if len(parts) > 2 else name
+        if len(parts) < 3:
+            continue
+        domain, var = parts[1], parts[2]
+        results[(domain, var)] = {
+            "ItemOID": oid,
+            "ODM_Variable": var,
+            "ODM_Domain": domain,
+            "Aliases": aliases
+        }
+    return results
 
-        match_key = (inferred_domain, inferred_var)
-        match = sdtm_lookup.get(match_key)
-        match_type = "OID" if match else None
-        mapping_type = "Direct" if not aliases else "Unmatched"
-        alias_context = ""
-        alias_name = ""
-        alias_label = ""
-        derived_target = ""
+def parse_aliases(aliases: List[Dict]) -> Dict:
+    result = {
+        "Alias_Context": "",
+        "Alias_Name": "",
+        "Alias_Label": "",
+        "Mapping_Type": "Direct",
+        "Match_Type": "OID",
+        "Derived_Target": "",
+        "QNAM": "",
+        "QLABEL": "",
+        "IDVAR": "",
+        "IDVARVAL": "",
+        "Not_Submitted": False
+    }
 
-        qlabel_alias = next((a for a in aliases if "QLABEL" in a.get("Context", "")), None)
-        fallback_label = qlabel_alias["Name"] if qlabel_alias else item.get("Label", "")
+    for alias in aliases:
+        context = alias.get("Context", "")
+        name = alias.get("Name", "")
+        if context == "DERIVATION_RULE":
+            result["Mapping_Type"] = "Derived"
+            result["Match_Type"] = "Alias.Derivation"
+            result["Derived_Target"] = name
+        elif context.startswith("SUPPQUAL"):
+            result["Mapping_Type"] = "SUPPQUAL"
+            result["Match_Type"] = "Alias.SUPP"
+            if "QNAM" in context:
+                result["QNAM"] = name
+            elif "QLABEL" in context:
+                result["QLABEL"] = name
+                result["Alias_Label"] = name
+            elif "IDVAR" in context:
+                result["IDVAR"] = name
+            elif "IDVARVAL" in context:
+                result["IDVARVAL"] = name
+            result["Alias_Context"] = context
+            result["Alias_Name"] = name
+        elif context == "NOT_SUBMITTED":
+            result["Mapping_Type"] = "Not_Submitted"
+            result["Match_Type"] = "Alias.NotSubmitted"
+            result["Alias_Context"] = context
+            result["Alias_Name"] = name
+            result["Not_Submitted"] = True
+    return result
 
-        for alias in aliases:
-            context = alias.get("Context", "")
-            name_in_alias = alias.get("Name", "")
+def match_odm_to_sdtm_all(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
+    odm_vars = parse_odm_items(odm_json)
+    odm_domains = set(domain for (domain, _) in odm_vars.keys())
 
-            if context == "DERIVATION_TARGET":
-                derived_target = name_in_alias
+    filtered_sdtm_lookup = {k: v for k, v in sdtm_lookup.items() if k[0] in odm_domains}
+    all_keys = set(filtered_sdtm_lookup.keys())
 
-            if context.startswith("SUPPQUAL") and name_in_alias:
-                alias_context = context
-                alias_name = name_in_alias
-                alias_label = fallback_label
-                mapping_type = "SUPPQUAL"
-                match_type = "Alias.SUPP"
-                match = {
-                    "SDTM_Domain": f"SUPP{inferred_domain}",
-                    "SDTM_Variable": "QVAL",
-                    "SDTM_Label": "Qualifier Value",
-                    "Ordinal": "",
-                    "Core": "",
-                    "Role": "",
-                    "Datatype": "",
-                    "Description": "",
-                    "CodeList": "",
-                    "SDTM_Path": ""
-                }
-                break
+    results = []
 
-            elif context == "DERIVATION_RULE":
-                alias_context = context
-                alias_name = name_in_alias
-                mapping_type = "Derived"
-                match_type = "Alias.Derivation"
-                match = sdtm_lookup.get((inferred_domain, inferred_var))
-                break
+    # Pass 1: matched or unmatched SDTMIG vars
+    for key in all_keys:
+        domain, var = key
+        match = filtered_sdtm_lookup.get(key, {})
+        odm_info = odm_vars.get(key)
 
-        if not match:
-            mapping_type = "Unmatched"
+        alias_info = {}
+        if odm_info:
+            alias_info = parse_aliases(odm_info.get("Aliases", []))
 
         results.append({
-            "ItemOID": oid,
-            "ODM_Variable": name,
-            "ODM_Domain": inferred_domain or "",
-            "Alias_Context": alias_context,
-            "Alias_Name": alias_name,
-            "Alias_Label": alias_label,
-            "Mapping_Type": mapping_type,
-            "Match_Type": match_type if match else "Unmatched",
-            "Derived_Target": derived_target,
-            "SDTM_Domain": match.get("SDTM_Domain", "") if match else "",
-            "SDTM_Variable": match.get("SDTM_Variable", "") if match else "",
-            "SDTM_Label": match.get("SDTM_Label", "") if match else "",
-            "Ordinal": match.get("Ordinal", "") if match else "",
-            "Core": match.get("Core", "") if match else "",
-            "Role": match.get("Role", "") if match else "",
-            "Datatype": match.get("Datatype", "") if match else "",
-            "Description": match.get("Description", "") if match else "",
-            "CodeList": match.get("CodeList", "") if match else "",
-            "SDTM_Path": match.get("SDTM_Path", "") if match else "",
-            "QNAM": alias_name if mapping_type == "SUPPQUAL" else "",
-            "QLABEL": alias_label if mapping_type == "SUPPQUAL" else "",
-            "IDVAR": inferred_domain if mapping_type == "SUPPQUAL" else "",
-            "IDVARVAL": name if mapping_type == "SUPPQUAL" else ""
+            "ItemOID": odm_info["ItemOID"] if odm_info else "",
+            "ODM_Variable": odm_info["ODM_Variable"] if odm_info else "",
+            "ODM_Domain": odm_info["ODM_Domain"] if odm_info else domain,
+            "Alias_Context": alias_info.get("Alias_Context", ""),
+            "Alias_Name": alias_info.get("Alias_Name", ""),
+            "Alias_Label": alias_info.get("Alias_Label", ""),
+            "Mapping_Type": alias_info.get("Mapping_Type", "Unmatched") if not odm_info else alias_info.get("Mapping_Type", "Direct"),
+            "Match_Type": alias_info.get("Match_Type", "Missing") if not odm_info else alias_info.get("Match_Type", "OID"),
+            "Derived_Target": alias_info.get("Derived_Target", ""),
+            "SDTM_Domain": match.get("SDTM_Domain", domain),
+            "SDTM_Variable": match.get("SDTM_Variable", var),
+            "SDTM_Label": match.get("SDTM_Label", ""),
+            "Ordinal": match.get("Ordinal", ""),
+            "Core": match.get("Core", ""),
+            "Role": match.get("Role", ""),
+            "Datatype": match.get("Datatype", ""),
+            "Description": match.get("Description", ""),
+            "CodeList": match.get("CodeList", ""),
+            "SDTM_Path": match.get("SDTM_Path", ""),
+            "QNAM": alias_info.get("QNAM", ""),
+            "QLABEL": alias_info.get("QLABEL", ""),
+            "IDVAR": alias_info.get("IDVAR", ""),
+            "IDVARVAL": alias_info.get("IDVARVAL", ""),
+            "Not_Submitted": alias_info.get("Not_Submitted", False)
         })
+
+    # Pass 2: include unmatched ODM variables that map to SUPP
+    for key, odm_info in odm_vars.items():
+        if key in all_keys:
+            continue  # already processed above
+        alias_info = parse_aliases(odm_info.get("Aliases", []))
+        if alias_info.get("Mapping_Type") == "SUPPQUAL":
+            results.append({
+                "ItemOID": odm_info["ItemOID"],
+                "ODM_Variable": odm_info["ODM_Variable"],
+                "ODM_Domain": odm_info["ODM_Domain"],
+                "Alias_Context": alias_info.get("Alias_Context", ""),
+                "Alias_Name": alias_info.get("Alias_Name", ""),
+                "Alias_Label": alias_info.get("Alias_Label", ""),
+                "Mapping_Type": "SUPPQUAL",
+                "Match_Type": "Alias.SUPP",
+                "Derived_Target": "",
+                "SDTM_Domain": f"SUPP{odm_info['ODM_Domain']}",
+                "SDTM_Variable": "QVAL",
+                "SDTM_Label": "Qualifier Value",
+                "Ordinal": "",
+                "Core": "",
+                "Role": "",
+                "Datatype": "",
+                "Description": "",
+                "CodeList": "",
+                "SDTM_Path": "",
+                "QNAM": alias_info.get("QNAM", ""),
+                "QLABEL": alias_info.get("QLABEL", ""),
+                "IDVAR": alias_info.get("IDVAR", ""),
+                "IDVARVAL": alias_info.get("IDVARVAL", ""),
+                "Not_Submitted": alias_info.get("Not_Submitted", False)
+            })
 
     return results
 
@@ -127,7 +178,7 @@ def main(odm_path: str, sdtm_path: str, output_csv: str):
     odm_json = load_json(odm_path)
     sdtm_json = load_json(sdtm_path)
     sdtm_lookup = flatten_sdtm_metadata(sdtm_json)
-    matched = match_odm_to_sdtm(odm_json, sdtm_lookup)
+    matched = match_odm_to_sdtm_all(odm_json, sdtm_lookup)
     save_to_csv(matched, output_csv)
     print(f"✅ Match results written to: {output_csv}")
 
@@ -139,5 +190,3 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True, help="Output CSV path for match results")
     args = parser.parse_args()
     main(args.odm, args.sdtm, args.output)
-
-## -- End of Program Code -- ##
