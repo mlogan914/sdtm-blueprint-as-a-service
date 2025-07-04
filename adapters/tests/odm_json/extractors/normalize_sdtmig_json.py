@@ -1,6 +1,10 @@
 import argparse
 import json
-from utils.extract_sdtm_metadata import extract_sdtm_metadata
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from utils.parse_sdtmig_json import extract_sdtm_metadata
 
 def main():
     parser = argparse.ArgumentParser(
@@ -23,7 +27,7 @@ def main():
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2)
 
-    print(f"✅ SDTM metadata extracted and saved to {args.output}")
+    print(f"✅ SDTM metadata extracted and saved to: {args.output}")
 
 if __name__ == "__main__":
     main()

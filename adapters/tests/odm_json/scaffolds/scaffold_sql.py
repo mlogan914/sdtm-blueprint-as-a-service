@@ -1,12 +1,7 @@
+import argparse
 import pandas as pd
 from collections import defaultdict
 from pathlib import Path
-
-match_df = pd.read_csv("match_results.csv")
-
-# Separate primary and supplemental domains
-dm_df = match_df[match_df["SDTM_Domain"] == "DM"]
-supp_df = match_df[match_df["Mapping_Type"] == "SUPPQUAL"]
 
 def safe_ordinal(val):
     try:
@@ -14,7 +9,6 @@ def safe_ordinal(val):
     except:
         return float("inf")
 
-# Create dm.sql
 def create_dm_sql(df: pd.DataFrame, path: Path):
     grouped = df.groupby("SDTM_Variable")
     lines = ["SELECT"]
@@ -24,7 +18,7 @@ def create_dm_sql(df: pd.DataFrame, path: Path):
         key=lambda var: safe_ordinal(df[df["SDTM_Variable"] == var]["Ordinal"].iloc[0])
     )
 
-    for i, var in enumerate(sdtm_vars):
+    for var in sdtm_vars:
         group = df[df["SDTM_Variable"] == var]
         row = group.iloc[0]
         mapping_type = row["Mapping_Type"]
@@ -33,13 +27,11 @@ def create_dm_sql(df: pd.DataFrame, path: Path):
 
         if mapping_type == "Direct":
             lines.append(f"    ,{sources} AS {var}  -- {sdtm_label}")
-
         elif mapping_type == "Derived":
             lines.append(f"    -- Derived variable: {var}")
             if sources:
                 lines.append(f"    -- Candidate inputs: {sources}")
             lines.append(f"    ,{{% raw %}}{{{{ derive_{var.lower()}(...) }}}}{{% endraw %}} AS {var}  -- {sdtm_label}")
-
         elif mapping_type == "Unmatched":
             lines.append(f"    -- TODO: Unmatched variable: {var}")
             if sources:
@@ -48,9 +40,8 @@ def create_dm_sql(df: pd.DataFrame, path: Path):
 
     lines.append("FROM {% raw %}{{ ref('raw_dm') }}{% endraw %};")
     path.write_text("\n".join(lines))
-    print(f"✅ Wrote {path.name}")
+    print(f"✅ Generated SQL scaffold → {path}")
 
-# Create suppdm.sql using UNION logic
 def create_suppdm_sql(df: pd.DataFrame, path: Path):
     grouped = df.groupby("QNAM")
     blocks = []
@@ -80,8 +71,23 @@ def create_suppdm_sql(df: pd.DataFrame, path: Path):
 
     sql = "\nUNION ALL\n".join(blocks) + ";"
     path.write_text(sql)
-    print(f"✅ Wrote {path.name}")
+    print(f"✅ Generated SQL scaffold → {path}")
 
-# Output both
-create_dm_sql(dm_df[dm_df["Mapping_Type"] != "SUPPQUAL"], Path("dm.sql"))
-create_suppdm_sql(supp_df, Path("suppdm.sql"))
+def main():
+    parser = argparse.ArgumentParser(description="Generate SQL scaffolds from ODM-SDTM matched metadata.")
+    parser.add_argument("--input", required=True, help="Path to matched metadata CSV file")
+    parser.add_argument("--output_dir", required=True, help="Directory to save scaffolded SQL files")
+    args = parser.parse_args()
+
+    match_df = pd.read_csv(args.input)
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    dm_df = match_df[match_df["SDTM_Domain"] == "DM"]
+    supp_df = match_df[match_df["Mapping_Type"] == "SUPPQUAL"]
+
+    create_dm_sql(dm_df[dm_df["Mapping_Type"] != "SUPPQUAL"], output_dir / "scaffold_dm.sql")
+    create_suppdm_sql(supp_df, output_dir / "scaffold_suppdm.sql")
+
+if __name__ == "__main__":
+    main()

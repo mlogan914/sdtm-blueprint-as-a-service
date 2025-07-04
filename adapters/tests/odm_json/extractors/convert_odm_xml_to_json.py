@@ -9,10 +9,12 @@ NS = {"odm": "http://www.cdisc.org/ns/odm/v2.0"}
 
 # -- Schema Validation
 def validate_xml_against_xsd(xml_path: Path, xsd_path: Path):
-    """Validate the XML against a given XSD schema."""
+    """Validate the XML against a given XSD schema, resolving includes."""
+    parser = etree.XMLParser(load_dtd=True, no_network=False)
+
     with open(xsd_path, 'rb') as f:
-        schema_root = etree.XML(f.read())
-        schema = etree.XMLSchema(schema_root)
+        schema_doc = etree.parse(f, parser)
+        schema = etree.XMLSchema(schema_doc)
 
     xml_doc = etree.parse(str(xml_path))
     is_valid = schema.validate(xml_doc)
@@ -20,6 +22,7 @@ def validate_xml_against_xsd(xml_path: Path, xsd_path: Path):
     if not is_valid:
         raise ValueError(f"XML validation failed:\n{schema.error_log}")
     print(f"✅ XML file {xml_path.name} is valid against {xsd_path.name}")
+
 
 # -- XML Parse
 def parse_metadata(xml_path: Path) -> dict:
@@ -125,7 +128,7 @@ def main():
     args = parser.parse_args()
 
     inp = Path(args.input)
-    outp = Path(args.output) if args.output else inp.with_name(inp.stem + "_metadata.json")
+    outp = Path(args.output) if args.output else inp.with_name(inp.stem + "_crf_metadata.json")
 
     if not inp.exists():
         raise FileNotFoundError(f"Input file {inp} not found")
@@ -137,7 +140,7 @@ def main():
     with open(outp, "w", encoding="utf-8") as fh:
         json.dump(metadata_json, fh, indent=2)
 
-    print(f"✅ JSON written to {outp}")
+    print(f"✅ JSON written to: {outp}")
 
 if __name__ == "__main__":
     main()
