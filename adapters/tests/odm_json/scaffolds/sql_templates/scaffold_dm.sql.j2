@@ -1,55 +1,40 @@
 SELECT
-    ,studyid AS STUDYID  -- Study Identifier
-    ,domain AS DOMAIN  -- Domain Abbreviation
-    -- TODO: Unmatched variable: USUBJID
-    ,null AS USUBJID  -- Unique Subject Identifier
-    ,subjid AS SUBJID  -- Subject Identifier for the Study
-    -- TODO: Unmatched variable: RFSTDTC
-    ,null AS RFSTDTC  -- Subject Reference Start Date/Time
-    -- TODO: Unmatched variable: RFENDTC
-    ,null AS RFENDTC  -- Subject Reference End Date/Time
-    -- TODO: Unmatched variable: RFXSTDTC
-    ,null AS RFXSTDTC  -- Date/Time of First Study Treatment
-    -- TODO: Unmatched variable: RFXENDTC
-    ,null AS RFXENDTC  -- Date/Time of Last Study Treatment
-    -- TODO: Unmatched variable: RFCSTDTC
-    ,null AS RFCSTDTC  -- Date/Time of First Challenge Agent Admin
-    -- TODO: Unmatched variable: RFCENDTC
-    ,null AS RFCENDTC  -- Date/Time of Last Challenge Agent Admin
-    ,rficdtc AS RFICDTC  -- Date/Time of Informed Consent
-    -- TODO: Unmatched variable: RFPENDTC
-    ,null AS RFPENDTC  -- Date/Time of End of Participation
-    -- TODO: Unmatched variable: DTHDTC
-    ,null AS DTHDTC  -- Date/Time of Death
-    -- TODO: Unmatched variable: DTHFL
-    ,null AS DTHFL  -- Subject Death Flag
-    ,siteid AS SITEID  -- Study Site Identifier
-    -- TODO: Unmatched variable: INVID
-    ,null AS INVID  -- Investigator Identifier
-    -- TODO: Unmatched variable: INVNAM
-    ,null AS INVNAM  -- Investigator Name
-    ,brthdtc AS BRTHDTC  -- Date/Time of Birth
-    ,{% include 'overrides/standard/derive_age.sql' %} AS AGE  -- Age
-    -- TODO: Unmatched variable: AGEU
-    ,null AS AGEU  -- Age Units
-    ,sex AS SEX  -- Sex
-    -- TODO: Custom derivation for RACE
-    ,null AS RACE  -- Race
-    ,ethnic AS ETHNIC  -- Ethnicity
-    -- TODO: Custom derivation for ARMCD
-    ,null AS ARMCD  -- Planned Arm Code
-    -- TODO: Custom derivation for ARM
-    ,null AS ARM  -- Description of Planned Arm
-    -- TODO: Custom derivation for ACTARMCD
-    ,null AS ACTARMCD  -- Actual Arm Code
-    -- TODO: Custom derivation for ACTARM
-    ,null AS ACTARM  -- Description of Actual Arm
-    -- TODO: Custom derivation for ARMNRS
-    ,null AS ARMNRS  -- Reason Arm and/or Actual Arm is Null
-    -- TODO: Custom derivation for ACTARMUD
-    ,null AS ACTARMUD  -- Description of Unplanned Actual Arm
-    ,country AS COUNTRY  -- Country
-    ,dmdtc AS DMDTC  -- Date/Time of Collection
-    -- TODO: Unmatched variable: DMDY
-    ,null AS DMDY  -- Study Day of Collection
-FROM {% raw %}{{ ref('raw_{{ domain.lower() }}') }}{% endraw %};
+    ,studyid AS STUDYID
+    ,domain AS DOMAIN
+    ,{% include 'overrides/custom/dm/derive_usubjid.sql' %} AS USUBJID
+    ,subjid AS SUBJID
+    ,NULL AS RFSTDTC
+    ,NULL AS RFENDTC
+    ,NULL AS RFXSTDTC
+    ,NULL AS RFXENDTC
+    ,NULL AS RFCSTDTC
+    ,NULL AS RFCENDTC
+    ,rficdtc AS RFICDTC
+    ,NULL AS RFPENDTC
+    ,NULL AS DTHDTC
+    ,NULL AS DTHFL
+    ,siteid AS SITEID
+    ,NULL AS INVID
+    ,NULL AS INVNAM
+    ,brthdtc AS BRTHDTC
+    ,{% include 'overrides/standard/derive_age.sql' %} AS AGE
+    ,NULL AS AGEU
+    ,sex AS SEX
+    ,{% include 'overrides/custom/dm/derive_race.sql' %} AS RACE
+    ,ethnic AS ETHNIC
+    ,NULL AS ARMCD  -- TODO: Custom derivation file missing for ARMCD
+    ,NULL AS ARM  -- TODO: Custom derivation file missing for ARM
+    ,NULL AS ACTARMCD  -- TODO: Custom derivation file missing for ACTARMCD
+    ,NULL AS ACTARM  -- TODO: Custom derivation file missing for ACTARM
+    ,NULL AS ARMNRS  -- TODO: Custom derivation file missing for ARMNRS
+    ,NULL AS ACTARMUD  -- TODO: Custom derivation file missing for ACTARMUD
+    ,country AS COUNTRY
+    ,dmdtc AS DMDTC
+    ,NULL AS DMDY
+    ,NULL AS QVAL
+    ,NULL AS DY  -- TODO: Standard derivation file missing for DY
+    ,NULL AS EPOCH  -- TODO: Standard derivation file missing for EPOCH
+    ,NULL AS VISIT  -- TODO: Standard derivation file missing for VISIT
+    ,NULL AS VISITDY  -- TODO: Standard derivation file missing for VISITDY
+
+FROM {{ '{{' }} ref('raw_{{ '{{' }} domain.lower() {{ '}}' }}') {{ '}}' }};

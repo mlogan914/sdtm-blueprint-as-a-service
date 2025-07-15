@@ -1,114 +1,104 @@
-import argparse
 import pandas as pd
-from collections import defaultdict
-from pathlib import Path
 import yaml
+import argparse
 import logging
+from pathlib import Path
 
-# Setup logging
+# Resolve paths relative to script location
+script_dir = Path(__file__).resolve().parent
+project_root = script_dir.parent
+
+config_dir = project_root / "config"
+overrides_dir = project_root / "overrides"
+
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
-# Load standard derivations from YAML
-with open("config/standard_derivations.yml") as f:
-    standard_config = yaml.safe_load(f)
-STANDARD_DERIVATIONS = set(map(str.upper, standard_config.get("standard_derivations", [])))
+def load_yaml(path):
+    with open(path, "r") as f:
+        return yaml.safe_load(f)
 
+def load_csv(path):
+    return pd.read_csv(path)
 
-def safe_ordinal(val):
-    try:
-        return int(val)
-    except:
-        return float("inf")
+def inject_variable_line(var, domain, mapping_type, standard_deriv_vars, custom_deriv_vars, custom_path, standard_path):
+    var_upper = var.upper()
+    var_lower = var.lower()
+    comment = ""
 
-def create_domain_sql(df: pd.DataFrame, domain: str, path: Path):
-    grouped = df.groupby("SDTM_Variable")
-    lines = ["SELECT"]
+    if mapping_type == "Direct":
+        return f"    ,{var_lower} AS {var_upper}"
+    
+    elif var_upper in standard_deriv_vars:
+        deriv_file = standard_path / f"derive_{var_lower}.sql"
+        if deriv_file.exists():
+            logging.info(f"[{domain}] Injecting standard derivation for: {var_upper}")
+            return f"    ,{{% include 'overrides/standard/derive_{var_lower}.sql' %}} AS {var_upper}"
+        else:
+            logging.warning(f"[{domain}] Standard derivation listed but file missing: derive_{var_lower}.sql")
+            comment = f"  -- TODO: Standard derivation file missing for {var_upper}"
+    
+    elif var_upper in custom_deriv_vars:
+        deriv_file = custom_path / domain.lower() / f"derive_{var_lower}.sql"
+        if deriv_file.exists():
+            logging.info(f"[{domain}] Injecting custom derivation for: {var_upper}")
+            return f"    ,{{% include 'overrides/custom/{domain.lower()}/derive_{var_lower}.sql' %}} AS {var_upper}"
+        else:
+            logging.warning(f"[{domain}] Custom derivation listed but file missing: derive_{var_lower}.sql")
+            comment = f"  -- TODO: Custom derivation file missing for {var_upper}"
+    
+    elif mapping_type == "Derived":
+        logging.info(f"[{domain}] Derived variable identified with no derivation listed: {var_upper}")
+        comment = f"  -- TODO: Derived variable {var_upper} needs a derivation"
 
-    sdtm_vars = sorted(
-        df["SDTM_Variable"].dropna().unique(),
-        key=lambda var: safe_ordinal(df[df["SDTM_Variable"] == var]["Ordinal"].iloc[0])
-    )
+    return f"    ,NULL AS {var_upper}{comment}"
 
-    for var in sdtm_vars:
-        group = df[df["SDTM_Variable"] == var]
-        row = group.iloc[0]
-        target = row["Derived_Target"] if pd.notna(row.get("Derived_Target")) else var
-        mapping_type = row["Mapping_Type"]
-        sdtm_label = row["SDTM_Label"]
-        sources = ", ".join(group["ODM_Variable"].dropna().str.lower().unique())
-
-        if mapping_type == "Direct":
-            lines.append(f"    ,{sources} AS {var}  -- {sdtm_label}")
-        elif mapping_type == "Derived":
-            var_upper = var.upper()
-            if var_upper in STANDARD_DERIVATIONS:
-                logging.info("[{}] Injecting standard derivation for: {}".format(domain, var_upper))
-                lines.append("    ,{{% include 'overrides/standard/derive_{}.sql' %}} AS {}  -- {}".format(
-                    var.lower(), target, sdtm_label))
-            else:
-                logging.info("[{}] Identified custom derivation needed for: {}".format(domain, var_upper))
-                lines.append("    -- TODO: Custom derivation for {}".format(target))
-                lines.append("    ,null AS {}  -- {}".format(target, sdtm_label))
-        elif mapping_type == "Unmatched":
-            lines.append(f"    -- TODO: Unmatched variable: {var}")
-            if sources:
-                lines.append(f"    -- Candidate sources: {sources}")
-            lines.append(f"    ,null AS {var}  -- {sdtm_label}")
-
-    lines.append("FROM {% raw %}{{ ref('raw_{{ domain.lower() }}') }}{% endraw %};")
-    path.write_text("\n".join(lines))
-    print(f"✅ Generated SQL scaffold → {path}")
-
-def create_suppdm_sql(df: pd.DataFrame, path: Path):
-    grouped = df.groupby("QNAM")
-    blocks = []
-
-    for qnam, group in grouped:
-        row = group.iloc[0]
-        qlabel = row["QLABEL"]
-        idvar = row["IDVAR"]
-        idvarval = row["IDVARVAL"]
-        source = row["ODM_Variable"].lower()
-
-        block = [
-            "SELECT",
-            f"    studyid",
-            f"    ,'SUPPDM' AS RDOMAIN",
-            f"    ,usubjid",
-            f"    ,'{idvar}' AS IDVAR",
-            f"    ,{str(idvarval).strip().lower() if pd.notna(idvarval) else 'null'} AS IDVARVAL",
-            f"    ,'{qnam}' AS QNAM",
-            f"    ,'{qlabel}' AS QLABEL",
-            f"    ,{source} AS QVAL",
-            "FROM {% raw %}{{ ref('raw_{{ domain.lower() }}') }}{% endraw %}",
-            f"WHERE {source} IS NOT NULL"
-        ]
-
-        blocks.append("\n".join(block))
-
-    sql = "\nUNION ALL\n".join(blocks) + ";"
-    path.write_text(sql)
-    print(f"✅ Generated SQL scaffold → {path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate SQL scaffolds from ODM-SDTM matched metadata.")
-    parser.add_argument("--input", required=True, help="Path to matched metadata CSV file")
-    parser.add_argument("--output_dir", required=True, help="Directory to save scaffolded SQL files")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", required=True)
+    parser.add_argument("--output_dir", required=True)
     args = parser.parse_args()
 
-    match_df = pd.read_csv(args.input)
-    output_dir = Path(args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    df = load_csv(args.input)
+    standard_config = load_yaml(config_dir / "standard_derivations.yml")
+    custom_config = load_yaml(config_dir / "custom_derivations.yml")
 
-    dm_df = match_df[match_df["SDTM_Domain"] == "DM"]
-    supp_df = match_df[match_df["Mapping_Type"] == "SUPPQUAL"]
+    standard_deriv_vars = set(standard_config.get("standard_derivations", []))
+    domain = df["SDTM_Domain"].dropna().unique()[0].upper()
+    custom_deriv_vars = set(custom_config.get("custom_derivations", {}).get(domain, []))
 
-    domains = match_df["SDTM_Domain"].dropna().unique()
-    for domain in domains:
-        domain_df = match_df[(match_df["SDTM_Domain"] == domain) & (match_df["Mapping_Type"] != "SUPPQUAL")]
-        if not domain_df.empty:
-            create_domain_sql(domain_df, domain, output_dir / f"scaffold_{domain.lower()}.sql.j2")
-    create_suppdm_sql(supp_df, output_dir / "scaffold_suppdm.sql.j2")
+    mapping_vars = set(df["SDTM_Variable"].dropna().str.upper())
+    all_known_vars = mapping_vars.union(standard_deriv_vars).union(custom_deriv_vars)
+
+    # Use absolute paths for checking file existence
+    custom_path = (overrides_dir / "custom").resolve()
+    standard_path = (overrides_dir / "standard").resolve()
+
+    lines = ["SELECT"]
+    ordered_df = df.sort_values("Ordinal", na_position="last") if "Ordinal" in df.columns else df
+    ordered_vars = ordered_df["SDTM_Variable"].dropna().str.upper().tolist()
+
+    for var in sorted(all_known_vars):
+        if var not in ordered_vars:
+            ordered_vars.append(var)
+
+    for var in ordered_vars:
+        var_lower = var.lower()
+        mapping_type = df[df["SDTM_Variable"].str.upper() == var]["Mapping_Type"].values
+        mapping_type = mapping_type[0] if len(mapping_type) else "unmatched"
+        line = inject_variable_line(var, domain, mapping_type, standard_deriv_vars, custom_deriv_vars, custom_path, standard_path)
+        lines.append(line)
+
+    lines.append("")
+    lines.append("FROM {{ '{{' }} ref('raw_{{ '{{' }} domain.lower() {{ '}}' }}') {{ '}}' }};")
+
+    output_path = Path(args.output_dir) / f"scaffold_{domain.lower()}.sql.j2"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_path, "w") as f:
+        f.write("\n".join(lines))
+
+    logging.info(f"✅ Generated SQL scaffold → {output_path}")
 
 if __name__ == "__main__":
     main()
