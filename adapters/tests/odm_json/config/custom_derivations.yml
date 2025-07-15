@@ -1,0 +1,10 @@
+custom_derivations:
+  DM:
+    - USUBJID
+    - RACE
+    - ARMCD
+    - ARM
+    - ACTARMCD
+    - ACTARM
+    - ARMNRS
+    - ACTARMUD
