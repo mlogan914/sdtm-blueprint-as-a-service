@@ -37,4 +37,4 @@ SELECT
     ,NULL AS VISIT  -- TODO: Standard derivation file missing for VISIT
     ,NULL AS VISITDY  -- TODO: Standard derivation file missing for VISITDY
 
-FROM {{ '{{' }} ref('raw_{{ '{{' }} domain.lower() {{ '}}' }}') {{ '}}' }};
+FROM {{ ref('raw_' ~ domain.lower()) }};
