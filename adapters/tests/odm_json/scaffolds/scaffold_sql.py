@@ -90,7 +90,7 @@ def main():
         lines.append(line)
 
     lines.append("")
-    lines.append("FROM {{ '{{' }} ref('raw_{{ '{{' }} domain.lower() {{ '}}' }}') {{ '}}' }};")
+    lines.append(r"FROM {{ ref('raw_' ~ domain.lower()) }};")
 
     output_path = Path(args.output_dir) / f"scaffold_{domain.lower()}.sql.j2"
     output_path.parent.mkdir(parents=True, exist_ok=True)
