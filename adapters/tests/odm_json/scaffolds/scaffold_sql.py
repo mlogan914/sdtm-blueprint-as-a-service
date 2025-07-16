@@ -60,8 +60,8 @@ def main():
     args = parser.parse_args()
 
     df = load_csv(args.input)
-    standard_config = load_yaml(config_dir / "standard_derivations.yml")
-    custom_config = load_yaml(config_dir / "custom_derivations.yml")
+    standard_config = load_yaml("config/standard_derivations.yml")
+    custom_config = load_yaml("config/custom_derivations.yml")
 
     standard_deriv_vars = set(standard_config.get("standard_derivations", []))
     domain = df["SDTM_Domain"].dropna().unique()[0].upper()
@@ -70,11 +70,46 @@ def main():
     mapping_vars = set(df["SDTM_Variable"].dropna().str.upper())
     all_known_vars = mapping_vars.union(standard_deriv_vars).union(custom_deriv_vars)
 
-    # Use absolute paths for checking file existence
-    custom_path = (overrides_dir / "custom").resolve()
-    standard_path = (overrides_dir / "standard").resolve()
+    custom_path = Path("overrides/custom") / domain.lower()
+    standard_path = Path("overrides/standard")
 
-    lines = ["SELECT"]
+    lines = []
+
+    # ============================================
+    # Step 1: Pre-Merge Input Data
+    # ============================================
+    # This CTE (if present) prepares raw inputs from one or more source datasets
+    # into a unified input structure for downstream derivations.
+    # The logic is defined in: overrides/custom/<domain>/prep_input_cte.sql
+    prep_cte_path = custom_path / "prep_input_cte.sql"
+    if prep_cte_path.exists():
+        lines.append("-- ============================================")
+        lines.append("-- Step 1: Pre-Merge Input Data")
+        lines.append("-- ============================================")
+        lines.append("-- This CTE (if present) prepares raw inputs from one or more source datasets")
+        lines.append("-- into a unified input structure for downstream derivations.")
+        lines.append("-- The logic is defined in: overrides/custom/<domain>/prep_input_cte.sql")
+        lines.append("{% include 'overrides/custom/" + domain.lower() + "/prep_input_cte.sql' %}")
+        from_clause = f"FROM {{ {{ domain.lower() }} }}_input"
+    else:
+        from_clause = r"FROM {{ ref('raw_' ~ domain.lower()) }}"
+
+
+    lines.append("")
+    # ============================================
+    # Step 2: Build SDTM Domain Variables
+    # ============================================
+    lines.append("-- ============================================")
+    lines.append("-- Step 2: Build SDTM Domain Variables")
+    lines.append("-- ============================================")
+    lines.append("-- This SELECT block builds the SDTM-compliant domain using:")
+    lines.append("--  - Direct mappings from source columns")
+    lines.append("--  - Standard derivation snippets (injected)")
+    lines.append("--  - Custom derivation snippets (injected per domain)")
+    lines.append("--  - Null placeholders for unmapped variables (with TODO comments)")
+    lines.append("-- Column order is based on SDTMIG metadata")
+    lines.append("SELECT")
+
     ordered_df = df.sort_values("Ordinal", na_position="last") if "Ordinal" in df.columns else df
     ordered_vars = ordered_df["SDTM_Variable"].dropna().str.upper().tolist()
 
@@ -90,7 +125,7 @@ def main():
         lines.append(line)
 
     lines.append("")
-    lines.append(r"FROM {{ ref('raw_' ~ domain.lower()) }};")
+    lines.append(from_clause + ";")
 
     output_path = Path(args.output_dir) / f"scaffold_{domain.lower()}.sql.j2"
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -99,6 +134,7 @@ def main():
         f.write("\n".join(lines))
 
     logging.info(f"✅ Generated SQL scaffold → {output_path}")
+
 
 if __name__ == "__main__":
     main()
