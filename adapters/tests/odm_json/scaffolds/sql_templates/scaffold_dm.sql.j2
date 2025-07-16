@@ -1,7 +1,24 @@
+-- ============================================
+-- Step 1: Pre-Merge Input Data
+-- ============================================
+-- This CTE (if present) prepares raw inputs from one or more source datasets
+-- into a unified input structure for downstream derivations.
+-- The logic is defined in: overrides/custom/<domain>/prep_input_cte.sql
+{% include 'overrides/custom/dm/prep_input_cte.sql' %}
+
+-- ============================================
+-- Step 2: Build SDTM Domain Variables
+-- ============================================
+-- This SELECT block builds the SDTM-compliant domain using:
+--  - Direct mappings from source columns
+--  - Standard derivation snippets (injected)
+--  - Custom derivation snippets (injected per domain)
+--  - Null placeholders for unmapped variables (with TODO comments)
+-- Column order is based on SDTMIG metadata
 SELECT
     ,studyid AS STUDYID
     ,domain AS DOMAIN
-    ,{% include 'overrides/custom/dm/derive_usubjid.sql' %} AS USUBJID
+    ,NULL AS USUBJID  -- TODO: Custom derivation file missing for USUBJID
     ,subjid AS SUBJID
     ,NULL AS RFSTDTC
     ,NULL AS RFENDTC
@@ -20,7 +37,7 @@ SELECT
     ,{% include 'overrides/standard/derive_age.sql' %} AS AGE
     ,NULL AS AGEU
     ,sex AS SEX
-    ,{% include 'overrides/custom/dm/derive_race.sql' %} AS RACE
+    ,NULL AS RACE  -- TODO: Custom derivation file missing for RACE
     ,ethnic AS ETHNIC
     ,NULL AS ARMCD  -- TODO: Custom derivation file missing for ARMCD
     ,NULL AS ARM  -- TODO: Custom derivation file missing for ARM
@@ -37,4 +54,4 @@ SELECT
     ,NULL AS VISIT  -- TODO: Standard derivation file missing for VISIT
     ,NULL AS VISITDY  -- TODO: Standard derivation file missing for VISITDY
 
-FROM {{ ref('raw_' ~ domain.lower()) }};
+FROM { { domain.lower() } }_input;
