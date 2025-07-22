@@ -127,7 +127,7 @@ def main():
     lines.append("")
     lines.append(from_clause + ";")
 
-    output_path = Path(args.output_dir) / f"scaffold_{domain.lower()}.sql.j2"
+    output_path = Path(args.output_dir) / f"scaffold_{domain.lower()}.sql"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, "w") as f:
