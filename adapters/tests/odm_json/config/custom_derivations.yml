@@ -8,3 +8,5 @@ custom_derivations:
     - ACTARM
     - ARMNRS
     - ACTARMUD
+    - DMDTC
+    - BRTHDTC

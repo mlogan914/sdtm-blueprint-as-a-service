@@ -1,10 +1,3 @@
--- ============================================
--- Step 1: Pre-Merge Input Data
--- ============================================
--- This CTE (if present) prepares raw inputs from one or more source datasets
--- into a unified input structure for downstream derivations.
--- The logic is defined in: overrides/custom/<domain>/prep_input_cte.sql
-{% include 'overrides/custom/dm/prep_input_cte.sql' %}
 
 -- ============================================
 -- Step 2: Build SDTM Domain Variables
@@ -18,7 +11,7 @@
 SELECT
     ,studyid AS STUDYID
     ,domain AS DOMAIN
-    ,NULL AS USUBJID  -- TODO: Custom derivation file missing for USUBJID
+    ,{% include 'overrides/custom/dm/derive_usubjid.sql' %} AS USUBJID
     ,subjid AS SUBJID
     ,NULL AS RFSTDTC
     ,NULL AS RFENDTC
@@ -33,11 +26,11 @@ SELECT
     ,siteid AS SITEID
     ,NULL AS INVID
     ,NULL AS INVNAM
-    ,brthdtc AS BRTHDTC
-    ,{% include 'overrides/standard/derive_age.sql' %} AS AGE
+    ,{% include 'overrides/custom/dm/derive_brthdtc.sql' %} AS BRTHDTC
+    ,NULL AS AGE  -- TODO: Standard derivation file missing for AGE
     ,NULL AS AGEU
     ,sex AS SEX
-    ,NULL AS RACE  -- TODO: Custom derivation file missing for RACE
+    ,{% include 'overrides/custom/dm/derive_race.sql' %} AS RACE
     ,ethnic AS ETHNIC
     ,NULL AS ARMCD  -- TODO: Custom derivation file missing for ARMCD
     ,NULL AS ARM  -- TODO: Custom derivation file missing for ARM
@@ -46,7 +39,7 @@ SELECT
     ,NULL AS ARMNRS  -- TODO: Custom derivation file missing for ARMNRS
     ,NULL AS ACTARMUD  -- TODO: Custom derivation file missing for ACTARMUD
     ,country AS COUNTRY
-    ,dmdtc AS DMDTC
+    ,{% include 'overrides/custom/dm/derive_dmdtc.sql' %} AS DMDTC
     ,NULL AS DMDY
     ,NULL AS QVAL
     ,NULL AS DY  -- TODO: Standard derivation file missing for DY
@@ -54,4 +47,4 @@ SELECT
     ,NULL AS VISIT  -- TODO: Standard derivation file missing for VISIT
     ,NULL AS VISITDY  -- TODO: Standard derivation file missing for VISITDY
 
-FROM { { domain.lower() } }_input;
+FROM {{ ref('raw_' ~ domain.lower()) }};

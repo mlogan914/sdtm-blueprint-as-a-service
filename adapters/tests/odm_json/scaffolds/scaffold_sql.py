@@ -38,7 +38,8 @@ def inject_variable_line(var, domain, mapping_type, standard_deriv_vars, custom_
             comment = f"  -- TODO: Standard derivation file missing for {var_upper}"
     
     elif var_upper in custom_deriv_vars:
-        deriv_file = custom_path / domain.lower() / f"derive_{var_lower}.sql"
+        deriv_file = custom_path / f"derive_{var_lower}.sql"
+
         if deriv_file.exists():
             logging.info(f"[{domain}] Injecting custom derivation for: {var_upper}")
             return f"    ,{{% include 'overrides/custom/{domain.lower()}/derive_{var_lower}.sql' %}} AS {var_upper}"
