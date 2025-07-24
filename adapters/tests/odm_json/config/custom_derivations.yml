@@ -10,3 +10,4 @@ custom_derivations:
     - ACTARMUD
     - DMDTC
     - BRTHDTC
+    - ISSUE_FLAG_USUBJID
