@@ -156,20 +156,24 @@
                 <Alias Context="DERIVATION_RULE" Name="ACTARMUD" />
                 <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
-            <ItemDef OID="IT.DM.BRTHDTC" Name="BRTHDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+            <ItemDef OID="IT.DM.BRTHDTC" Name="BRTHDTC_RAW" DataType="date" DisplayFormat="YYYY-MM-DD">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Date of Birth </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_RULE" Name="BRTHDTC" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
             <ItemDef OID="IT.DM.COUNTRY" Name="COUNTRY" DataType="text" Length="200">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Country </TranslatedText>
                 </Question>
             </ItemDef>
-            <ItemDef OID="IT.DM.DMDTC" Name="DMDTC" DataType="date" DisplayFormat="YYYY-MM-DD">
+            <ItemDef OID="IT.DM.DMDTC" Name="DMDTC_RAW" DataType="date" DisplayFormat="YYYY-MM-DD">
                 <Question>
                     <TranslatedText xml:lang="en" Type="text"> Date of Collection </TranslatedText>
                 </Question>
+                <Alias Context="DERIVATION_RULE" Name="DMDTC" />
+                <Alias Context="DEFAULT_VALUE" Name="NULL" />
             </ItemDef>
             <ItemDef OID="IT.DM.DOMAIN" Name="DOMAIN" DataType="text" Length="200" />
             <ItemDef OID="IT.DM.ETHNIC" Name="ETHNIC" DataType="text" Length="200">

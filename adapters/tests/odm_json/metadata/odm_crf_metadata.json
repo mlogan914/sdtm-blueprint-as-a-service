@@ -120,13 +120,22 @@
       },
       {
         "OID": "IT.DM.BRTHDTC",
-        "Name": "BRTHDTC",
+        "Name": "BRTHDTC_RAW",
         "DataType": "date",
         "Length": null,
         "Format": "YYYY-MM-DD",
         "CodeListRef": null,
-        "Derived": false,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "BRTHDTC"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.COUNTRY",
@@ -140,13 +149,22 @@
       },
       {
         "OID": "IT.DM.DMDTC",
-        "Name": "DMDTC",
+        "Name": "DMDTC_RAW",
         "DataType": "date",
         "Length": null,
         "Format": "YYYY-MM-DD",
         "CodeListRef": null,
-        "Derived": false,
-        "Aliases": []
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "DMDTC"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
       },
       {
         "OID": "IT.DM.DOMAIN",
