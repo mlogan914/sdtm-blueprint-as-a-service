@@ -34,14 +34,15 @@ SELECT
                 CONCAT(prevstudy, '-', prevsubj)
         END
 END AS USUBJID
-    ,raw_dm.subjid AS SUBJID
+    ,raw_dm.subject AS SUBJID
     ,NULL AS RFSTDTC
     ,NULL AS RFENDTC
     ,NULL AS RFXSTDTC
     ,NULL AS RFXENDTC
     ,NULL AS RFCSTDTC
     ,NULL AS RFCENDTC
-    ,raw_dm.rficdtc AS RFICDTC
+    -- Injected custom: derive_rficdtc.sql
+    ,{{ convert_us_date_to_iso('RFICDTC') }} AS RFICDTC
     ,NULL AS RFPENDTC
     ,NULL AS DTHDTC
     ,NULL AS DTHFL
