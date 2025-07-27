@@ -38,3 +38,18 @@ models:
       +materialized: view
     staging:
       +materialized: ephemeral
+
+seeds:
+  VEXIN_03:
+    raw_dm:
+      +column_types:
+        SITEID: text
+        SUBJID: text
+        SUBJECT: text
+        RFICDTC: text
+        BRTHDTC_RAW: text
+        DMDTC_RAW: text
+        PREVSUBJ: text
+        PREVSTUDY: text
+        RESCREENNUM_RAW: text
+
