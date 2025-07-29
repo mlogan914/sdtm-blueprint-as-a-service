@@ -1,0 +1,1 @@
+{{ convert_us_date_to_iso('RFICDTC_RAW') }} AS RFICDTC

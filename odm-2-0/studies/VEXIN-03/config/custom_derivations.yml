@@ -1,0 +1,14 @@
+custom_derivations:
+  DM:
+    - USUBJID
+    - RACE
+    - ARMCD
+    - ARM
+    - ACTARMCD
+    - ACTARM
+    - ARMNRS
+    - ACTARMUD
+    - DMDTC
+    - RFICDTC
+    - BRTHDTC
+    - ISSUE_FLAG_USUBJID

@@ -1,0 +1,592 @@
+{
+  "StudyOID": "ST.VEXIN-03",
+  "MetaDataVersion": {
+    "OID": "MDV.2",
+    "Name": "VEXIN-03 ODM Export",
+    "ItemDefs": [
+      {
+        "OID": "IT.DM.ACTARM",
+        "Name": "ACTARM",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ACTARM"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ACTARMCD",
+        "Name": "ACTARMCD",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ACTARMCD"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ARM",
+        "Name": "ARM",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ARM"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ARMCD",
+        "Name": "ARMCD",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ARMCD"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ARMNRS",
+        "Name": "ARMNRS",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ARMNRS"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.ACTARMUD",
+        "Name": "ACTARMUD",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "ACTARMUD"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.BRTHDTC",
+        "Name": "BRTHDTC_RAW",
+        "DataType": "date",
+        "Length": null,
+        "Format": "YYYY-MM-DD",
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "BRTHDTC"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.COUNTRY",
+        "Name": "COUNTRY",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.DMDTC",
+        "Name": "DMDTC_RAW",
+        "DataType": "date",
+        "Length": null,
+        "Format": "YYYY-MM-DD",
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "DMDTC"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.DOMAIN",
+        "Name": "DOMAIN",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.ETHNIC",
+        "Name": "ETHNIC",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": "CL.ETHNIC",
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.RACE",
+        "Name": "RACE",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACEOTH",
+        "Name": "RACEOTH",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": false,
+        "Aliases": [
+          {
+            "Context": "SUPPQUAL.SUPPDM.QNAM",
+            "Name": "RACEOTH"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.QLABEL",
+            "Name": "Race, Other Specify"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.QVAL",
+            "Name": "RACEOTH"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.IDVAR",
+            "Name": "USUBJID"
+          },
+          {
+            "Context": "SUPPQUAL.SUPPDM.IDVARVAL",
+            "Name": "RACEOTH"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACE_AIAN",
+        "Name": "RACE_AIAN",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACE_ASIAN",
+        "Name": "RACE_ASIAN",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACE_BLACK",
+        "Name": "RACE_BLACK",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACE_NHPI",
+        "Name": "RACE_NHPI",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACE_OTHER",
+        "Name": "RACE_OTHER",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RACE_WHITE",
+        "Name": "RACE_WHITE",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_TARGET",
+            "Name": "RACE"
+          },
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RACE"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.RFICDTC",
+        "Name": "RFICDTC_RAW",
+        "DataType": "date",
+        "Length": null,
+        "Format": "YYYY-MM-DD",
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "RFICDTC"
+          },
+          {
+            "Context": "DEFAULT_VALUE",
+            "Name": "NULL"
+          }
+        ]
+      },
+      {
+        "OID": "IT.DM.SEX",
+        "Name": "SEX",
+        "DataType": "text",
+        "Length": "1",
+        "Format": null,
+        "CodeListRef": "CL.SEX",
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.SITEID",
+        "Name": "SITEID",
+        "DataType": "integer",
+        "Length": null,
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.STUDYID",
+        "Name": "STUDYID",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.SUBJID",
+        "Name": "SUBJECT",
+        "DataType": "text",
+        "Length": "200",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": false,
+        "Aliases": []
+      },
+      {
+        "OID": "IT.DM.AGE",
+        "Name": "AGE",
+        "DataType": "integer",
+        "Length": "3",
+        "Format": null,
+        "CodeListRef": null,
+        "Derived": true,
+        "Aliases": [
+          {
+            "Context": "DERIVATION_RULE",
+            "Name": "AGE"
+          }
+        ]
+      }
+    ],
+    "CodeLists": [
+      {
+        "OID": "CL.SEX",
+        "Name": "Sex",
+        "DataType": "text",
+        "Items": [
+          {
+            "CodedValue": "M",
+            "Decode": "Male"
+          },
+          {
+            "CodedValue": "F",
+            "Decode": "Female"
+          }
+        ]
+      },
+      {
+        "OID": "CL.ETHNIC",
+        "Name": "Ethnicity",
+        "DataType": "text",
+        "Items": [
+          {
+            "CodedValue": "HISPANIC OR LATINO",
+            "Decode": "Hispanic or Latino"
+          },
+          {
+            "CodedValue": "NOT HISPANIC OR LATINO",
+            "Decode": "Not Hispanic or Latino"
+          }
+        ]
+      }
+    ],
+    "ItemGroupDefs": [
+      {
+        "OID": "FORM.DM",
+        "Name": "Demographics",
+        "Type": "Form",
+        "Repeating": "No",
+        "ItemRefs": [
+          {
+            "ItemOID": "IT.DM.ACTARM",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ACTARMCD",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ARM",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ARMCD",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ARMNRS",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ACTARMUD",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.BRTHDTC",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.COUNTRY",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.DMDTC",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.DOMAIN",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.ETHNIC",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACEOTH",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE_AIAN",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE_ASIAN",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE_BLACK",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE_NHPI",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE_OTHER",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RACE_WHITE",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.RFICDTC",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.SEX",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.SITEID",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.STUDYID",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.SUBJID",
+            "Mandatory": "Yes",
+            "RepeatKey": null
+          },
+          {
+            "ItemOID": "IT.DM.AGE",
+            "Mandatory": "No",
+            "RepeatKey": null
+          }
+        ]
+      }
+    ]
+  }
+}
