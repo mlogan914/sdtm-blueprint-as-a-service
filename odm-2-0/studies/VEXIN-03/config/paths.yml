@@ -1,0 +1,15 @@
+dev:
+  repo_root: ${repo_root}
+  study: ${study}
+
+  odm_xml: ${repo_root}/studies/${study}/inputs/odm/${study}/odm.xml
+  odm_xsd: ${repo_root}/adapters/odm_json/schemas/odm/v2_0/ODM.xsd
+  sdtmig_input_json: ${repo_root}/studies/${study}/inputs/sdtmig/sdtmig_v3_4.json
+
+  crf_metadata_json: ${repo_root}/studies/${study}/runs/metadata/odm_crf_metadata.json
+  sdtmig_normalized_json: ${repo_root}/studies/${study}/runs/metadata/sdtmig_v3_4_normalized.json
+  match_output_csv: ${repo_root}/studies/${study}/runs/metadata/odm_to_sdtm_mapping.csv
+
+  overrides_dir: ${repo_root}/studies/${study}/overrides
+  config_dir: ${repo_root}/studies/${study}/config
+  dbt_models_dir: ${repo_root}/studies/${study}/dbt/models/sdtm
