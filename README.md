@@ -217,10 +217,3 @@ The matcher handles the `Name` vs `OID` discrepancy and records the resolved tar
 
 ## License
 MIT (or your chosen permissive license). Add a LICENSE file at repo root. -->
-
----
-
-### Maintainer notes (remove before publishing)
-- Update the top‑level *About* section and repo description on GitHub.
-- Add `requirements.txt`/`pyproject.toml` and a minimal `profiles.yml` example.
-- Keep the `studies/VEXIN-03/` demo in sync with the runner and mapping fields.
