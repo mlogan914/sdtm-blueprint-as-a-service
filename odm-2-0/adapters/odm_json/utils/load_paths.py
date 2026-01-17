@@ -11,6 +11,8 @@ def load_paths(study: str, env: str) -> dict:
     print(repo_root)
 
     config_path = os.path.join(repo_root, "studies", study, "config", "paths.yml")
+    print(config_path)
+    
     with open(config_path, "r") as f:
         raw_config = yaml.safe_load(f)
 
@@ -34,3 +36,5 @@ def load_paths(study: str, env: str) -> dict:
             resolved[key] = val
 
     return resolved
+
+## - End of Porgram Code -- ##

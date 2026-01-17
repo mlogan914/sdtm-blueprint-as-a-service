@@ -158,7 +158,7 @@ def main():
     lines.append("")
     lines.append(from_clause)
 
-    output_path = output_dir / f"scaffold_{domain.lower()}.sql"
+    output_path = output_dir / f"{domain.lower()}.sql" #f"scaffold_{domain.lower()}.sql"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, "w") as f:
@@ -168,3 +168,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+## -- End of Program Code -- #
