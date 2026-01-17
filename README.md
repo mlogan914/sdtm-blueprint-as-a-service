@@ -88,7 +88,8 @@ odm-2-0/
 ```
 </details> 
 
-<details> <summary><strong>Study Layer (`studies/VEXIN-03/`)</strong></summary>
+<details> 
+<summary><strong>Study Layer (`studies/VEXIN-03/`)</strong></summary>
 
 ```text
 studies/VEXIN-03/
@@ -98,6 +99,7 @@ studies/VEXIN-03/
 ├── runs/
 └── dbt/
 ```
+</details>
 
 > **Note:** The scaffolder reads per‑study config and writes dbt SQL into the study’s `dbt/models/sdtm/`.
 
@@ -267,7 +269,7 @@ D
 ## Roadmap
 - [x] ODM-JSON adapter workflow
 - [x] ODM-JSON adapter conversion
-- [x]Define Pre-Processing Data Injection Logic
+- [x] Define Pre-Processing Data Injection Logic
 - [x] DuckDB local profile and first end‑to‑end dbt run
 - [x] Injection of standard/custom derivations via jinja templates
 - [x] Injection of standard/custom derivations via jinja macros
