@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "dev"."main"."raw_dm";
+    -- dbt seed --
+    
+          COPY "dev"."main"."raw_dm" FROM '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/seeds/raw_dm.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

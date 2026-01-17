@@ -1,0 +1,56 @@
+[Fri Jan 16 04:06:42 PM PST 2026] Starting pipeline for study: studies/VEXIN-03 (env=dm)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 11, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/studies/VEXIN-03/config/paths.yml'
+[Fri Jan 16 04:06:59 PM PST 2026] Starting pipeline for study: studies/VEXIN-03 (env=dm)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 11, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/studies/VEXIN-03/config/paths.yml'
+[Fri Jan 16 04:07:26 PM PST 2026] Starting pipeline for study: studies/VEXIN-03 (env=dm)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 11, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/studies/VEXIN-03/config/paths.yml'
+[Fri Jan 16 04:18:33 PM PST 2026] Starting pipeline for study: studies/VEXIN-03 (env=dm)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 11, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/studies/VEXIN-03/config/paths.yml'

@@ -1,1 +1,1 @@
-{"_invocation_id": "d1b4e9b8-7837-4433-a89b-f505cdfa0a32", "linked": {"0": {"name": "model.VEXIN_03.dm", "type": "model"}, "1": {"name": "seed.VEXIN_03.raw_dm", "type": "seed", "succ": [0]}, "2": {"name": "model.VEXIN_03.stg_dm", "type": "model"}}}
+{"_invocation_id": "73d5edc7-b82c-44b9-bab9-87243b369e78", "linked": {"0": {"name": "model.VEXIN_03.scaffold_dm", "type": "model"}, "1": {"name": "seed.VEXIN_03.raw_dm", "type": "seed", "succ": [0]}, "2": {"name": "model.VEXIN_03.stg_dm", "type": "model"}}}

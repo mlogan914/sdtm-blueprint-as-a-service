@@ -8,7 +8,7 @@ if [[ $# -lt 1 ]]; then
   exit 1
 fi
 
-STUDY="$1"
+STUDY="$1" #TODO: add promt for parameter input + param check
 ENV="${2:-dev}"
 
 ROOT_DIR=$(pwd)

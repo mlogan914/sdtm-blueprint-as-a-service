@@ -99,10 +99,6 @@ studies/VEXIN-03/
 └── dbt/
 ```
 
-</details>
-
----
-
 > **Note:** The scaffolder reads per‑study config and writes dbt SQL into the study’s `dbt/models/sdtm/`.
 
 ---

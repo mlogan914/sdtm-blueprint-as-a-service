@@ -1,0 +1,80 @@
+[Fri Jan 16 04:26:48 PM PST 2026] Starting pipeline for study: dm (env=dev)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 14, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/dm/config/paths.yml'
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+[Fri Jan 16 04:35:38 PM PST 2026] Starting pipeline for study: dm (env=dev)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 14, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/dm/config/paths.yml'
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+[Fri Jan 16 04:38:39 PM PST 2026] Starting pipeline for study: dm (env=vexin-03)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 14, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/dm/config/paths.yml'
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+[Fri Jan 16 04:38:53 PM PST 2026] Starting pipeline for study: dm (env=VEXIN-03)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 14, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/dm/config/paths.yml'
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+[Fri Jan 16 04:45:16 PM PST 2026] Starting pipeline for study: dm (env=dev)
+Step 1: Convert ODM-XML to JSON
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 144, in <module>
+    main()
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/extractors/convert_odm_xml_to_json.py", line 124, in main
+    paths = load_paths(study=args.study, env=args.env)
+  File "/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils/load_paths.py", line 14, in load_paths
+    with open(config_path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/dm/config/paths.yml'
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0

@@ -32,3 +32,233 @@ WARNING: [DM] Custom derivation listed but file missing: derive_issue_flag_usubj
 INFO: ✅ Generated SQL scaffold → /home/mlogan/projects/baas/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
 [Mon Jul 28 08:18:08 PM PDT 2025] Pipeline completed for study: VEXIN-03
 Logs saved to: /home/mlogan/projects/baas/odm-2-0/studies/VEXIN-03/runs/logs/pipeline.log
+[Fri Jan 16 04:44:58 PM PST 2026] Starting pipeline for study: VEXIN-03 (env=dev)
+Step 1: Convert ODM-XML to JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Metadata written to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_crf_metadata.json
+Step 2: Normalize SDTMIG JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ SDTM metadata extracted and saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/sdtmig_v3_4_normalized.json
+Step 3: Match ODM to SDTM
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Match results written to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_to_sdtm_mapping.csv
+Step 4: Scaffold SQL per domain
+  → Scaffolding domain: DM
+INFO: [DM] Injecting custom derivation for: USUBJID from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_usubjid.sql
+INFO: [DM] Injecting custom derivation for: RFICDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_rficdtc.sql
+INFO: [DM] Injecting custom derivation for: BRTHDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_brthdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_age.sql
+INFO: [DM] Derived variable identified with no derivation listed: AGE
+INFO: [DM] Injecting custom derivation for: RACE from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_race.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_armcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_arm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARM
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_actarm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARM
+WARNING: [DM] Custom derivation listed but file missing: derive_armnrs.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMNRS
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmud.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMUD
+INFO: [DM] Injecting custom derivation for: DMDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_dmdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_dy.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_epoch.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_issue_flag_usubjid.sql
+INFO: ✅ Generated SQL scaffold → /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+[Fri Jan 16 04:45:00 PM PST 2026] Pipeline completed for study: VEXIN-03
+Logs saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/logs/pipeline.log
+[Fri Jan 16 04:45:47 PM PST 2026] Starting pipeline for study: VEXIN-03 (env=dev)
+Step 1: Convert ODM-XML to JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Metadata written to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_crf_metadata.json
+Step 2: Normalize SDTMIG JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ SDTM metadata extracted and saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/sdtmig_v3_4_normalized.json
+Step 3: Match ODM to SDTM
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Match results written to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_to_sdtm_mapping.csv
+Step 4: Scaffold SQL per domain
+  → Scaffolding domain: DM
+INFO: [DM] Injecting custom derivation for: USUBJID from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_usubjid.sql
+INFO: [DM] Injecting custom derivation for: RFICDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_rficdtc.sql
+INFO: [DM] Injecting custom derivation for: BRTHDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_brthdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_age.sql
+INFO: [DM] Derived variable identified with no derivation listed: AGE
+INFO: [DM] Injecting custom derivation for: RACE from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_race.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_armcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_arm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARM
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_actarm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARM
+WARNING: [DM] Custom derivation listed but file missing: derive_armnrs.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMNRS
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmud.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMUD
+INFO: [DM] Injecting custom derivation for: DMDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_dmdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_dy.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_epoch.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_issue_flag_usubjid.sql
+INFO: ✅ Generated SQL scaffold → /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+[Fri Jan 16 04:45:48 PM PST 2026] Pipeline completed for study: VEXIN-03
+Logs saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/logs/pipeline.log
+[Fri Jan 16 04:52:49 PM PST 2026] Starting pipeline for study: VEXIN-03 (env=dev)
+Step 1: Convert ODM-XML to JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Metadata written to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_crf_metadata.json
+Step 2: Normalize SDTMIG JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ SDTM metadata extracted and saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/sdtmig_v3_4_normalized.json
+Step 3: Match ODM to SDTM
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Match results written to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_to_sdtm_mapping.csv
+Step 4: Scaffold SQL per domain
+  → Scaffolding domain: DM
+INFO: [DM] Injecting custom derivation for: USUBJID from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_usubjid.sql
+INFO: [DM] Injecting custom derivation for: RFICDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_rficdtc.sql
+INFO: [DM] Injecting custom derivation for: BRTHDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_brthdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_age.sql
+INFO: [DM] Derived variable identified with no derivation listed: AGE
+INFO: [DM] Injecting custom derivation for: RACE from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_race.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_armcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_arm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARM
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_actarm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARM
+WARNING: [DM] Custom derivation listed but file missing: derive_armnrs.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMNRS
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmud.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMUD
+INFO: [DM] Injecting custom derivation for: DMDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_dmdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_dy.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_epoch.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_issue_flag_usubjid.sql
+INFO: ✅ Generated SQL scaffold → /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+[Fri Jan 16 04:52:50 PM PST 2026] Pipeline completed for study: VEXIN-03
+Logs saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/logs/pipeline.log
+[Fri Jan 16 04:54:10 PM PST 2026] Starting pipeline for study: VEXIN-03 (env=dev)
+Step 1: Convert ODM-XML to JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Metadata written to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_crf_metadata.json
+Step 2: Normalize SDTMIG JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ SDTM metadata extracted and saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/sdtmig_v3_4_normalized.json
+Step 3: Match ODM to SDTM
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Match results written to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_to_sdtm_mapping.csv
+Step 4: Scaffold SQL per domain
+  → Scaffolding domain: DM
+INFO: [DM] Injecting custom derivation for: USUBJID from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_usubjid.sql
+INFO: [DM] Injecting custom derivation for: RFICDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_rficdtc.sql
+INFO: [DM] Injecting custom derivation for: BRTHDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_brthdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_age.sql
+INFO: [DM] Derived variable identified with no derivation listed: AGE
+INFO: [DM] Injecting custom derivation for: RACE from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_race.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_armcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_arm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARM
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_actarm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARM
+WARNING: [DM] Custom derivation listed but file missing: derive_armnrs.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMNRS
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmud.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMUD
+INFO: [DM] Injecting custom derivation for: DMDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_dmdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_dy.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_epoch.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_issue_flag_usubjid.sql
+INFO: ✅ Generated SQL scaffold → /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+[Fri Jan 16 04:54:11 PM PST 2026] Pipeline completed for study: VEXIN-03
+Logs saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/logs/pipeline.log
+[Fri Jan 16 05:07:40 PM PST 2026] Starting pipeline for study: VEXIN-03 (env=dev)
+Step 1: Convert ODM-XML to JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Metadata written to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_crf_metadata.json
+Step 2: Normalize SDTMIG JSON
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ SDTM metadata extracted and saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/sdtmig_v3_4_normalized.json
+Step 3: Match ODM to SDTM
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+✅ Match results written to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/metadata/odm_to_sdtm_mapping.csv
+Step 4: Scaffold SQL per domain
+  → Scaffolding domain: DM
+INFO: [DM] Injecting custom derivation for: USUBJID from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_usubjid.sql
+INFO: [DM] Injecting custom derivation for: RFICDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_rficdtc.sql
+INFO: [DM] Injecting custom derivation for: BRTHDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_brthdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_age.sql
+INFO: [DM] Derived variable identified with no derivation listed: AGE
+INFO: [DM] Injecting custom derivation for: RACE from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_race.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_armcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_arm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARM
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmcd.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMCD
+WARNING: [DM] Custom derivation listed but file missing: derive_actarm.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARM
+WARNING: [DM] Custom derivation listed but file missing: derive_armnrs.sql
+INFO: [DM] Derived variable identified with no derivation listed: ARMNRS
+WARNING: [DM] Custom derivation listed but file missing: derive_actarmud.sql
+INFO: [DM] Derived variable identified with no derivation listed: ACTARMUD
+INFO: [DM] Injecting custom derivation for: DMDTC from /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/overrides/custom/dm/derive_dmdtc.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_dy.sql
+WARNING: [DM] Standard derivation listed but file missing: derive_epoch.sql
+WARNING: [DM] Custom derivation listed but file missing: derive_issue_flag_usubjid.sql
+INFO: ✅ Generated SQL scaffold → /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/adapters/odm_json/utils
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0
+/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/config/paths.yml
+[Fri Jan 16 05:07:42 PM PST 2026] Pipeline completed for study: VEXIN-03
+Logs saved to: /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/runs/logs/pipeline.log

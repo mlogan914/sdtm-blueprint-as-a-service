@@ -14130,3 +14130,502 @@ alter view "dev"."main"."dm__dbt_tmp" rename to "dm"
 [0m20:28:55.537863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70a7773bb610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70a776901a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70a77707d900>]}
 [0m20:28:55.538271 [debug] [MainThread]: Flushing usage events
 [0m20:28:55.909009 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:35:37.125625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748c2cccf460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748c2ba4c220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748c2ba4c1c0>]}
+
+
+============================== 15:35:37.131113 | 5911b0f0-93b7-48d1-bf61-967ebac68c65 ==============================
+[0m15:35:37.131113 [info ] [MainThread]: Running with dbt=1.10.4
+[0m15:35:37.132463 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mlogan/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:35:37.167298 [info ] [MainThread]: Setting up your profile.
+[0m15:35:45.401062 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 8.370307, "process_in_blocks": "416", "process_kernel_time": 0.481148, "process_mem_max_rss": "96064", "process_out_blocks": "16", "process_user_time": 1.985752}
+[0m15:35:45.401596 [debug] [MainThread]: Command `dbt init` succeeded at 15:35:45.401488 after 8.37 seconds
+[0m15:35:45.402111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748c2cccf460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748c2ba529b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748c2ba52830>]}
+[0m15:35:45.402565 [debug] [MainThread]: Flushing usage events
+[0m15:35:45.721202 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:55:52.204667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c3529c7430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c3517442e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c351744280>]}
+
+
+============================== 15:55:52.207965 | 6bd8b475-f439-4a74-8f36-18729deaa3fa ==============================
+[0m15:55:52.207965 [info ] [MainThread]: Running with dbt=1.10.4
+[0m15:55:52.208810 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mlogan/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt seed', 'send_anonymous_usage_stats': 'True'}
+[0m15:55:52.652927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c351975390>]}
+[0m15:55:52.750460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c35171abf0>]}
+[0m15:55:52.752298 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m15:55:52.965878 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m15:55:53.107824 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m15:55:53.108818 [debug] [MainThread]: previous checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, current checksum: 455d2785864b255c1e18478d807791fa13e291e6db4b43cd46302e63ccbd543d
+[0m15:55:53.109252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c351fac970>]}
+[0m15:55:55.190027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c34d3485b0>]}
+[0m15:55:55.312350 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m15:55:55.316933 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m15:55:55.330512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c34cf7bf10>]}
+[0m15:55:55.331175 [info ] [MainThread]: Found 2 models, 1 seed, 430 macros
+[0m15:55:55.331741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c34cf62b00>]}
+[0m15:55:55.333257 [info ] [MainThread]: 
+[0m15:55:55.333737 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:55:55.334130 [info ] [MainThread]: 
+[0m15:55:55.334720 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:55:55.335745 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m15:55:55.380879 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m15:55:55.383557 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m15:55:55.384113 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:55:55.424921 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m15:55:55.426479 [debug] [ThreadPool]: On list_dev: Close
+[0m15:55:55.427367 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m15:55:55.427912 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m15:55:55.435912 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:55:55.436446 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m15:55:55.436759 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:55:55.437814 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:55:55.439006 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:55:55.439276 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m15:55:55.439705 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:55:55.439943 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:55:55.440156 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m15:55:55.440548 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:55:55.441280 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m15:55:55.441653 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m15:55:55.441870 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m15:55:55.442226 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:55:55.442507 [debug] [ThreadPool]: On create_dev_main: Close
+[0m15:55:55.448274 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m15:55:55.457255 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m15:55:55.457975 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m15:55:55.458442 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:55:55.459465 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:55:55.459850 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m15:55:55.460198 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m15:55:55.471848 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m15:55:55.473424 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m15:55:55.474366 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m15:55:55.474787 [debug] [ThreadPool]: On list_dev_main: Close
+[0m15:55:55.476421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c34cf78e80>]}
+[0m15:55:55.476977 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:55:55.477659 [debug] [MainThread]: On master: BEGIN
+[0m15:55:55.478050 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:55:55.478828 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:55:55.479195 [debug] [MainThread]: On master: COMMIT
+[0m15:55:55.479494 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:55:55.479855 [debug] [MainThread]: On master: COMMIT
+[0m15:55:55.480536 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:55:55.481199 [debug] [MainThread]: On master: Close
+[0m15:55:55.490892 [debug] [Thread-1 (]: Began running node seed.VEXIN_03.raw_dm
+[0m15:55:55.491573 [info ] [Thread-1 (]: 1 of 1 START seed file main.raw_dm ............................................. [RUN]
+[0m15:55:55.492437 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now seed.VEXIN_03.raw_dm)
+[0m15:55:55.493007 [debug] [Thread-1 (]: Began compiling node seed.VEXIN_03.raw_dm
+[0m15:55:55.493311 [debug] [Thread-1 (]: Began executing node seed.VEXIN_03.raw_dm
+[0m15:55:55.534136 [debug] [Thread-1 (]: Using duckdb connection "seed.VEXIN_03.raw_dm"
+[0m15:55:55.534719 [debug] [Thread-1 (]: On seed.VEXIN_03.raw_dm: BEGIN
+[0m15:55:55.535031 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:55:55.535840 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:55:55.536184 [debug] [Thread-1 (]: Using duckdb connection "seed.VEXIN_03.raw_dm"
+[0m15:55:55.536532 [debug] [Thread-1 (]: On seed.VEXIN_03.raw_dm: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "node_id": "seed.VEXIN_03.raw_dm"} */
+truncate table "dev"."main"."raw_dm"
+[0m15:55:55.537307 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m15:55:55.554726 [debug] [Thread-1 (]: Using duckdb connection "seed.VEXIN_03.raw_dm"
+[0m15:55:55.555593 [debug] [Thread-1 (]: On seed.VEXIN_03.raw_dm: 
+          COPY "dev"."main"."raw_dm" FROM '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/seeds/raw_dm.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m15:55:55.569195 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m15:55:55.578455 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.VEXIN_03.raw_dm"
+[0m15:55:55.592568 [debug] [Thread-1 (]: On seed.VEXIN_03.raw_dm: COMMIT
+[0m15:55:55.593201 [debug] [Thread-1 (]: Using duckdb connection "seed.VEXIN_03.raw_dm"
+[0m15:55:55.593614 [debug] [Thread-1 (]: On seed.VEXIN_03.raw_dm: COMMIT
+[0m15:55:55.630620 [debug] [Thread-1 (]: SQL status: OK in 0.036 seconds
+[0m15:55:55.635548 [debug] [Thread-1 (]: On seed.VEXIN_03.raw_dm: Close
+[0m15:55:55.639560 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6bd8b475-f439-4a74-8f36-18729deaa3fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c34c380b20>]}
+[0m15:55:55.640866 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file main.raw_dm ......................................... [[32mINSERT 40[0m in 0.14s]
+[0m15:55:55.642355 [debug] [Thread-1 (]: Finished running node seed.VEXIN_03.raw_dm
+[0m15:55:55.644897 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:55:55.645646 [debug] [MainThread]: On master: BEGIN
+[0m15:55:55.646312 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:55:55.647490 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:55:55.648123 [debug] [MainThread]: On master: COMMIT
+[0m15:55:55.648755 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:55:55.649139 [debug] [MainThread]: On master: COMMIT
+[0m15:55:55.649512 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:55:55.650064 [debug] [MainThread]: On master: Close
+[0m15:55:55.650957 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:55:55.651439 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m15:55:55.651867 [debug] [MainThread]: Connection 'seed.VEXIN_03.raw_dm' was properly closed.
+[0m15:55:55.652811 [info ] [MainThread]: 
+[0m15:55:55.654310 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m15:55:55.659068 [debug] [MainThread]: Command end result
+[0m15:55:55.803869 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m15:55:55.809041 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m15:55:55.821604 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/run_results.json
+[0m15:55:55.821946 [info ] [MainThread]: 
+[0m15:55:55.822694 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:55:55.823976 [info ] [MainThread]: 
+[0m15:55:55.824955 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:55:55.827263 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 3.6892602, "process_in_blocks": "7624", "process_kernel_time": 0.921671, "process_mem_max_rss": "162920", "process_out_blocks": "2688", "process_user_time": 4.692147}
+[0m15:55:55.828291 [debug] [MainThread]: Command `dbt seed` succeeded at 15:55:55.828056 after 3.69 seconds
+[0m15:55:55.829118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c3529c7430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c35426b1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71c34d0472e0>]}
+[0m15:55:55.829581 [debug] [MainThread]: Flushing usage events
+[0m15:55:56.161787 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:55:27.967073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d96721cb460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9670f55300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9670f552a0>]}
+
+
+============================== 09:55:27.973211 | 9229e226-5f18-46c3-9eff-1c313d7d6443 ==============================
+[0m09:55:27.973211 [info ] [MainThread]: Running with dbt=1.10.4
+[0m09:55:27.974240 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mlogan/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select dm --vars {domain: "DM"}', 'send_anonymous_usage_stats': 'True'}
+[0m09:55:28.423407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9229e226-5f18-46c3-9eff-1c313d7d6443', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d96717dfe80>]}
+[0m09:55:28.526313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9229e226-5f18-46c3-9eff-1c313d7d6443', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d9670f56ef0>]}
+[0m09:55:28.534744 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m09:55:28.772182 [debug] [MainThread]: checksum: 455d2785864b255c1e18478d807791fa13e291e6db4b43cd46302e63ccbd543d, vars: {'domain': 'DM'}, profile: , target: , version: 1.10.4
+[0m09:55:29.006145 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m09:55:29.009758 [debug] [MainThread]: previous checksum: 455d2785864b255c1e18478d807791fa13e291e6db4b43cd46302e63ccbd543d, current checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2
+[0m09:55:29.010289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9229e226-5f18-46c3-9eff-1c313d7d6443', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d96717af8e0>]}
+[0m09:55:31.292459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9229e226-5f18-46c3-9eff-1c313d7d6443', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d966cb73910>]}
+[0m09:55:31.425666 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m09:55:31.430465 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m09:55:31.471729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9229e226-5f18-46c3-9eff-1c313d7d6443', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d966c8e5900>]}
+[0m09:55:31.473404 [info ] [MainThread]: Found 2 models, 1 seed, 430 macros
+[0m09:55:31.474608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9229e226-5f18-46c3-9eff-1c313d7d6443', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d966c8e5150>]}
+[0m09:55:31.475772 [warn ] [MainThread]: The selection criterion 'dm' does not match any enabled nodes
+[0m09:55:31.478430 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m09:55:31.479781 [debug] [MainThread]: Command end result
+[0m09:55:31.527667 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m09:55:31.531796 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m09:55:31.539845 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/run_results.json
+[0m09:55:31.543381 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.669712, "process_in_blocks": "55784", "process_kernel_time": 3.361403, "process_mem_max_rss": "125268", "process_out_blocks": "2656", "process_user_time": 2.46832}
+[0m09:55:31.544076 [debug] [MainThread]: Command `dbt run` succeeded at 09:55:31.543949 after 3.67 seconds
+[0m09:55:31.544624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d96721cb460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d966cb55f00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d96717dfe80>]}
+[0m09:55:31.545135 [debug] [MainThread]: Flushing usage events
+[0m09:55:31.866606 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:57:43.549082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a874c3490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a8624c220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a8624c1c0>]}
+
+
+============================== 09:57:43.555654 | dcac557a-8034-47a6-b780-e6722bc72234 ==============================
+[0m09:57:43.555654 [info ] [MainThread]: Running with dbt=1.10.4
+[0m09:57:43.557165 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/mlogan/.dbt', 'log_path': '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select dm_scaffold --vars {domain: "DM"}', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:57:43.881382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dcac557a-8034-47a6-b780-e6722bc72234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a872159c0>]}
+[0m09:57:43.995365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dcac557a-8034-47a6-b780-e6722bc72234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a8624de10>]}
+[0m09:57:43.998557 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m09:57:44.178342 [debug] [MainThread]: checksum: 455d2785864b255c1e18478d807791fa13e291e6db4b43cd46302e63ccbd543d, vars: {'domain': 'DM'}, profile: , target: , version: 1.10.4
+[0m09:57:44.378530 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:57:44.379145 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:57:44.449843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dcac557a-8034-47a6-b780-e6722bc72234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a81e41120>]}
+[0m09:57:44.553648 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m09:57:44.557990 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m09:57:44.571947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dcac557a-8034-47a6-b780-e6722bc72234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a81e412a0>]}
+[0m09:57:44.572578 [info ] [MainThread]: Found 2 models, 1 seed, 430 macros
+[0m09:57:44.573380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dcac557a-8034-47a6-b780-e6722bc72234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a81e5e080>]}
+[0m09:57:44.574030 [warn ] [MainThread]: The selection criterion 'dm_scaffold' does not match any enabled nodes
+[0m09:57:44.575231 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m09:57:44.577375 [debug] [MainThread]: Command end result
+[0m09:57:44.608062 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m09:57:44.612319 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m09:57:44.619228 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/run_results.json
+[0m09:57:44.620363 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1723082, "process_in_blocks": "3728", "process_kernel_time": 0.90599, "process_mem_max_rss": "119780", "process_out_blocks": "1776", "process_user_time": 2.208351}
+[0m09:57:44.620892 [debug] [MainThread]: Command `dbt run` succeeded at 09:57:44.620762 after 1.17 seconds
+[0m09:57:44.621417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a874c3490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a8234ffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b1a8713d3c0>]}
+[0m09:57:44.621973 [debug] [MainThread]: Flushing usage events
+[0m09:57:44.956325 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:58:13.806277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70998a9db3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7099898041f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x709989804190>]}
+
+
+============================== 09:58:13.813928 | 73d5edc7-b82c-44b9-bab9-87243b369e78 ==============================
+[0m09:58:13.813928 [info ] [MainThread]: Running with dbt=1.10.4
+[0m09:58:13.815420 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/mlogan/.dbt', 'log_path': '/home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select scaffold_dm --vars {domain: "DM"}', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:58:14.215737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70998c056b30>]}
+[0m09:58:14.309673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x709989805de0>]}
+[0m09:58:14.312013 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m09:58:14.475289 [debug] [MainThread]: checksum: 455d2785864b255c1e18478d807791fa13e291e6db4b43cd46302e63ccbd543d, vars: {'domain': 'DM'}, profile: , target: , version: 1.10.4
+[0m09:58:14.691682 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:58:14.702046 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:58:14.838409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x709985335030>]}
+[0m09:58:14.995120 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m09:58:14.999476 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m09:58:15.014207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x709985335240>]}
+[0m09:58:15.014826 [info ] [MainThread]: Found 2 models, 1 seed, 430 macros
+[0m09:58:15.015502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7099855963e0>]}
+[0m09:58:15.017432 [info ] [MainThread]: 
+[0m09:58:15.018516 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:58:15.019469 [info ] [MainThread]: 
+[0m09:58:15.020776 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:58:15.022783 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m09:58:15.188791 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m09:58:15.189826 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m09:58:15.190597 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:58:15.432474 [debug] [ThreadPool]: SQL status: OK in 0.242 seconds
+[0m09:58:15.434905 [debug] [ThreadPool]: On list_dev: Close
+[0m09:58:15.435855 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m09:58:15.436493 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m09:58:15.443493 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:58:15.443926 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m09:58:15.444568 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:58:15.445707 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m09:58:15.447039 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:58:15.447401 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m09:58:15.447806 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:58:15.448082 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:58:15.448350 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m09:58:15.448743 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:58:15.449700 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:58:15.450029 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m09:58:15.450302 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m09:58:15.450697 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:58:15.451011 [debug] [ThreadPool]: On create_dev_main: Close
+[0m09:58:15.457433 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m09:58:15.466963 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:58:15.468000 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m09:58:15.468826 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:58:15.470172 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m09:58:15.471010 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m09:58:15.471801 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m09:58:15.502552 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m09:58:15.505669 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m09:58:15.509309 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m09:58:15.510179 [debug] [ThreadPool]: On list_dev_main: Close
+[0m09:58:15.513228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x709985337880>]}
+[0m09:58:15.514389 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:58:15.515141 [debug] [MainThread]: On master: BEGIN
+[0m09:58:15.515835 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:58:15.517094 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m09:58:15.517843 [debug] [MainThread]: On master: COMMIT
+[0m09:58:15.518493 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:58:15.519029 [debug] [MainThread]: On master: COMMIT
+[0m09:58:15.520658 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:58:15.521449 [debug] [MainThread]: On master: Close
+[0m09:58:15.527174 [debug] [Thread-1 (]: Began running node model.VEXIN_03.scaffold_dm
+[0m09:58:15.528240 [info ] [Thread-1 (]: 1 of 1 START sql view model main.scaffold_dm ................................... [RUN]
+[0m09:58:15.529645 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.VEXIN_03.scaffold_dm)
+[0m09:58:15.530529 [debug] [Thread-1 (]: Began compiling node model.VEXIN_03.scaffold_dm
+[0m09:58:15.543015 [debug] [Thread-1 (]: Writing injected SQL for node "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.545654 [debug] [Thread-1 (]: Began executing node model.VEXIN_03.scaffold_dm
+[0m09:58:15.577981 [debug] [Thread-1 (]: Writing runtime sql for node "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.582507 [debug] [Thread-1 (]: Using duckdb connection "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.583349 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: BEGIN
+[0m09:58:15.584250 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:58:15.585913 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m09:58:15.587115 [debug] [Thread-1 (]: Using duckdb connection "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.588270 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "node_id": "model.VEXIN_03.scaffold_dm"} */
+
+  
+  create view "dev"."main"."scaffold_dm__dbt_tmp" as (
+    
+
+
+-- ============================================
+-- Step 2: Build SDTM Domain Variables
+-- ============================================
+SELECT
+    raw_dm.studyid AS STUDYID
+    ,raw_dm.domain AS DOMAIN
+    -- Injected custom: derive_usubjid.sql
+    ,CASE
+    WHEN prevstudy IS NULL OR TRIM(CAST(prevstudy AS VARCHAR)) = '' THEN
+        CASE
+            WHEN prevsubj IS NOT NULL AND TRIM(CAST(prevsubj AS VARCHAR)) <> '' THEN
+                -- ERROR: prevstudy is null but prevsubj is not
+                NULL
+            WHEN rescreennum_raw IS NOT NULL AND TRIM(CAST(rescreennum_raw AS VARCHAR)) <> '' THEN
+                CONCAT(project, '-', rescreennum_raw)
+            ELSE
+                CONCAT(project, '-', subject)
+        END
+    ELSE
+        CASE
+            WHEN prevsubj IS NULL OR TRIM(CAST(prevsubj AS VARCHAR)) = '' THEN
+                -- ERROR: prevstudy not null but prevsubj is null
+                NULL
+            ELSE
+                CONCAT(prevstudy, '-', prevsubj)
+        END
+    END AS USUBJID
+    ,raw_dm.subject AS SUBJID
+    ,NULL AS RFSTDTC
+    ,NULL AS RFENDTC
+    ,NULL AS RFXSTDTC
+    ,NULL AS RFXENDTC
+    ,NULL AS RFCSTDTC
+    ,NULL AS RFCENDTC
+    -- Injected custom: derive_rficdtc.sql
+    ,
+    CASE 
+        WHEN RFICDTC_RAW IS NULL OR TRIM(RFICDTC_RAW) = '' THEN NULL
+        ELSE STRFTIME(STRPTIME(RFICDTC_RAW, '%m/%d/%Y'), '%Y-%m-%d')
+    END
+ AS RFICDTC
+    ,NULL AS RFPENDTC
+    ,NULL AS DTHDTC
+    ,NULL AS DTHFL
+    ,raw_dm.siteid AS SITEID
+    ,NULL AS INVID
+    ,NULL AS INVNAM
+    -- Injected custom: derive_brthdtc.sql
+    ,
+    CASE 
+        WHEN BRTHDTC_RAW IS NULL OR TRIM(BRTHDTC_RAW) = '' THEN NULL
+        ELSE STRFTIME(STRPTIME(BRTHDTC_RAW, '%m/%d/%Y'), '%Y-%m-%d')
+    END
+ AS BRTHDTC
+    ,NULL AS AGE  -- TODO: Derived variable AGE needs a derivation
+    ,NULL AS AGEU
+    ,raw_dm.sex AS SEX
+    -- Injected custom: derive_race.sql
+    ,CASE
+    WHEN COALESCE(raceoth, '') = ''
+         THEN CASE
+             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
+                 THEN 'MULTIPLE'
+             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
+             WHEN race_asian = 1 THEN 'ASIAN'
+             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
+             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
+             WHEN race_white = 1 THEN 'WHITE'
+             ELSE NULL
+         END
+    WHEN COALESCE(raceoth, '') <> ''
+         THEN CASE
+             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
+                 THEN 'MULTIPLE'
+             ELSE 'OTHER'
+         END
+    END AS RACE
+    ,raw_dm.ethnic AS ETHNIC
+    ,NULL AS ARMCD  -- TODO: Derived variable ARMCD needs a derivation
+    ,NULL AS ARM  -- TODO: Derived variable ARM needs a derivation
+    ,NULL AS ACTARMCD  -- TODO: Derived variable ACTARMCD needs a derivation
+    ,NULL AS ACTARM  -- TODO: Derived variable ACTARM needs a derivation
+    ,NULL AS ARMNRS  -- TODO: Derived variable ARMNRS needs a derivation
+    ,NULL AS ACTARMUD  -- TODO: Derived variable ACTARMUD needs a derivation
+    ,raw_dm.country AS COUNTRY
+    -- Injected custom: derive_dmdtc.sql
+    ,
+    CASE 
+        WHEN DMDTC_RAW IS NULL OR TRIM(DMDTC_RAW) = '' THEN NULL
+        ELSE STRFTIME(STRPTIME(DMDTC_RAW, '%m/%d/%Y'), '%Y-%m-%d')
+    END
+ AS DMDTC
+    ,NULL AS DMDY
+    ,NULL AS QVAL
+    ,NULL AS DY  -- TODO: Standard derivation file missing for DY
+    ,NULL AS EPOCH  -- TODO: Standard derivation file missing for EPOCH
+    ,NULL AS ISSUE_FLAG_USUBJID  -- TODO: Custom derivation file missing for ISSUE_FLAG_USUBJID
+
+FROM "dev"."main"."raw_dm"
+  );
+
+[0m09:58:15.590863 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m09:58:15.607935 [debug] [Thread-1 (]: Using duckdb connection "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.608809 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "node_id": "model.VEXIN_03.scaffold_dm"} */
+alter view "dev"."main"."scaffold_dm" rename to "scaffold_dm__dbt_backup"
+[0m09:58:15.610148 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:58:15.615888 [debug] [Thread-1 (]: Using duckdb connection "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.617316 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "node_id": "model.VEXIN_03.scaffold_dm"} */
+alter view "dev"."main"."scaffold_dm__dbt_tmp" rename to "scaffold_dm"
+[0m09:58:15.618607 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m09:58:15.639853 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: COMMIT
+[0m09:58:15.641030 [debug] [Thread-1 (]: Using duckdb connection "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.641985 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: COMMIT
+[0m09:58:15.650757 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m09:58:15.662788 [debug] [Thread-1 (]: Using duckdb connection "model.VEXIN_03.scaffold_dm"
+[0m09:58:15.663220 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "VEXIN_03", "target_name": "dev", "node_id": "model.VEXIN_03.scaffold_dm"} */
+
+      drop view if exists "dev"."main"."scaffold_dm__dbt_backup" cascade
+    
+[0m09:58:15.670874 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m09:58:15.676218 [debug] [Thread-1 (]: On model.VEXIN_03.scaffold_dm: Close
+[0m09:58:15.681639 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '73d5edc7-b82c-44b9-bab9-87243b369e78', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70998c057490>]}
+[0m09:58:15.683453 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.scaffold_dm .............................. [[32mOK[0m in 0.15s]
+[0m09:58:15.685208 [debug] [Thread-1 (]: Finished running node model.VEXIN_03.scaffold_dm
+[0m09:58:15.687466 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:58:15.688308 [debug] [MainThread]: On master: BEGIN
+[0m09:58:15.689097 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:58:15.690465 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m09:58:15.691209 [debug] [MainThread]: On master: COMMIT
+[0m09:58:15.692939 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:58:15.693692 [debug] [MainThread]: On master: COMMIT
+[0m09:58:15.694774 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m09:58:15.695571 [debug] [MainThread]: On master: Close
+[0m09:58:15.696624 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:58:15.697396 [debug] [MainThread]: Connection 'model.VEXIN_03.scaffold_dm' was properly closed.
+[0m09:58:15.698016 [info ] [MainThread]: 
+[0m09:58:15.699183 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.68 seconds (0.68s).
+[0m09:58:15.700791 [debug] [MainThread]: Command end result
+[0m09:58:15.758639 [debug] [MainThread]: Wrote artifact WritableManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/manifest.json
+[0m09:58:15.766880 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/semantic_manifest.json
+[0m09:58:15.785322 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/mlogan/projects/testing/baas/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/target/run_results.json
+[0m09:58:15.785929 [info ] [MainThread]: 
+[0m09:58:15.786786 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:58:15.788330 [info ] [MainThread]: 
+[0m09:58:15.789635 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m09:58:15.791957 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.0865183, "process_in_blocks": "30960", "process_kernel_time": 1.274537, "process_mem_max_rss": "144280", "process_out_blocks": "1872", "process_user_time": 2.556145}
+[0m09:58:15.792421 [debug] [MainThread]: Command `dbt run` succeeded at 09:58:15.792331 after 2.09 seconds
+[0m09:58:15.793436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70998a9db3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70998a769780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7099843ac370>]}
+[0m09:58:15.794395 [debug] [MainThread]: Flushing usage events
+[0m09:58:16.114541 [debug] [MainThread]: An error was encountered while trying to flush usage events
