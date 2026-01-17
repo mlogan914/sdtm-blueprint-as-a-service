@@ -54,7 +54,7 @@ Metadata‑driven scaffolding and reproducible pipelines for SDTM domain product
 └─ scripts/                 # CLIs: extract, match, scaffold, validate
 ```
 
-> **Note:** If you reorganize, keep the separation between **adapters**, **reference**, **study assets**, and **runners**. The scaffolder reads per‑study config and writes dbt SQL into the study’s `dbt/models/sdtm/`.
+> **Note:** The scaffolder reads per‑study config and writes dbt SQL into the study’s `dbt/models/sdtm/`.
 
 ---
 
@@ -83,10 +83,16 @@ cd studies/VEXIN-03/dbt
 ### One‑command demo (VEXIN‑03)
 ```bash
 # from repo root
-./run_baas.sh studies/VEXIN-03 dm  # scaffold & run DM for sample study VEXIN‑03
+cd ~/sdtm-blueprint-as-a-service/odm-2-0
+./bin/run_baas.sh VEXIN-03  # study parameter required (e.g., VEXIN‑03)
 ```
-This will:
-1) parse/normalize the study’s ODM JSON, 2) match to SDTM reference, 3) scaffold dbt SQL for the domain, 4) inject overrides (if any), and 5) `dbt run` against DuckDB.
+<!-- This will:
+1) parse/normalize the study’s ODM JSON, 2) match to SDTM reference, 3) scaffold dbt SQL for the domain, 4) inject overrides (if any), and 5) `dbt run` against DuckDB. -->
+
+### Scaffolding output
+```
+INFO: ✅ Generated SQL scaffold → /home/user/projects/sdtm-blueprint-as-a-service/odm-2-0/studies/VEXIN-03/dbt/models/sdtm/scaffold_dm.sql
+```
 
 ---
 
