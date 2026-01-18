@@ -4,11 +4,20 @@
 
 Metadata‑driven scaffolding and reproducible pipelines for SDTM domain production, powered by ODM‑XML to standard JSON, dbt, and injection overrides.
 
----
+## Tools & Technologies Used:
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white" />
+  <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS_Code-0078d7?style=flat&logo=visual-studio-code&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white" />
+</div>
 
 ## Table of Contents
 - [Concept](#concept)
-- [Tools & Technologies Used](#tools--technologies-used)
 - [High-Level Architecture](#high-level-architecture)
 - [Repository Structure](#-repository-structure)
 - [Quick Start](#quick-start)
@@ -38,17 +47,6 @@ Instead of hand-coding SDTM domains or relying on enterprise transformation tool
 - Execution (dbt)
 
 - **Study-isolated execution**: Each study is self-contained but powered by shared platform logic.
-## Tools & Technologies Used:
-<div align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white" />
-  <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white" />
-  <img src="https://img.shields.io/badge/VS_Code-0078d7?style=flat&logo=visual-studio-code&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white" />
-</div>
 
 ## High-Level Architecture
 ```
