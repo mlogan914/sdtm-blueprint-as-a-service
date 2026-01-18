@@ -88,7 +88,8 @@ odm-2-0/
 ```
 </details> 
 
-<details> <summary><strong>Study Layer (`studies/VEXIN-03/`)</strong></summary>
+<details> 
+<summary><strong>Study Layer (`studies/VEXIN-03/`)</strong></summary>
 
 ```text
 studies/VEXIN-03/
@@ -98,6 +99,7 @@ studies/VEXIN-03/
 ├── runs/
 └── dbt/
 ```
+</details>
 
 > **Note:** The scaffolder reads per‑study config and writes dbt SQL into the study’s `dbt/models/sdtm/`.
 
@@ -224,7 +226,7 @@ D show tables;
 │ dm                  │
 │ my_first_dbt_model  │       │
 └─────────────────────┘
-D select * from scaffold_dm limit 5
+D select * from dm limit 5
   ;
 ┌──────────┬─────────┬───────────────┬─────────┬─────────┬─────────┬──────────┬───┬─────────┬────────────┬───────┬───────┬───────┬───────┬────────────────────┐
 │ STUDYID  │ DOMAIN  │    USUBJID    │ SUBJID  │ RFSTDTC │ RFENDTC │ RFXSTDTC │ … │ COUNTRY │   DMDTC    │ DMDY  │ QVAL  │  DY   │ EPOCH │ ISSUE_FLAG_USUBJID │
@@ -267,11 +269,11 @@ D
 ## Roadmap
 - [x] ODM-JSON adapter workflow
 - [x] ODM-JSON adapter conversion
-- [x]Define Pre-Processing Data Injection Logic
+- [x] Define Pre-Processing Data Injection Logic
 - [x] DuckDB local profile and first end‑to‑end dbt run
 - [x] Injection of standard/custom derivations via jinja templates
 - [x] Injection of standard/custom derivations via jinja macros
-- [ ] [🔄 In progress] Use CTEs as a “prepend/append rows” layer at the very start of the domain build
+- 🔄 In progress: Use CTEs as a “prepend/append rows” layer at the very start of the domain build
 - [ ] Start wiki documentation (Normalization and scaffolding logic)
 - [ ] Multi‑domain runs
 - [ ] SUPPQUAL generation
@@ -303,4 +305,4 @@ The matcher handles the `Name` vs `OID` discrepancy and records the resolved tar
 <!-- ---
 
 ## License
-MIT (or chosen permissive license). Add a LICENSE file at repo root. -->
+MIT (or chosen permissive license). Add a LICENSE file at repo root. --> 
