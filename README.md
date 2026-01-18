@@ -303,6 +303,5 @@ Use dbt macros in the study project (e.g., `convert_us_to_iso8601.sql`), referen
 The matcher handles the `Name` vs `OID` discrepancy and records the resolved target variable; check the mapping CSV before scaffolding.
 
 <!-- ---
-
 ## License
 MIT (or chosen permissive license). Add a LICENSE file at repo root. --> 
