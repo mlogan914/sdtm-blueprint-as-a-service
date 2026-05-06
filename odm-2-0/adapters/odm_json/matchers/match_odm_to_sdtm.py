@@ -55,6 +55,7 @@ def parse_aliases(aliases: List[Dict]) -> Dict:
         "Mapping_Type": "Direct",
         "Match_Type": "OID",
         "Derived_Target": "",
+        "Derived_Rule": "",
         "QNAM": "",
         "QLABEL": "",
         "IDVAR": "",
@@ -64,10 +65,17 @@ def parse_aliases(aliases: List[Dict]) -> Dict:
     for alias in aliases:
         context = alias.get("Context", "")
         name = alias.get("Name", "")
-        if context == "DERIVATION_RULE":
+
+        if context == "DERIVATION_TARGET":
             result["Mapping_Type"] = "Derived"
             result["Match_Type"] = "Alias.Derivation"
             result["Derived_Target"] = name
+
+        if context == "DERIVATION_RULE":
+            result["Mapping_Type"] = "Derived"
+            result["Match_Type"] = "Alias.Derivation"
+            result["Derived_Rule"] = name
+
         elif context.startswith("SUPPQUAL"):
             result["Mapping_Type"] = "SUPPQUAL"
             result["Match_Type"] = "Alias.SUPP"
@@ -82,6 +90,7 @@ def parse_aliases(aliases: List[Dict]) -> Dict:
                 result["IDVARVAL"] = name
             result["Alias_Context"] = context
             result["Alias_Name"] = name
+
         elif context == "NOT_SUBMITTED":
             result["Mapping_Type"] = "Not_Submitted"
             result["Match_Type"] = "Alias.NotSubmitted"
@@ -120,6 +129,7 @@ def match_odm_to_sdtm_all(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
             "Mapping_Type": alias_info.get("Mapping_Type", "Unmatched") if not odm_info else alias_info.get("Mapping_Type", "Direct"),
             "Match_Type": alias_info.get("Match_Type", "Missing") if not odm_info else alias_info.get("Match_Type", "OID"),
             "Derived_Target": alias_info.get("Derived_Target", ""),
+            "Derived_Rule": alias_info.get("Derived_Rule", ""),
             "SDTM_Domain": match.get("SDTM_Domain", domain),
             "SDTM_Variable": match.get("SDTM_Variable", var),
             "SDTM_Label": match.get("SDTM_Label", ""),
@@ -154,6 +164,7 @@ def match_odm_to_sdtm_all(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
                 "Mapping_Type": "SUPPQUAL",
                 "Match_Type": "Alias.SUPP",
                 "Derived_Target": "",
+                "Derived_Rule": "",
                 "SDTM_Domain": f"SUPP{odm_info['ODM_Domain']}",
                 "SDTM_Variable": "QVAL",
                 "SDTM_Label": "Qualifier Value",
