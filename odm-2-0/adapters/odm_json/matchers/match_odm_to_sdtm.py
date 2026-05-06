@@ -71,7 +71,7 @@ def parse_aliases(aliases: List[Dict]) -> Dict:
             result["Match_Type"] = "Alias.Derivation"
             result["Derived_Target"] = name
 
-        if context == "DERIVATION_RULE":
+        elif context == "DERIVATION_RULE":
             result["Mapping_Type"] = "Derived"
             result["Match_Type"] = "Alias.Derivation"
             result["Derived_Rule"] = name
@@ -147,12 +147,44 @@ def match_odm_to_sdtm_all(odm_json: Dict, sdtm_lookup: Dict) -> List[Dict]:
             "Not_Submitted": alias_info.get("Not_Submitted", False)
         })
 
-    # Pass 2: include unmatched ODM variables that map to SUPP
+    # Pass 2: include unmatched ODM variables that map to SUPP and unmatched "derived" alias variables
     for key, odm_info in odm_vars.items():
         if key in all_keys:
-            continue # already processed above
+            continue  # already processed above
+
         alias_info = parse_aliases(odm_info.get("Aliases", []))
-        if alias_info.get("Mapping_Type") == "SUPPQUAL":
+
+        if alias_info.get("Mapping_Type") == "Derived":
+            results.append({
+                "ItemOID": odm_info["ItemOID"],
+                "ODM_Variable": odm_info["ODM_Variable"],
+                "ODM_Domain": odm_info["ODM_Domain"],
+                "Raw_Input_Name": odm_info.get("Raw_Input_Name", ""),
+                "Alias_Context": alias_info.get("Alias_Context", ""),
+                "Alias_Name": alias_info.get("Alias_Name", ""),
+                "Alias_Label": alias_info.get("Alias_Label", ""),
+                "Mapping_Type": "Derived",
+                "Match_Type": "Alias.Derivation",
+                "Derived_Target": alias_info.get("Derived_Target", ""),
+                "Derived_Rule": alias_info.get("Derived_Rule", ""),
+                "SDTM_Domain": odm_info["ODM_Domain"],
+                "SDTM_Variable": alias_info.get("Derived_Target", ""),
+                "SDTM_Label": "",
+                "Ordinal": "",
+                "Core": "",
+                "Role": "",
+                "Datatype": "",
+                "Description": "",
+                "CodeList": "",
+                "SDTM_Path": "",
+                "QNAM": "",
+                "QLABEL": "",
+                "IDVAR": "",
+                "IDVARVAL": "",
+                "Not_Submitted": alias_info.get("Not_Submitted", False)
+            })
+
+        elif alias_info.get("Mapping_Type") == "SUPPQUAL":
             results.append({
                 "ItemOID": odm_info["ItemOID"],
                 "ODM_Variable": odm_info["ODM_Variable"],
