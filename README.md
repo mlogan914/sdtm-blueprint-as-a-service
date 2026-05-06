@@ -272,7 +272,7 @@ D
 - [x] Injection of standard/custom derivations via jinja templates
 - [x] Injection of standard/custom derivations via jinja macros
 - [🔄 In progress]: Use CTEs as a “prepend/append rows” layer at the very start of the domain build
-- [ ] Start wiki documentation (Normalization and scaffolding logic)
+- [x] Start documentation (Normalization and scaffolding logic)
 - [ ] Multi‑domain runs
 - [ ] SUPPQUAL generation
 - [ ] Automated tests/validators (schema + content checks)
