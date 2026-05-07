@@ -8,14 +8,81 @@ This document reflects the current implementation state and architectural assump
 
 ---
 
-# Current Pipeline
+## Workflow Reference
 
-```text
-ODM XML
-→ odm_crf_metadata.json
-→ normalized SDTMIG JSON
-→ odm_to_sdtm_mapping.csv
-→ scaffolded dbt SQL
+The adapter workflow and design evolution were originally documented in:
+- GitHub Issue #40
+- GitHub Issue #42
+
+The diagrams below reflect the current implemented architecture and execution flow.
+
+
+## Current Pipeline
+
+### High-Level Matching Architecture
+```mermaid
+flowchart LR
+
+    START([Start])
+
+    subgraph ODM["ODM Normalization"]
+        ODMXML["1. ODM-XML"]
+        ODMADAPTER{"ODM Adapter"}
+        ODMJSON["2. Normalized ODM Metadata JSON"]
+    end
+
+    subgraph SDTM["SDTMIG Normalization"]
+        CDISC["3. CDISC Library API<br/>(SDTMIG 3.X)"]
+        SDTMADAPTER{"SDTMIG Adapter"}
+        SDTMJSON["4. Normalized SDTMIG Metadata JSON"]
+    end
+
+    MATCH{"5. Match"}
+
+    CSV["Matched Metadata CSV<br/>(odm_to_sdtm_mapping.csv)"]
+
+    SCAFFOLD["6. SQL Scaffolding"]
+
+    START --> ODMXML
+    START --> CDISC
+
+    ODMXML --> ODMADAPTER --> ODMJSON
+    CDISC --> SDTMADAPTER --> SDTMJSON
+
+    ODMJSON --> MATCH
+    SDTMJSON --> MATCH
+
+    MATCH --> CSV --> SCAFFOLD
+```
+
+### High-Level Matching Execution Flow
+```mermaid
+flowchart TD
+
+    ODMXML["ODM-XML"]
+    ODMCONVERT["convert_odm_xml_to_json.py"]
+    ODMJSON["Normalized ODM Metadata JSON"]
+
+    SDTMAPI["CDISC Library API<br/>(SDTMIG 3.X)"]
+    SDTMNORMALIZE["normalize_sdtmig_json.py"]
+    SDTMJSON["Normalized SDTMIG Metadata JSON"]
+
+    MATCH["match_odm_to_sdtm.py"]
+    CSV["odm_to_sdtm_mapping.csv"]
+
+    SCAFFOLD["scaffold_sql.py"]
+    SQL["Scaffolded dbt SQL"]
+
+    ODMXML --> ODMCONVERT --> ODMJSON
+
+    SDTMAPI --> SDTMNORMALIZE --> SDTMJSON
+
+    ODMJSON --> MATCH
+    SDTMJSON --> MATCH
+
+    MATCH --> CSV
+
+    CSV --> SCAFFOLD --> SQL
 ```
 
 Core matching logic currently exists in:
@@ -31,22 +98,9 @@ adapters/odm_json/scaffolds/scaffold_sql.py
 ```
 ---
 
-# Adapter Workflow Reference
-
-The ODM-JSON adapter workflow is documented in GitHub Issue #40.
-
-Current intended workflow:
-
-```text
-convert_odm_xml_to_json.py
-→ normalize_sdtmig_json.py
-→ match_odm_to_sdtm.py
-→ scaffold_sql.py
-```
-
 ## Workflow Steps
 
-### 1. Convert ODM XML to ODM JSON
+### 1. Convert ODM XML to Normalized ODM Metadata JSON
 
 Script:
 
@@ -56,8 +110,8 @@ adapters/odm_json/extractors/convert_odm_xml_to_json.py
 
 Purpose:
 
-- validate or process ODM-XML input
-- convert ODM-XML into a usable ODM-derived JSON metadata structure
+- Validate or process ODM-XML input
+- Convert ODM-XML into a usable ODM-derived JSON metadata structure
 
 Primary output:
 
@@ -65,7 +119,7 @@ Primary output:
 odm_crf_metadata.json
 ```
 
-### 2. Normalize SDTMIG JSON
+### 2. Convert CDISC Library SDTMIG Metadata to Normalized SDTMIG JSON
 
 Script:
 
@@ -75,8 +129,8 @@ adapters/odm_json/extractors/normalize_sdtmig_json.py
 
 Purpose:
 
-- take SDTMIG metadata from the CDISC Library
-- normalize it into a consistent JSON reference structure for lookup and matching
+- Take SDTMIG metadata from the CDISC Library
+- Normalize it into a consistent JSON reference structure for lookup and matching
 
 Primary output:
 
@@ -94,9 +148,9 @@ adapters/odm_json/matchers/match_odm_to_sdtm.py
 
 Purpose:
 
-- match collected ODM field metadata to associated SDTMIG variables
-- classify mapping behavior
-- generate the intermediate mapping CSV
+- Match collected ODM field metadata to associated SDTMIG variables
+- Classify mapping behavior
+- Generate the intermediate mapping CSV
 
 Primary output:
 
@@ -114,9 +168,9 @@ adapters/odm_json/scaffolds/scaffold_sql.py
 
 Purpose:
 
-- consume the mapping CSV
-- generate scaffolded dbt SQL models by domain
-- identify direct mappings, derivations, SUPPQUAL mappings, and manual intervention points
+- Consume the mapping CSV
+- Generate scaffolded dbt SQL models by domain
+- Identify direct mappings, derivations, SUPPQUAL mappings, and manual intervention points
 
 Example output:
 
@@ -135,17 +189,18 @@ The issue is useful design context, but should not be treated as fully implement
 
 The design intent described there includes:
 
-- use `ItemOID` for variable matching where OID conventions are sponsor-controlled
-- use aliases to define scaffolding logic or derivation intent
-- infer mapping types such as `Direct`, `Derived`, `SUPPQUAL`, and `Unmatched`
-- scaffold 1:1 mappings directly when no alias is present
-- use `DERIVATION_RULE` to identify derivation logic
-- use `SUPPQUAL` aliases to scaffold supplemental qualifier structures
-- route unmatched mappings to manual intervention
+- Use `ItemOID` for variable matching where OID conventions are sponsor-controlled
+- Use aliases to define scaffolding logic or derivation intent
+- Infer mapping types such as `Direct`, `Derived`, `SUPPQUAL`, and `Unmatched`
+- Scaffold 1:1 mappings directly when no alias is present
+- Use `DERIVATION_TARGET` to identify the SDTM variable being produced
+- Use `DERIVATION_RULE` to identify the derivation logic or rule name
+- Use `SUPPQUAL` aliases to scaffold supplemental qualifier structures
+- Route unmatched mappings to manual intervention
 
 This aligns with the current architecture direction: OID-based matching provides the stable primary mapping layer, while aliases provide transformation/scaffolding context.
 
-However, several ideas in Issue #42 may remain conceptual or partially implemented, especially around reusable derivation macros and extended SUPPQUAL derivation behavior.
+However, several ideas in Issue #42 may remain conceptual or partially implemented, especially around reusable derivation macros, scaffold consumption of `Derivation_Rule`, and extended SUPPQUAL derivation behavior.
 
 ---
 
@@ -163,7 +218,7 @@ This structure allows the matcher to infer:
 
 - ODM object type: `IT`
 - SDTM domain: `DM`
-- candidate SDTM variable: `SUBJID`
+- Candidate SDTM variable: `SUBJID`
 
 The matcher currently uses the parsed `(domain, variable)` pair as the primary matching key against normalized SDTMIG metadata.
 
@@ -280,72 +335,63 @@ Marks a field as intentionally excluded from SDTM submission output.
 
 ---
 
-# Current Implementation Gap
+# Derivation Alias Semantics
 
-The current implementation in:
+The implementation in:
 
 ```text
 adapters/odm_json/matchers/match_odm_to_sdtm.py
 ```
 
-does not fully preserve the semantic distinction between:
+now preserves the semantic distinction between:
 
 - `DERIVATION_TARGET`
 - `DERIVATION_RULE`
 
-Current behavior populates:
+The intended distinction is:
+
+| Alias Context | Output Field | Intended Meaning |
+|---|---|---|
+| DERIVATION_TARGET | Derived_Target | The SDTM variable being produced |
+| DERIVATION_RULE | Derivation_Rule | The derivation logic or rule name |
+
+This correction prevents two separate metadata concepts from being collapsed into one field.
+
+Example:
 
 ```text
-Derived_Target
+DERIVATION_TARGET = AGE
+DERIVATION_RULE   = age_from_brthdtc_rfstdtc
 ```
 
-using the value from:
+Expected mapping output:
 
-```text
-DERIVATION_RULE
-```
-
-This is likely semantically incorrect.
-
-The intended distinction appears to be:
-
-| Alias Context | Intended Meaning |
+| Derived_Target | Derivation_Rule |
 |---|---|
-| DERIVATION_TARGET | The SDTM variable being produced |
-| DERIVATION_RULE | The derivation logic or rule name |
-
-Future implementation should preserve both separately in the mapping output.
-
-Potential future CSV fields:
-
-```text
-Derived_Target
-Derivation_Rule
-```
+| AGE | age_from_brthdtc_rfstdtc |
 
 ---
 
 # Current Scaffold Behavior
 
-Current scaffold generation logic in:
+Current scaffold generation consumes the mapping CSV as its primary metadata contract layer.
 
-```text
-adapters/odm_json/scaffolds/scaffold_sql.py
-```
-
-does not currently appear to directly consume:
-
-```text
-Derived_Target
-```
-
-The scaffold currently relies primarily on:
+Current scaffold behavior relies primarily on:
 
 - `SDTM_Variable`
 - `Raw_Input_Name`
 - `Mapping_Type`
 
-This means the matcher semantics can likely be corrected safely before scaffold integration changes are introduced.
+However, scaffold generation does not currently operationalize the `Derived_Target` and `Derivation_Rule` fields independently.
+
+This means the matcher semantics have been corrected independently of scaffold integration.
+
+Future scaffold enhancements may leverage:
+
+- `Derived_Target`
+- `Derivation_Rule`
+
+for reusable derivation injection, lineage-aware scaffolding, and macro/template selection.
 
 ---
 
@@ -355,10 +401,10 @@ This means the matcher semantics can likely be corrected safely before scaffold 
 
 OID is currently used for:
 
-- stable metadata identity
-- primary SDTM candidate matching
-- cross-study consistency
-- deterministic lookup behavior
+- Stable metadata identity
+- Primary SDTM candidate matching
+- Cross-study consistency
+- Deterministic lookup behavior
 
 ## Alias Responsibilities
 
@@ -366,10 +412,10 @@ Aliases are currently used when the relationship cannot be expressed cleanly thr
 
 Examples:
 
-- derived variables
-- multiple collected fields contributing to one SDTM variable
+- Derived variables
+- Multiple collected fields contributing to one SDTM variable
 - SUPPQUAL routing
-- alternate semantic mapping targets
+- Alternate semantic mapping targets
 ---
 
 # CSV Output Contract
@@ -415,9 +461,9 @@ IT.DM.SUBJID
 
 Used for:
 
-- metadata traceability
-- stable identity
-- sponsor-controlled matching behavior
+- Metadata traceability
+- Stable identity
+- Sponsor-controlled matching behavior
 
 ### ODM_Variable
 
@@ -496,10 +542,10 @@ Examples:
 
 This field is intended to support:
 
-- debugging
-- lineage tracing
-- future confidence scoring
-- validation workflows
+- Debugging
+- Lineage tracing
+- Future confidence scoring
+- Validation workflows
 
 ### Derived_Target
 
@@ -539,8 +585,8 @@ metadata aliases.
 
 This distinction allows the architecture to preserve both:
 
-- what variable is being derived
-- how it is derived
+- What variable is being derived
+- How it is derived
 
 independently.
 
@@ -582,19 +628,19 @@ The CSV intentionally acts as a decoupled metadata contract layer.
 
 This separation allows:
 
-- matching logic
-- scaffold generation
-- validation
-- lineage tracking
-- and future orchestration workflows
+- Matching logic
+- Scaffold generation
+- Validation
+- Lineage tracking 
+- Future orchestration workflows
 
 to evolve somewhat independently.
 
 The CSV is therefore treated as:
 
-- an implementation artifact
-- a debugging surface
-- and a future extensibility layer
+- An implementation artifact
+- A debugging surface
+- A future extensibility layer
 
 rather than simply a temporary export.
 
@@ -606,28 +652,23 @@ The project is currently transitioning from prototype architecture toward a more
 
 Some areas remain intentionally fluid, including:
 
-- adapter abstractions
-- derivation handling strategy
-- alias standardization
-- confidence scoring
-- validation framework behavior
-- scaffold generation extensibility
+- Adapter abstractions
+- Derivation handling strategy
+- Alias standardization
+- Confidence scoring
+- Validation framework behavior
+- Scaffold generation extensibility
 
 This document should therefore be treated as a living architecture reference rather than finalized specification documentation.
 
 ---
 
-# Future Considerations
+# Future Sections
 
-Potential future enhancements include:
-
-- semantic/fuzzy matching layers
-- configurable matching strategies
-- confidence scoring
-- ontology-aware matching
-- sponsor-specific metadata governance profiles
-- validation and audit traceability improvements
-- richer derivation dependency tracking
+- High-Level Scaffold Generation Architecture
+- High-Level dbt Project Architecture
+- High-Level Derivation Injection Flow
+- Validation and Traceability Architecture
 
 ---
 
