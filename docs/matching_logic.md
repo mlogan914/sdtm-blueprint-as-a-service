@@ -706,12 +706,4 @@ This document should therefore be treated as a living architecture reference rat
 
 ---
 
-# Related References
-
-- GitHub Issue #29: OID matching rationale
-- `match_odm_to_sdtm.py`
-- `scaffold_sql.py`
-
----
-
 --- End of Current Matching Documentation ---
