@@ -359,7 +359,7 @@ This area remains experimental and should currently be treated as evolving archi
 
 ---
 
-# SUPPQUAL and Nonstandard Variables
+# SUPPQUAL and Non-Standard Variables
 
 Current metadata matching architecture already supports SUPPQUAL classification.
 
@@ -375,7 +375,7 @@ The intended architecture included:
 Current architecture direction may need to be extended to support:
 
 ```text
-Nonstandard Variables
+Non-Standard Variables
 ```
 
 which are replacing traditional SUPPQUAL handling in future SDTM standards.
@@ -452,7 +452,7 @@ Some areas remain intentionally fluid, including:
 - Reusable derivation framework behavior
 - Jinja macro/template standardization
 - SUPPQUAL scaffold generation
-- Nonstandard Variable support
+- Non-Standard Variables support
 - Validation-aware scaffolding
 - Lineage-aware scaffold generation
 - Orchestration behavior
@@ -471,7 +471,7 @@ Potential future documentation sections include:
 - Validation and Traceability Architecture
 - Multi-Source Merge Architecture
 - Orchestration Layer Architecture
-- Nonstandard Variable Scaffold Generation
+- Non-Standard Variables Scaffold Generation
 
 ---
 
