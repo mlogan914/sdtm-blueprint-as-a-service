@@ -44,7 +44,7 @@ or domain-specific transformation behavior.
 # High-Level End-to-End Workflow
 
 ```mermaid
-flowchart LR
+flowchart TD
 
     ODM["ODM-XML"]
     CDISC["CDISC Library API<br/>(SDTMIG Metadata)"]
