@@ -49,20 +49,45 @@ Instead of hand-coding SDTM domains or relying on enterprise transformation tool
 - **Study-isolated execution**: Each study is self-contained but powered by shared platform logic.
 
 ## High-Level Architecture
-```
-ODM XML
-  ↓
-ODM → JSON normalization
-  ↓
-ODM ↔ SDTMIG matching
-  ↓
-Domain-level SQL scaffolding
-  ↓
-Config & override injection
-  ↓
-dbt execution → SDTM datasets
-```
+# High-Level End-to-End Workflow
 
+```mermaid
+flowchart TD
+
+    ODM["ODM-XML"]
+    CDISC["CDISC Library API<br/>(SDTMIG Metadata)"]
+
+    ODMNORM["ODM Metadata<br/>Normalization"]
+    SDTMNORM["SDTMIG Metadata<br/>Normalization"]
+
+    MATCH["Metadata Matching<br/>& Classification"]
+
+    CSV["Normalized Metadata Contract<br/>(odm_to_sdtm_mapping.csv)"]
+
+    SCAFFOLD["SQL Scaffold Generation"]
+
+    INJECT["SQL Injection Layers<br/>(Derivations / Overrides / Preprocessing)"]
+
+    DBT["dbt Model Execution"]
+
+    SDTM["SDTM Datasets"]
+
+    ODM --> ODMNORM
+    CDISC --> SDTMNORM
+
+    ODMNORM --> MATCH
+    SDTMNORM --> MATCH
+
+    MATCH --> CSV
+
+    CSV --> SCAFFOLD
+
+    SCAFFOLD --> INJECT
+
+    INJECT --> DBT
+
+    DBT --> SDTM
+```
 ---
 
 ## 📁 Repository Structure
