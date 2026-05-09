@@ -49,7 +49,7 @@ Instead of hand-coding SDTM domains or relying on enterprise transformation tool
 - **Study-isolated execution**: Each study is self-contained but powered by shared platform logic.
 
 ## High-Level Architecture
-# High-Level End-to-End Workflow
+### High-Level End-to-End Workflow
 
 ```mermaid
 flowchart TD
