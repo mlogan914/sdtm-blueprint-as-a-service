@@ -104,7 +104,6 @@ odm-2-0/
 │       ├── schemas/
 │       └── utils/
 ├── bin/
-├── logs/
 ├── requirements.txt
 └── studies/
 ```
@@ -119,6 +118,8 @@ studies/VEXIN-03/
 ├── inputs/
 ├── overrides/
 ├── runs/
+│    ├── logs/
+│    └── metadata/
 └── dbt/
 ```
 </details>
