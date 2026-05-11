@@ -1,9 +1,26 @@
+# Python
 __pycache__/
 *.pyc
-.env
-.venv/
+*.pyo
+*.pyd
 *.egg-info/
 .ipynb_checkpoints/
+
+# Virtual environments
+.env
+.venv/
+
+# OS / Editor
 .DS_Store
 
-.venv/
+# dbt runtime artifacts
+target/
+dbt_packages/
+logs/
+
+# Runtime logs
+*.log
+**/logs/
+
+# Runtime artifacts
+**/runs/logs/
