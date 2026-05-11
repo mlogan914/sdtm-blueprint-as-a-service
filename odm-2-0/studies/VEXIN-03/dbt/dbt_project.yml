@@ -33,7 +33,7 @@ models:
   VEXIN_03:
     # Config indicated by + and applies to all files under models/example/
     sdtm:
-      +materialized: view
+      +materialized: table
     staging:
       +materialized: ephemeral
 

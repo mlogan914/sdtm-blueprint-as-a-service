@@ -102,7 +102,7 @@ def main():
     lines.append("{{ config(materialized='view') }}")
     lines.append("")
 
-    prep_cte_file = custom_path / "prep_input_cte.sql"
+    prep_cte_file = custom_path / "prep_input.sql"
     if prep_cte_file.exists():
         with open(prep_cte_file, "r") as f:
             prep_cte_sql = f.read().strip()
