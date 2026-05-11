@@ -1,7 +1,4 @@
-
-  
-  create view "dev"."main"."dm__dbt_tmp" as (
-    
+{{ config(materialized='view') }}
 
 
 -- ============================================
@@ -39,12 +36,7 @@ SELECT
     ,NULL AS RFCSTDTC
     ,NULL AS RFCENDTC
     -- Injected custom: derive_rficdtc.sql
-    ,
-    CASE 
-        WHEN RFICDTC_RAW IS NULL OR TRIM(RFICDTC_RAW) = '' THEN NULL
-        ELSE STRFTIME(STRPTIME(RFICDTC_RAW, '%m/%d/%Y'), '%Y-%m-%d')
-    END
- AS RFICDTC
+    ,{{ convert_us_date_to_iso('RFICDTC_RAW') }} AS RFICDTC
     ,NULL AS RFPENDTC
     ,NULL AS DTHDTC
     ,NULL AS DTHFL
@@ -52,12 +44,7 @@ SELECT
     ,NULL AS INVID
     ,NULL AS INVNAM
     -- Injected custom: derive_brthdtc.sql
-    ,
-    CASE 
-        WHEN BRTHDTC_RAW IS NULL OR TRIM(BRTHDTC_RAW) = '' THEN NULL
-        ELSE STRFTIME(STRPTIME(BRTHDTC_RAW, '%m/%d/%Y'), '%Y-%m-%d')
-    END
- AS BRTHDTC
+    ,{{ convert_us_date_to_iso('BRTHDTC_RAW') }} AS BRTHDTC
     ,NULL AS AGE  -- TODO: Derived variable AGE needs a derivation
     ,NULL AS AGEU
     ,raw_dm.sex AS SEX
@@ -90,12 +77,7 @@ SELECT
     ,NULL AS ACTARMUD  -- TODO: Derived variable ACTARMUD needs a derivation
     ,raw_dm.country AS COUNTRY
     -- Injected custom: derive_dmdtc.sql
-    ,
-    CASE 
-        WHEN DMDTC_RAW IS NULL OR TRIM(DMDTC_RAW) = '' THEN NULL
-        ELSE STRFTIME(STRPTIME(DMDTC_RAW, '%m/%d/%Y'), '%Y-%m-%d')
-    END
- AS DMDTC
+    ,{{ convert_us_date_to_iso('DMDTC_RAW') }} AS DMDTC
     ,NULL AS DMDY
     ,NULL AS QVAL
     -- Injected custom: derive_race.sql
@@ -222,5 +204,4 @@ SELECT
     ,NULL AS EPOCH  -- TODO: Standard derivation file missing for EPOCH
     ,NULL AS ISSUE_FLAG_USUBJID  -- TODO: Custom derivation file missing for ISSUE_FLAG_USUBJID
 
-FROM "dev"."main"."raw_dm"
-  );
+FROM {{ ref('raw_dm') }}
