@@ -124,9 +124,25 @@ def main():
     ordered_df = df.sort_values("Ordinal", na_position="last") if "Ordinal" in df.columns else df
     ordered_vars = ordered_df["SDTM_Variable"].dropna().str.upper().tolist()
 
+    '''
+    Preserve SDTM variable order while preventing duplicate SDTM output
+    when multiple metadata rows map to the same SDTM variable (e.g. RACE).
+    11MAY2026 - ML
+    '''
+    seen_vars = set()
+    deduped_ordered_vars = []
+
+    for var in ordered_vars:
+        if var not in seen_vars:
+            deduped_ordered_vars.append(var)
+            seen_vars.add(var)
+
+    ordered_vars = deduped_ordered_vars
+
     for var in sorted(all_known_vars):
-        if var not in ordered_vars:
+        if var not in seen_vars:
             ordered_vars.append(var)
+            seen_vars.add(var)
 
     first = True
     for var in ordered_vars:
@@ -168,5 +184,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-## -- End of Program Code -- #
