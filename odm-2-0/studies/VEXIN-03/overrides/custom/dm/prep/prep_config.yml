@@ -1,0 +1,8 @@
+prep_mappings:
+  ARMCD:
+    input_column: ARMCD
+    action: passthrough
+
+  ARM:
+    input_column: raw_arm
+    action: passthrough

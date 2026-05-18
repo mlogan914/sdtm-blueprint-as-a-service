@@ -28,6 +28,12 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 def load_yaml(path: Path):
     with open(path, "r") as f:
         return yaml.safe_load(f)
+    
+def load_optional_yaml(path: Path):
+    if path.exists():
+        with open(path, "r") as f:
+            return yaml.safe_load(f) or {}
+    return {}
 
 def load_csv(path: Path):
     return pd.read_csv(path)
@@ -48,13 +54,26 @@ def inject_variable_line(
     custom_deriv_vars: set,
     custom_path: Path,
     standard_path: Path,
+    source_alias: str,
+    prep_mappings: dict,
 ):
     var_upper = var.upper()
     var_lower = var.lower()
     comment = ""
 
     if mapping_type == "Direct":
-        return f"    ,raw_{domain.lower()}.{raw_var.lower()} AS {var_upper}"
+        return f"    ,{source_alias}.{raw_var.lower()} AS {var_upper}"
+    
+    mapping_type_norm = str(mapping_type).strip().lower()
+
+    prep_mapping = prep_mappings.get(var_upper)
+
+    if mapping_type_norm == "derived" and prep_mapping:
+        action = str(prep_mapping.get("action", "")).strip().lower()
+        input_column = prep_mapping.get("input_column", var)
+
+        if action == "passthrough":
+            return f"    ,{source_alias}.{input_column} AS {var_upper}"
 
 
     if var_upper in standard_deriv_vars:
@@ -102,7 +121,22 @@ def main():
     lines.append("{{ config(materialized='view') }}")
     lines.append("")
 
-    prep_cte_file = custom_path / "prep_input.sql"
+    prep_dir = custom_path / "prep"
+    prep_cte_file = prep_dir / "prep_input.sql"
+    prep_config_file = prep_dir / "prep_config.yml"
+
+    prep_config = load_optional_yaml(prep_config_file)
+    prep_mappings = {
+        key.upper(): value
+        for key, value in prep_config.get("prep_mappings", {}).items()
+    }
+
+    # Source alias 
+    if prep_cte_file.exists():
+        source_alias = f"{domain.lower()}_input"
+    else:
+        source_alias = f"raw_{domain.lower()}"
+
     if prep_cte_file.exists():
         with open(prep_cte_file, "r") as f:
             prep_cte_sql = f.read().strip()
@@ -162,6 +196,8 @@ def main():
             custom_deriv_vars=custom_deriv_vars,
             custom_path=custom_path,
             standard_path=standard_path,
+            source_alias=source_alias,
+            prep_mappings=prep_mappings
         )
 
         if first:
