@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."raw_ds" ("PROJECT" text,"STUDYID" text,"DOMAIN" text,"RECORDID" integer,"DATAPAGENAME" text,"SITEID" integer,"SUBJECT" integer,"DSDTC_RAW" text,"DSSTDTC_RAW" text,"DSTERM" text,"DSDECOD" text,"DSCAT" text,"DTHDTC" integer,"DTHFL" integer,"ARMCD" text,"RAW_ARM" text,"ACTARMCD" text,"ACTARM" text,"ARMNRS" text,"ACTARMUD" integer,"DSDTC_RAW_2" integer,"SCRNFAIL" text)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."raw_ds" FROM '/home/mlogan/projects/baas/odm-2-0/studies/VEXIN-03/dbt/seeds/raw_ds.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
