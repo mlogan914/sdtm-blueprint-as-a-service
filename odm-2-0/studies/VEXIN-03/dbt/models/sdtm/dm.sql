@@ -1,12 +1,27 @@
 {{ config(materialized='view') }}
 
+-- ============================================
+-- Step 1: Pre-Merge Input Data
+-- ============================================
+-- Injected from: /home/mlogan/projects/baas/odm-2-0/studies/VEXIN-03/overrides/custom/dm/prep/prep_input.sql
+WITH
+
+dm_input AS (
+    SELECT
+         dm.*
+        ,ds.armcd
+        ,ds.raw_arm
+    FROM {{ ref('raw_dm') }} dm LEFT JOIN 
+         {{ ref('raw_ds') }} ds
+    ON dm.subject = ds.subject
+)
 
 -- ============================================
 -- Step 2: Build SDTM Domain Variables
 -- ============================================
 SELECT
-    raw_dm.studyid AS STUDYID
-    ,raw_dm.domain AS DOMAIN
+    dm_input.studyid AS STUDYID
+    ,dm_input.domain AS DOMAIN
     -- Injected custom: derive_usubjid.sql
     ,CASE
     WHEN prevstudy IS NULL OR TRIM(CAST(prevstudy AS VARCHAR)) = '' THEN
@@ -28,7 +43,7 @@ SELECT
                 CONCAT(prevstudy, '-', prevsubj)
         END
     END AS USUBJID
-    ,raw_dm.subject AS SUBJID
+    ,dm_input.subject AS SUBJID
     ,NULL AS RFSTDTC
     ,NULL AS RFENDTC
     ,NULL AS RFXSTDTC
@@ -40,14 +55,14 @@ SELECT
     ,NULL AS RFPENDTC
     ,NULL AS DTHDTC
     ,NULL AS DTHFL
-    ,raw_dm.siteid AS SITEID
+    ,dm_input.siteid AS SITEID
     ,NULL AS INVID
     ,NULL AS INVNAM
     -- Injected custom: derive_brthdtc.sql
     ,{{ convert_us_date_to_iso('BRTHDTC_RAW') }} AS BRTHDTC
     ,NULL AS AGE  -- TODO: Derived variable AGE needs a derivation
     ,NULL AS AGEU
-    ,raw_dm.sex AS SEX
+    ,dm_input.sex AS SEX
     -- Injected custom: derive_race.sql
     ,CASE
     WHEN COALESCE(raceoth, '') = ''
@@ -68,14 +83,14 @@ SELECT
              ELSE 'OTHER'
          END
     END AS RACE
-    ,raw_dm.ethnic AS ETHNIC
-    ,NULL AS ARMCD  -- TODO: Derived variable ARMCD needs a derivation
-    ,NULL AS ARM  -- TODO: Derived variable ARM needs a derivation
+    ,dm_input.ethnic AS ETHNIC
+    ,dm_input.ARMCD AS ARMCD
+    ,dm_input.raw_arm AS ARM
     ,NULL AS ACTARMCD  -- TODO: Derived variable ACTARMCD needs a derivation
     ,NULL AS ACTARM  -- TODO: Derived variable ACTARM needs a derivation
     ,NULL AS ARMNRS  -- TODO: Derived variable ARMNRS needs a derivation
     ,NULL AS ACTARMUD  -- TODO: Derived variable ACTARMUD needs a derivation
-    ,raw_dm.country AS COUNTRY
+    ,dm_input.country AS COUNTRY
     -- Injected custom: derive_dmdtc.sql
     ,{{ convert_us_date_to_iso('DMDTC_RAW') }} AS DMDTC
     ,NULL AS DMDY
@@ -84,4 +99,4 @@ SELECT
     ,NULL AS EPOCH  -- TODO: Standard derivation file missing for EPOCH
     ,NULL AS ISSUE_FLAG_USUBJID  -- TODO: Custom derivation file missing for ISSUE_FLAG_USUBJID
 
-FROM {{ ref('raw_dm') }}
+FROM dm_input

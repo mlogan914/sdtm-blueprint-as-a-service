@@ -1,12 +1,27 @@
 
 
+-- ============================================
+-- Step 1: Pre-Merge Input Data
+-- ============================================
+-- Injected from: /home/mlogan/projects/baas/odm-2-0/studies/VEXIN-03/overrides/custom/dm/prep/prep_input.sql
+WITH
+
+dm_input AS (
+    SELECT
+         dm.*
+        ,ds.armcd
+        ,ds.raw_arm
+    FROM "dev"."main"."raw_dm" dm LEFT JOIN 
+         "dev"."main"."raw_ds" ds
+    ON dm.subject = ds.subject
+)
 
 -- ============================================
 -- Step 2: Build SDTM Domain Variables
 -- ============================================
 SELECT
-    raw_dm.studyid AS STUDYID
-    ,raw_dm.domain AS DOMAIN
+    dm_input.studyid AS STUDYID
+    ,dm_input.domain AS DOMAIN
     -- Injected custom: derive_usubjid.sql
     ,CASE
     WHEN prevstudy IS NULL OR TRIM(CAST(prevstudy AS VARCHAR)) = '' THEN
@@ -28,7 +43,7 @@ SELECT
                 CONCAT(prevstudy, '-', prevsubj)
         END
     END AS USUBJID
-    ,raw_dm.subject AS SUBJID
+    ,dm_input.subject AS SUBJID
     ,NULL AS RFSTDTC
     ,NULL AS RFENDTC
     ,NULL AS RFXSTDTC
@@ -45,7 +60,7 @@ SELECT
     ,NULL AS RFPENDTC
     ,NULL AS DTHDTC
     ,NULL AS DTHFL
-    ,raw_dm.siteid AS SITEID
+    ,dm_input.siteid AS SITEID
     ,NULL AS INVID
     ,NULL AS INVNAM
     -- Injected custom: derive_brthdtc.sql
@@ -57,7 +72,7 @@ SELECT
  AS BRTHDTC
     ,NULL AS AGE  -- TODO: Derived variable AGE needs a derivation
     ,NULL AS AGEU
-    ,raw_dm.sex AS SEX
+    ,dm_input.sex AS SEX
     -- Injected custom: derive_race.sql
     ,CASE
     WHEN COALESCE(raceoth, '') = ''
@@ -78,14 +93,14 @@ SELECT
              ELSE 'OTHER'
          END
     END AS RACE
-    ,raw_dm.ethnic AS ETHNIC
-    ,NULL AS ARMCD  -- TODO: Derived variable ARMCD needs a derivation
-    ,NULL AS ARM  -- TODO: Derived variable ARM needs a derivation
+    ,dm_input.ethnic AS ETHNIC
+    ,dm_input.ARMCD AS ARMCD
+    ,dm_input.raw_arm AS ARM
     ,NULL AS ACTARMCD  -- TODO: Derived variable ACTARMCD needs a derivation
     ,NULL AS ACTARM  -- TODO: Derived variable ACTARM needs a derivation
     ,NULL AS ARMNRS  -- TODO: Derived variable ARMNRS needs a derivation
     ,NULL AS ACTARMUD  -- TODO: Derived variable ACTARMUD needs a derivation
-    ,raw_dm.country AS COUNTRY
+    ,dm_input.country AS COUNTRY
     -- Injected custom: derive_dmdtc.sql
     ,
     CASE 
@@ -95,128 +110,8 @@ SELECT
  AS DMDTC
     ,NULL AS DMDY
     ,NULL AS QVAL
-    -- Injected custom: derive_race.sql
-    ,CASE
-    WHEN COALESCE(raceoth, '') = ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
-                 THEN 'MULTIPLE'
-             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
-             WHEN race_asian = 1 THEN 'ASIAN'
-             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
-             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
-             WHEN race_white = 1 THEN 'WHITE'
-             ELSE NULL
-         END
-    WHEN COALESCE(raceoth, '') <> ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
-                 THEN 'MULTIPLE'
-             ELSE 'OTHER'
-         END
-    END AS RACE
-    -- Injected custom: derive_race.sql
-    ,CASE
-    WHEN COALESCE(raceoth, '') = ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
-                 THEN 'MULTIPLE'
-             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
-             WHEN race_asian = 1 THEN 'ASIAN'
-             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
-             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
-             WHEN race_white = 1 THEN 'WHITE'
-             ELSE NULL
-         END
-    WHEN COALESCE(raceoth, '') <> ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
-                 THEN 'MULTIPLE'
-             ELSE 'OTHER'
-         END
-    END AS RACE
-    -- Injected custom: derive_race.sql
-    ,CASE
-    WHEN COALESCE(raceoth, '') = ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
-                 THEN 'MULTIPLE'
-             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
-             WHEN race_asian = 1 THEN 'ASIAN'
-             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
-             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
-             WHEN race_white = 1 THEN 'WHITE'
-             ELSE NULL
-         END
-    WHEN COALESCE(raceoth, '') <> ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
-                 THEN 'MULTIPLE'
-             ELSE 'OTHER'
-         END
-    END AS RACE
-    -- Injected custom: derive_race.sql
-    ,CASE
-    WHEN COALESCE(raceoth, '') = ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
-                 THEN 'MULTIPLE'
-             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
-             WHEN race_asian = 1 THEN 'ASIAN'
-             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
-             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
-             WHEN race_white = 1 THEN 'WHITE'
-             ELSE NULL
-         END
-    WHEN COALESCE(raceoth, '') <> ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
-                 THEN 'MULTIPLE'
-             ELSE 'OTHER'
-         END
-    END AS RACE
-    -- Injected custom: derive_race.sql
-    ,CASE
-    WHEN COALESCE(raceoth, '') = ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
-                 THEN 'MULTIPLE'
-             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
-             WHEN race_asian = 1 THEN 'ASIAN'
-             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
-             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
-             WHEN race_white = 1 THEN 'WHITE'
-             ELSE NULL
-         END
-    WHEN COALESCE(raceoth, '') <> ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
-                 THEN 'MULTIPLE'
-             ELSE 'OTHER'
-         END
-    END AS RACE
-    -- Injected custom: derive_race.sql
-    ,CASE
-    WHEN COALESCE(raceoth, '') = ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) > 1
-                 THEN 'MULTIPLE'
-             WHEN race_aian = 1 THEN 'AMERICAN INDIAN OR ALASKA NATIVE'
-             WHEN race_asian = 1 THEN 'ASIAN'
-             WHEN race_black = 1 THEN 'BLACK OR AFRICAN AMERICAN'
-             WHEN race_nhpi = 1 THEN 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER'
-             WHEN race_white = 1 THEN 'WHITE'
-             ELSE NULL
-         END
-    WHEN COALESCE(raceoth, '') <> ''
-         THEN CASE
-             WHEN COALESCE(race_aian, 0) + COALESCE(race_asian, 0) + COALESCE(race_black, 0) + COALESCE(race_nhpi, 0) + COALESCE(race_white, 0) >= 1
-                 THEN 'MULTIPLE'
-             ELSE 'OTHER'
-         END
-    END AS RACE
     ,NULL AS DY  -- TODO: Standard derivation file missing for DY
     ,NULL AS EPOCH  -- TODO: Standard derivation file missing for EPOCH
     ,NULL AS ISSUE_FLAG_USUBJID  -- TODO: Custom derivation file missing for ISSUE_FLAG_USUBJID
 
-FROM "dev"."main"."raw_dm"
+FROM dm_input
