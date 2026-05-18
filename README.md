@@ -104,7 +104,6 @@ odm-2-0/
 │       ├── schemas/
 │       └── utils/
 ├── bin/
-├── logs/
 ├── requirements.txt
 └── studies/
 ```
@@ -119,6 +118,8 @@ studies/VEXIN-03/
 ├── inputs/
 ├── overrides/
 ├── runs/
+│    ├── logs/
+│    └── metadata/
 └── dbt/
 ```
 </details>
@@ -289,20 +290,24 @@ D
 ---
 
 ## Roadmap
+
 - [x] ODM-JSON adapter workflow
 - [x] ODM-JSON adapter conversion
-- [x] Define Pre-Processing Data Injection Logic
-- [x] DuckDB local profile and first end‑to‑end dbt run
-- [x] Injection of standard/custom derivations via jinja templates
-- [x] Injection of standard/custom derivations via jinja macros
-- [🔄 In progress]: Use CTEs as a “prepend/append rows” layer at the very start of the domain build
-- [x] Start documentation (Normalization and scaffolding logic)
-- [ ] Multi‑domain runs
-- [ ] SUPPQUAL generation
-- [ ] Automated tests/validators (schema + content checks)
-- [ ] Warehouse targets (Snowflake/Redshift/BigQuery) via dbt profiles
-- [ ] CLI packaging (pipx/poetry) + `baas` command
-- [ ] GitHub Actions CI for lint + tests + sample run artifacts
+- [x] Define preprocessing injection architecture
+- [x] Configure DuckDB local dbt profile
+- [x] Complete first end-to-end dbt run
+- [x] Inject standard derivations via Jinja templates
+- [x] Inject custom derivations via Jinja templates
+- [x] Inject standard derivations via Jinja macros
+- [x] Inject custom derivations via Jinja macros
+- [x] Add preprocessing layer for passthrough variables using CTE-based joins/appends
+- [ ] Add preprocessing layer for derived variables using CTE-based joins/appends
+- [x] Start architecture documentation for matching and scaffolding logic
+- [ ] Add GitHub Actions CI for linting, tests, and sample dbt execution
+- [ ] Support multi-domain runs
+- [ ] Add warehouse targets via dbt profiles
+- [ ] Generate SUPPQUAL / Nonstandard Variable outputs
+- [ ] Add CLI packaging and `baas` command 
 
 ---
 
