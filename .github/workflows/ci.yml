@@ -26,7 +26,7 @@ jobs:
         working-directory: odm-2-0
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -63,3 +63,7 @@ jobs:
       - name: Validate dbt project
         working-directory: odm-2-0/studies/VEXIN-03/dbt
         run: dbt parse
+
+      - name: Compile dbt project
+        working-directory: odm-2-0/studies/VEXIN-03/dbt
+        run: dbt compile
