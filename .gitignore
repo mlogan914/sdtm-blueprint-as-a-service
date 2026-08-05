@@ -1,26 +1,28 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 *.egg-info/
-.ipynb_checkpoints/
 
 # Virtual environments
-.env
 .venv/
+venv/
+.env
 
-# OS / Editor
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
 .DS_Store
 
-# dbt runtime artifacts
+# Logs
+logs/
+*.log
+
+# dbt
 target/
 dbt_packages/
-logs/
 
-# Runtime logs
-*.log
-**/logs/
-
-# Runtime artifacts
-**/runs/logs/
+# DuckDB
+*.duckdb
