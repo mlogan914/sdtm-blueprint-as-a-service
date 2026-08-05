@@ -115,3 +115,19 @@ jobs:
       - name: Run dbt tests
         working-directory: odm-2-0/studies/VEXIN-03/dbt
         run: dbt test
+
+      - name: Verify integration output
+        working-directory: odm-2-0/studies/VEXIN-03/dbt
+        run: |
+            python - <<'PY'
+            import duckdb
+
+            con = duckdb.connect("dev.duckdb")
+
+            row_count = con.execute(
+                "select count(*) from dev.dm"
+            ).fetchone()[0]
+
+            assert row_count > 0, "DM table is empty"
+            print(f"DM validation passed: {row_count} rows")
+            PY
