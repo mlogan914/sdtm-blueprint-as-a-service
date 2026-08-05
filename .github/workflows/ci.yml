@@ -47,6 +47,19 @@ jobs:
         run: |
           find . -name "*.sh" -exec bash -n {} \;
 
+      - name: Create dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml <<'EOF'
+          VEXIN_03:
+            outputs:
+              dev:
+                type: duckdb
+                path: dev.duckdb
+                threads: 1
+            target: dev
+          EOF
+
       - name: Validate dbt project
         working-directory: odm-2-0/studies/VEXIN-03/dbt
         run: dbt parse
