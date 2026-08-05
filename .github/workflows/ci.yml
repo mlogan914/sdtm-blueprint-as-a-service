@@ -67,3 +67,25 @@ jobs:
       - name: Compile dbt project
         working-directory: odm-2-0/studies/VEXIN-03/dbt
         run: dbt compile
+
+        
+  integration-test:
+    needs: validate
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: odm-2-0
+
+    steps:
+      - name: Load seed data
+        working-directory: odm-2-0/studies/VEXIN-03/dbt
+        run: dbt seed
+
+      - name: Run dbt models
+        working-directory: odm-2-0/studies/VEXIN-03/dbt
+        run: dbt run
+
+      - name: Run dbt tests
+        working-directory: odm-2-0/studies/VEXIN-03/dbt
+        run: dbt test
