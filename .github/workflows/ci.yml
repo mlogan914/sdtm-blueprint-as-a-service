@@ -125,7 +125,7 @@ jobs:
             con = duckdb.connect("dev.duckdb")
 
             row_count = con.execute(
-                "select count(*) from sdtm.dm"
+                "select count(*) from dev.dm"
             ).fetchone()[0]
 
             assert row_count > 0, "DM table is empty"
