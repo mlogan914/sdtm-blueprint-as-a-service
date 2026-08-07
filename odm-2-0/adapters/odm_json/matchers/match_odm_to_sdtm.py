@@ -1,6 +1,5 @@
 import json
 import csv
-from pathlib import Path
 from typing import Dict, List, Tuple
 
 from adapters.odm_json.utils.load_paths import load_paths
