@@ -8,13 +8,6 @@ on:
       - scaffold
       - ci
 
-  pull_request:
-    branches:
-      - main
-      - odm_adapter
-      - scaffold
-      - ci
-
   workflow_dispatch:
 
 jobs:
