@@ -303,7 +303,7 @@ D
 - [x] Add preprocessing layer for passthrough variables using CTE-based joins/appends
 - [ ] Add preprocessing layer for derived variables using CTE-based joins/appends
 - [x] Start architecture documentation for matching and scaffolding logic
-- [ ] Add GitHub Actions CI for linting, tests, and sample dbt execution
+- [x] Add GitHub Actions CI for linting, tests, and sample dbt execution
 - [ ] Support multi-domain runs
 - [ ] Add warehouse targets via dbt profiles
 - [ ] Generate SUPPQUAL / Nonstandard Variable outputs
