@@ -8,13 +8,6 @@ on:
       - scaffold
       - ci
 
-  pull_request:
-    branches:
-      - main
-      - odm_adapter
-      - scaffold
-      - ci
-
   workflow_dispatch:
 
 jobs:
@@ -38,8 +31,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
+        
+      - name: Lint Python
+        run: |
+          ruff check .
 
-      - name: Check Python syntax
+      - name: Check Python compile
         run: |
           python -m compileall .
 
