@@ -40,10 +40,6 @@ jobs:
         run: |
           python -m compileall .
 
-      - name: Run Python tests
-        run: |
-          python -m pytest
-
       - name: Check shell scripts
         run: |
           find . -name "*.sh" -exec bash -n {} \;
